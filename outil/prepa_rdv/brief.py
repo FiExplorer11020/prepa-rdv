@@ -18,7 +18,7 @@ from urllib.parse import urlparse
 
 from pypdf import PdfReader
 
-from . import affichage, contacts
+from . import affichage, contacts, gabarit
 from .listes import nom_court, norm, personne_courte
 from .schema import CHAMPS_BRIEF, LIBELLES_CHAMP, Champ, Niveau
 
@@ -190,27 +190,31 @@ def verifier_brief(c: dict, fiche: dict) -> list[str]:
 CSS = """
 @page { size: A4; margin: 0; }
 * { box-sizing: border-box; }
-body { margin: 0; font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; color: #111827; }
-.brief { width: 210mm; height: 297mm; padding: 15mm 16mm 12mm; page-break-after: always; overflow: hidden; font-size: %(taille)spt; line-height: 1.38; display: flex; flex-direction: column; }
+body { margin: 0; font-family: %(police)s; color: #000; }
+.brief { position: relative; width: 210mm; height: 297mm; padding: 19mm 17mm 15mm; page-break-after: always; overflow: hidden; font-size: %(taille)spt; line-height: 1.38; display: flex; flex-direction: column; }
 .brief:last-child { page-break-after: auto; }
-h1 { font-size: 21pt; margin: 0 0 1mm; }
-.meta { margin: 0 0 5mm; color: #4b5563; font-size: 0.92em; border-bottom: 0.4mm solid #d1d5db; padding-bottom: 2.5mm; }
-h2 { font-size: 11.5pt; margin: 5mm 0 1.8mm; text-transform: none; }
+.bandeau { position: absolute; top: 0; left: 0; width: 210mm; height: 9mm; padding: 0 17mm; background: %(bleu_vert)s; color: #fff; display: flex; align-items: center; justify-content: space-between; }
+.bandeau b { font-size: 9pt; } .bandeau span { font-size: 7.5pt; }
+.pied { position: absolute; left: 17mm; right: 17mm; bottom: 7mm; display: flex; justify-content: space-between; font-size: 6.5pt; color: %(gris_pied)s; }
+h1 { font-size: 17pt; color: %(vert)s; margin: 0 0 1mm; }
+.meta { margin: 0 0 3mm; color: %(gris)s; font-size: 0.92em; }
+h2 { font-size: 11pt; color: %(bleu_vert)s; margin: 4mm 0 1.6mm; }
 h2 .hyp { font-size: 0.75em; font-weight: 600; background: #fef3c7; color: #78350f; padding: 0.3mm 1.6mm; border-radius: 1mm; margin-left: 2mm; }
-table { width: 100%%; border-collapse: collapse; }
-td { padding: 1.8mm 2mm; border-bottom: 0.25mm solid #e5e7eb; vertical-align: top; }
-td.champ { width: 33mm; font-weight: 600; }
-td.niveau { width: 26mm; text-align: right; white-space: nowrap; }
+%(tableau)s
+table { font-size: 0.92em; }
+th, td { padding: 1.3mm 1.8mm; }
+td.champ { width: 33mm; font-weight: 700; }
+td.niveau, th.niveau { width: 26mm; text-align: right; white-space: nowrap; }
 .badge { display: inline-block; padding: 0.4mm 2mm; border-radius: 1mm; font-size: 0.85em; font-weight: 600; }
 p { margin: 0 0 1.6mm; }
 ol { margin: 0; padding-left: 5mm; } li { margin: 0 0 1.4mm; }
 .contact { margin-top: 3mm; color: #374151; }
-footer { margin-top: auto; border-top: 0.3mm solid #d1d5db; padding-top: 2mm; font-size: 0.82em; color: #4b5563; }
-footer a { color: #1d4ed8; text-decoration: none; }
+footer { margin-top: auto; border-top: 0.3mm solid %(filet)s; padding-top: 2mm; font-size: 0.82em; color: %(gris)s; }
+footer a { color: %(bleu_vert)s; text-decoration: none; }
 """
 
 
-def html_section(c: dict) -> str:
+def html_section(c: dict, numero: int | None = None) -> str:
     e = html.escape
     lignes = "".join(
         f"<tr><td class='champ'>{e(l['champ'])}</td><td>{e(l['valeur'])}</td>"
@@ -220,16 +224,20 @@ def html_section(c: dict) -> str:
     questions = "".join(f"<li>{e(q)}</li>" for q in c["questions"])
     contact = f"<p class='contact'>{e(c['contact'])}</p>" if c["contact"] else ""
     sources = " · ".join(f"[{s['n']}] <a href='{e(s['url'])}'>{e(s['domaine'])}</a>, {e(s['annee'])}" for s in c["sources"]) or "Aucune source retenue."
-    return (f"<section class='brief'><h1>{e(c['societe'])}</h1><p class='meta'>{e(c['entete'])}</p>"
-            f"<h2>Ce qu'on sait</h2><table>{lignes}</table>"
+    return (f"<section class='brief'><div class='bandeau'><b>{e(gabarit.MARQUE)}</b><span>Brief de rendez-vous</span></div>"
+            f"<h1>{e(c['societe'])}</h1><p class='meta'>{e(c['entete'])}</p>"
+            f"<h2>Ce qu'on sait</h2><table><tr><th>Champ</th><th>Valeur et source</th><th class='niveau'>Niveau</th></tr>{lignes}</table>"
             f"<h2>L'angle pour CA|ES <span class='hyp'>hypothèse</span></h2>{angle}"
             f"<h2>Questions pour le rendez-vous</h2><ol>{questions}</ol>{contact}"
-            f"<footer>Sources : {sources}. Adresses complètes dans le tableur.</footer></section>")
+            f"<footer>Sources : {sources}. Adresses complètes dans le tableur.</footer>"
+            f"<div class='pied'><span>{e(gabarit.PIED)}</span><span>{numero or ''}</span></div></section>")
 
 
 def html_document(contenus: list[dict], taille: float = 10.0) -> str:
     return ("<!doctype html><html lang='fr'><head><meta charset='utf-8'><title>Briefs</title><style>"
-            + CSS % {"taille": taille} + "</style></head><body>" + "".join(html_section(c) for c in contenus) + "</body></html>")
+            + CSS % {"taille": taille, "police": gabarit.POLICE, "bleu_vert": gabarit.BLEU_VERT, "vert": gabarit.VERT,
+                     "gris": gabarit.GRIS, "gris_pied": gabarit.GRIS_PIED, "filet": gabarit.FILET, "tableau": gabarit.CSS_TABLEAU}
+            + "</style></head><body>" + "".join(html_section(c, i) for i, c in enumerate(contenus, 1)) + "</body></html>")
 
 
 def trouver_chrome() -> str | None:
@@ -254,7 +262,7 @@ def rendre_pdf(html_texte: str, pdf: Path) -> int:
     return len(PdfReader(str(pdf)).pages)
 
 
-def rendre_lot(contenus: list[dict], pdf: Path, tailles: tuple[float, ...] = (10.0, 9.5, 9.0, 8.5)) -> dict[str, Any]:
+def rendre_lot(contenus: list[dict], pdf: Path, tailles: tuple[float, ...] = (10.0, 9.5, 9.0, 8.5, 8.0)) -> dict[str, Any]:
     """Un PDF pour tout le lot, une page par société. La police réduit tant qu'une page déborde."""
     for taille in tailles:
         pages = rendre_pdf(html_document(contenus, taille), pdf)

@@ -56,7 +56,7 @@ puis la société est relancée (section 7).
 | 3. Lire | Modèle, puis code | `lecteur.py` |
 | 4. Extraire | Modèle | `schema.py`, `listes.py` |
 | 5. Vérifier et noter | Code | `verificateur.py`, `confiance.py`, `relecture.py` |
-| 6. Écrire | Code | `fiche.py`, `brief.py`, `tableur.py`, `textes.py`, `rapport.py` |
+| 6. Écrire | Code | `fiche.py`, `brief.py`, `tableur.py`, `textes.py`, `rapport.py`, `gabarit.py` |
 
 Les modules sont dans [`outil/prepa_rdv/`](outil/prepa_rdv/). Le déroulé d'une société est dans `run.py`.
 
@@ -137,6 +137,8 @@ valeur. La trouvaille entre alors, au plus « probable », puisque le code n'a p
 - `trouvailles.xlsx` : toutes les trouvailles, retenues ou rejetées, avec les résultats de chaque contrôle.
 - Les journaux (section 11) et les deux textes, « Ton outil » et « Et à 200 sociétés ? », écrits par le code depuis les
   journaux (`textes.py`).
+- Les trois PDF partagent une mise en page (`gabarit.py`, D23) : bandeau au nom de l'outil, titre, intertitres,
+  tableaux zébrés, mention et numéro de page en pied.
 
 ## 4. Les niveaux de confiance
 
@@ -230,6 +232,7 @@ Elles viennent du plan de travail, qui n'est pas publié. Chaque décision est d
 | D20 | Les 36 cellules de l'audit sont jugées par des sous-agents auditeurs d'un autre modèle que les agents de recherche (Opus 5.5), en trois lots de douze. L'auditeur reçoit ce qu'une personne voit dans la feuille (société, champ, valeur, citation, lien), sans le niveau ni les contrôles du code. Quatre verdicts : juste, partiel, faux, invérifiable ; pour partiel et faux, un écart pris dans une liste fermée. Le code refuse une réponse qui oublie une cellule, en juge une deux fois ou se contredit. | Le cas veut un outil qui fait le travail, sans geste à la main. Un modèle qui en juge un autre ne vaut pas une personne : les livrables le disent, et les verdicts partiels et faux sont les premiers à relire. |
 | D21 | Deux règles d'affichage, après l'audit (`affichage.py`). La cellule dit l'entité que la page nomme quand ce n'est pas la société (filiale, division, pays). Pour un ERP, une plateforme d'achats ou un TMS, elle dit « migration prévue ou en cours » quand le commentaire du modèle le dit. Les deux règles valent au brief, à la cartographie et à l'audit. Les cellules en écart sont rejugées telles qu'elles s'affichent, et un second tirage de 12 cellules nouvelles (graine 2027) mesure la porte G4. | Sur les 9 écarts du premier tirage, 8 tenaient à l'affichage. Le modèle avait noté l'entité et le projet, et la cellule les taisait. Corriger la règle plutôt que la cellule garde l'outil sans geste à la main. Le niveau reste le même, la preuve aussi. Mesuré ensuite : la règle du projet rend justes les 2 cellules fausses, celle de l'entité ne change aucun des 6 verdicts « filiale ou division ». |
 | D22 | Une cellule tirée d'une page sur une filiale reste dans la fiche, la filiale signalée (D21), et sa valeur se vérifie pour le groupe pendant le rendez-vous. La porte G4 se mesure sur le second tirage. Choix d'Oscar, propriétaire de la porte, le 14 novembre 2026. | Le cahier des charges veut une filiale signalée comme telle, pas retirée. Pour préparer un rendez-vous, l'outil d'une filiale est une question à poser au groupe. Le premier tirage a servi à écrire les règles, le second ne les a pas vues. L'auditeur juge toujours ces cellules partielles, et la limite reste écrite (§10). |
+| D23 | Une mise en page commune pour les trois PDF (`gabarit.py`). Bandeau de 9 mm au nom de l'outil et au titre court du document, titre en vert, intertitres et en-têtes de tableau en bleu-vert, lignes zébrées, police Inter, mention et numéro de page en pied, par les boîtes de marge de Chrome pour les textes de plusieurs pages. Les briefs gardent une page par société et gagnent un en-tête de tableau. | Squelette repris de documents de travail fournis par Oscar le 14 novembre 2026 : la mise en page et la structure, sans leur contenu ni leur logique. Le bandeau ne porte le nom d'aucune organisation, puisque les PDF sont publics. Le texte des documents et les contrôles ne changent pas. |
 
 ## 9. Ce que les journaux mesurent
 

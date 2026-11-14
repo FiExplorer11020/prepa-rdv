@@ -255,3 +255,15 @@ def test_le_poste_vient_de_la_citation_quand_la_valeur_n_est_que_le_nom():
     v2 = {"valeur": "Gerald Mayer", "precision": None, "statut": "present", "niveau": "confirmé", "ids": ["y"]}
     t2 = {"citation": "Mag. Gerald Mayer Chief Financial Officer (CFO)"}
     assert brief._valeur_affichee(v2, Champ.DIRECTION_FINANCIERE, t2) == "Gerald Mayer, Chief Financial Officer (CFO)"
+
+
+def test_les_pdf_prennent_le_gabarit_commun():
+    """D23 : bandeau au nom de l'outil, titre court, mention et numéro en pied, tableaux zébrés."""
+    from prepa_rdv import gabarit, textes
+    html = textes.md_vers_html("# Ton outil : comment il fonctionne\n\n| A | B |\n|---|---|\n| 1 | 2 |\n")
+    assert '@top-left { content: "prepa-rdv"' in html and '@top-right { content: "Ton outil"' in html
+    assert "counter(page)" in html and gabarit.PIED in html and gabarit.BLEU_VERT in html
+    assert gabarit.titre_court("Et à 200 sociétés ? Ce qui casse") == "Et à 200 sociétés ?"
+    doc = brief.html_document([{"societe": "Nokia", "entete": "Finland", "lignes": [], "angle": [], "questions": [],
+                                "contact": None, "sources": []}])
+    assert "class='bandeau'" in doc and "<th>Valeur et source</th>" in doc and "<span>1</span>" in doc

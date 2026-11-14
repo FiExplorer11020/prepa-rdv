@@ -11,7 +11,7 @@ import statistics
 from pathlib import Path
 from typing import Any
 
-from . import agent, bilan as bilan_mod, brief, erreurs as erreurs_mod, horloge, rapport
+from . import agent, bilan as bilan_mod, brief, erreurs as erreurs_mod, gabarit, horloge, rapport
 from .jetons import cout_estime
 from .schema import LIBELLES_CHAMP, Champ
 
@@ -436,11 +436,15 @@ def md_vers_html(md: str) -> str:
         elif l.strip():
             sortie.append(f"<p>{inline(l)}</p>")
         i += 1
-    css = ("@page{size:A4;margin:16mm}body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;font-size:10pt;line-height:1.4;color:#111827}"
-           "h1{font-size:18pt}h2{font-size:13pt;margin-top:6mm}table{border-collapse:collapse;width:100%;font-size:8.5pt;margin:2mm 0}"
-           "th,td{border:0.3mm solid #d1d5db;padding:1mm 1.6mm;vertical-align:top;text-align:left}th{background:#f3f4f6}"
-           "pre{background:#f3f4f6;padding:3mm;font-size:7.5pt;white-space:pre-wrap}code{font-size:0.9em;background:#f3f4f6}"
-           "table,tr{page-break-inside:avoid}h2,h3{page-break-after:avoid}")
+    titre = next((re.sub(r"\*\*|`", "", l[2:]).strip() for l in lignes if l.startswith("# ")), "")
+    css = (gabarit.css_page(titre)
+           + f"body{{margin:0;font-family:{gabarit.POLICE};font-size:9.5pt;line-height:1.45;color:#000}}"
+           + f"h1{{font-size:17pt;color:{gabarit.VERT};margin:0 0 2mm}}h2{{font-size:11pt;color:{gabarit.BLEU_VERT};margin:6mm 0 1.6mm}}"
+           + f"h3{{font-size:9.5pt;color:{gabarit.BLEU_VERT};margin:4mm 0 1.2mm}}"
+           + gabarit.CSS_TABLEAU + "table{font-size:7.5pt;margin:2mm 0}th,td{padding:1.1mm 1.6mm}"
+           + f"pre{{background:{gabarit.BLEU_VERT_CLAIR};padding:3mm;font-size:7.5pt;white-space:pre-wrap}}"
+           + f"code{{font-size:0.9em;background:{gabarit.BLEU_VERT_CLAIR}}}ul,ol{{padding-left:5mm}}li{{margin:0 0 1mm}}"
+           + "table,tr{page-break-inside:avoid}h2,h3{page-break-after:avoid}")
     return f"<!doctype html><html lang='fr'><head><meta charset='utf-8'><style>{css}</style></head><body>{''.join(sortie)}</body></html>"
 
 

@@ -12,3 +12,7 @@
 {"ts": "2026-11-14T02:59:34+00:00", "evenement": "fin", "note": "Audit par agents fait : premier tirage, cellules corrigées rejugées, second tirage ; textes et livrables à régénérer, dépôt à republier"}
 {"ts": "2026-11-14T15:38:15+00:00", "evenement": "reprise", "note": "Oscar tranche le périmètre des filiales (garder en signal) ; la règle s'écrit dans les textes, livrables et dépôt mis à jour"}
 {"ts": "2026-11-14T15:43:50+00:00", "evenement": "fin", "note": "Périmètre des filiales tranché par Oscar (D22) : règle écrite dans « Ton outil », la méthodologie, la planification et le journal ; un test ; livrables régénérés, dépôt à republier"}
+{"ts": "2026-11-14T15:46:08+00:00", "evenement": "reprise", "note": "Oscar fournit six documents de travail : reprendre leur squelette (mise en page, structure) pour les rendus PDF, sans leur contenu"}
+{"ts": "2026-11-14T15:51:48+00:00", "evenement": "fin", "note": "Gabarit commun des PDF (D23) : bandeau, titre, intertitres, tableaux zébrés, pied numéroté, police Inter, repris du squelette des documents fournis par Oscar ; briefs et textes régénérés, un test"}
+{"ts": "2026-11-14T15:52:31+00:00", "evenement": "reprise", "note": "Écrire la décision D23 dans la méthodologie, le README et le journal"}
+{"ts": "2026-11-14T15:52:53+00:00", "evenement": "fin", "note": "D23 écrite dans la méthodologie, le README et le journal ; textes régénérés, dépôt à republier"}

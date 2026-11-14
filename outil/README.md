@@ -17,7 +17,8 @@ puis fixe le niveau de confiance par une table. Aucune cellule n'est corrigée �
 5. **Vérifier et noter** : le code applique les contrôles de `prepa_rdv/verificateur.py` et la table de `prepa_rdv/confiance.py`.
    Quand la citation du modèle manque à la page, le code relit la page rendue par JavaScript si elle est pauvre, puis garde,
    s'il y en a un, le passage de la page qui porte la valeur (niveau plafonné à « probable », citation d'origine conservée).
-6. **Écrire** : fiche JSON, brief d'une page (HTML puis PDF par Chrome), deux tableurs, journaux.
+6. **Écrire** : fiche JSON, brief d'une page (HTML puis PDF par Chrome), deux tableurs, journaux. Les trois PDF
+   partagent une mise en page, dans `prepa_rdv/gabarit.py`.
 
 ## Installer
 
