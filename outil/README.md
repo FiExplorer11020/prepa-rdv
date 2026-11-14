@@ -54,6 +54,7 @@ uv run python -m prepa_rdv resoudre Nokia         # identité de la société
 uv run python -m prepa_rdv societe Nokia          # une société, de bout en bout
 uv run python -m prepa_rdv lot societes.csv       # plusieurs sociétés, deux à la fois
 uv run python -m prepa_rdv livrables --ordre societes.csv   # PDF des briefs et deux tableurs
+uv run python -m prepa_rdv vitrine <dossier> --ordre societes.csv   # site statique tiré des fiches et des livrables
 uv run python -m prepa_rdv jetons                 # jetons de tout le projet
 ```
 
@@ -89,7 +90,8 @@ uv run python -m prepa_rdv depot ../../prepa-rdv --lien-outil https://github.com
 
 `depot` construit la copie publique du cas à côté du dossier de travail : liste blanche (le cache des pages lues ne part
 pas), chemins de la machine remplacés, remplacements lus dans un fichier privé qui ne part jamais (`depot-prive.json`),
-adresses nominatives déduites retirées puis briefs et tableurs recomposés, liste des licences, `pip-audit`. Elle analyse
+adresses nominatives déduites retirées puis briefs et tableurs recomposés, vitrine écrite dans `vitrine/` et
+contrôlée, liste des licences, `pip-audit`. Elle analyse
 ensuite chaque fichier, PDF et tableurs compris, et ne fait le commit et le push (`--publier`) que si l'analyse ne
 trouve rien.
 

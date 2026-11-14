@@ -47,7 +47,7 @@ DOSSIERS = {
 }
 NOMS_EXCLUS = {".venv", "__pycache__", ".pytest_cache", ".ruff_cache", ".mypy_cache", ".DS_Store", ".git"}
 SUFFIXES_EXCLUS = {".pyc", ".pyo"}
-SUFFIXES_TEXTE = {".md", ".json", ".jsonl", ".html", ".csv", ".py", ".toml", ".txt", ".lock", ".cfg", ".ini", ".yaml", ".yml", ""}
+SUFFIXES_TEXTE = {".md", ".json", ".jsonl", ".html", ".css", ".svg", ".csv", ".py", ".toml", ".txt", ".lock", ".cfg", ".ini", ".yaml", ".yml", ""}
 TAILLE_MAX = 10_000_000
 FICHIER_PRIVE = "depot-prive.json"
 
@@ -85,12 +85,13 @@ class Rapport:
     non_lus: list[str] = field(default_factory=list)
     licences_douteuses: list[str] = field(default_factory=list)
     audit: dict[str, Any] | None = None
+    vitrine: dict[str, Any] | None = None
 
     @property
     def propre(self) -> bool:
         audit_ok = self.audit is None or self.audit.get("ok", False)
         return (not self.constats and not self.licences_douteuses and audit_ok and self.livrables_ok is not False
-                and all(self.remplacements.values()))
+                and all(self.remplacements.values()) and not (self.vitrine or {}).get("problemes"))
 
     def resume(self) -> dict[str, Any]:
         return {
@@ -98,7 +99,7 @@ class Rapport:
             "remplacements": self.remplacements, "adresses_nominatives_retirees": len(self.adresses_retirees),
             "livrables_recomposes": self.livrables_ok, "constats": [c.__dict__ for c in self.constats[:50]],
             "nombre_de_constats": len(self.constats), "fichiers_non_lus": self.non_lus,
-            "licences_douteuses": self.licences_douteuses, "audit": self.audit, "propre": self.propre,
+            "licences_douteuses": self.licences_douteuses, "audit": self.audit, "vitrine": self.vitrine, "propre": self.propre,
         }
 
 
@@ -326,7 +327,12 @@ def licences() -> tuple[str, list[str]]:
               "avec la licence que chacun déclare dans ses métadonnées. Liste écrite par `prepa-rdv depot`, "
               "qui refuse de publier si un paquet est sous GPL ou AGPL.\n\n"
               "| Paquet | Version | Licence déclarée |\n|---|---|---|\n")
-    return entete + "\n".join(lignes) + "\n", douteuses
+    polices = ("\n## Polices de la vitrine\n\n"
+               "Fraunces (Copyright 2018 The Fraunces Project Authors) et Figtree (Copyright 2022 The Figtree Project Authors), "
+               "sous licence SIL Open Font License 1.1. Ce sont des instances statiques de leurs polices variables : Fraunces à la "
+               "taille optique 144 et SOFT 100, Figtree en 400, 500 et 600. Elles sont dans `outil/prepa_rdv/polices/` et "
+               "`vitrine/polices/`, avec le texte de leur licence.\n")
+    return entete + "\n".join(lignes) + "\n" + polices, douteuses
 
 
 def auditer() -> dict[str, Any]:
@@ -410,6 +416,9 @@ def construire(dest: Path, prive: Path | None = None, lien_outil: str = "", reco
     rapport.adresses_retirees = caviarder_fiches(dest / "sorties")
     if recomposer:
         rapport.livrables, rapport.livrables_ok = recomposer_livrables(dest / "sorties", lien_outil, _ordre(racine))
+        # La vitrine, après les fiches nettoyées et les livrables recomposés : aucune adresse déduite ne l'atteint (D24).
+        from . import vitrine
+        rapport.vitrine = vitrine.construire(dest / "vitrine", dest / "sorties", lien_outil, _ordre(racine))
     if (dest / "README.md").exists():
         inserer_reponses(dest / "README.md", dest / "sorties", _ordre(racine))
     derniere_passe(dest, rapport.adresses_retirees, rapport)

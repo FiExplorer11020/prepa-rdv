@@ -23,6 +23,11 @@ Les douze sociétés : SSAB, voestalpine, Barilla, Stadler Rail, LVMH, Vattenfal
 Saint-Gobain, Deutsche Telekom, Verallia. Le dossier de chacune est dans `sorties/societes/` : la demande faite à
 l'agent, sa réponse brute, la fiche vérifiée, le brief et le journal de chaque étape.
 
+Les briefs se lisent aussi en ligne, sans compte, sur
+[outil-fiexplorer11020s-projects.vercel.app](https://outil-fiexplorer11020s-projects.vercel.app/) : une page par
+société, avec ses sources et la citation de chaque trouvaille retenue. Ce site statique est tiré des mêmes fiches par la
+commande `vitrine`, après la fin des trois heures (D24). Ses fichiers sont dans [`vitrine/`](vitrine/).
+
 ## Les réponses, société par société
 
 Ce que l'outil a retenu pour chaque société, tiré des fiches vérifiées au moment où ce dépôt est construit. Chaque
@@ -265,7 +270,7 @@ Les autres commandes et les accès au modèle sont décrits dans [`outil/README.
 
 ## Ce qui n'est pas publié, et pourquoi
 
-- **Le plan de travail.** Il porte des notes personnelles. Ses décisions, de D1 à D23, sont reprises avec leurs raisons
+- **Le plan de travail.** Il porte des notes personnelles. Ses décisions, de D1 à D24, sont reprises avec leurs raisons
   dans la méthodologie (section 8).
 - **Le cache des pages lues** (`sorties/cache/`). Ce sont des textes de tiers. Chaque trouvaille garde l'adresse de sa
   page et sa citation, ce qui suffit pour vérifier.
@@ -278,7 +283,7 @@ Les autres commandes et les accès au modèle sont décrits dans [`outil/README.
 
 La commande `prepa-rdv depot` construit ce dépôt depuis le dossier de travail. Elle copie une liste blanche, remplace
 les chemins, applique des remplacements lus dans un fichier privé qui ne part pas, retire les adresses déduites et
-recompose les briefs et les tableurs depuis les fiches nettoyées. Elle analyse ensuite chaque fichier, PDF et tableurs
+recompose les briefs et les tableurs depuis les fiches nettoyées, puis la vitrine. Elle analyse ensuite chaque fichier, PDF et tableurs
 compris, à la recherche de noms à taire, de secrets, de chemins de la machine et des adresses retirées. Elle écrit la
 liste des licences et lance `pip-audit`. Elle ne publie que si l'analyse ne trouve rien.
 

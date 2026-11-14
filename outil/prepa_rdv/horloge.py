@@ -13,6 +13,9 @@ from pathlib import Path
 from .jetons import dossier_sorties
 
 
+PLAFOND_MINUTES = 180  # le plafond de construction du cas
+
+
 def chemin() -> Path:
     return dossier_sorties() / "journal" / "horloge.jsonl"
 

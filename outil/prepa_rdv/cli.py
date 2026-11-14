@@ -8,6 +8,7 @@
     prepa-rdv demander-audit          demandes de l'agent auditeur (36 cellules tirées au sort, en lots)
     prepa-rdv recevoir-audit LOT      verdicts d'un lot validés, agent enregistré
     prepa-rdv depot DOSSIER           copie publique nettoyée et analysée ; --publier si l'analyse est verte
+    prepa-rdv vitrine DOSSIER         site statique tiré des fiches et des livrables (écrit aussi par depot)
     prepa-rdv jetons                  jetons de tout le projet
     prepa-rdv horloge debut|pause|reprise|fin
 """
@@ -218,6 +219,13 @@ def cmd_livrables(a: argparse.Namespace) -> int:
     return 0 if ok else 1
 
 
+def cmd_vitrine(a: argparse.Namespace) -> int:
+    from . import vitrine
+    resume = vitrine.construire(a.dossier, dossier_sorties(), a.lien_outil, _noms([a.ordre]) if a.ordre else None)
+    print(json.dumps(resume, ensure_ascii=False, indent=1))
+    return 1 if resume["problemes"] else 0
+
+
 def cmd_depot(a: argparse.Namespace) -> int:
     from . import depot
     rapport_depot = depot.construire(a.dossier, prive=a.prive, lien_outil=a.lien_outil, recomposer=not a.sans_livrables,
@@ -331,6 +339,12 @@ def main(argv: list[str] | None = None) -> int:
     v.add_argument("--ordre", help="fichier CSV des sociétés, pour l'ordre des pages")
     v.add_argument("--lien-outil", default="", help="adresse du dépôt, écrite dans le tableur")
     v.set_defaults(fonction=cmd_livrables)
+
+    vt = sub.add_parser("vitrine", help="site statique tiré des fiches et des livrables, pour un aperçu local")
+    vt.add_argument("dossier", type=Path, help="dossier du site (vide, ou vitrine précédente)")
+    vt.add_argument("--ordre", help="fichier CSV des sociétés, pour l'ordre des briefs")
+    vt.add_argument("--lien-outil", default="", help="adresse du dépôt public, citée dans le site")
+    vt.set_defaults(fonction=cmd_vitrine)
 
     dp = sub.add_parser("depot", help="construit et analyse la copie publique du cas ; la publie si l'analyse est verte")
     dp.add_argument("dossier", type=Path, help="dossier du dépôt public (vide, ou copie précédente)")

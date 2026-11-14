@@ -74,7 +74,7 @@ def formater(lignes: list[dict[str, Any]]) -> str:
             out.append(_ligne(str(t["societe"]), t))
     actif = horloge.temps_actif()
     if actif:
-        out += ["", f"Temps de construction actif : {actif / 60:.0f} minutes (plafond du cas : 180)."]
+        out += ["", f"Temps de construction actif : {actif / 60:.0f} minutes (plafond du cas : {horloge.PLAFOND_MINUTES})."]
     return "\n".join(out)
 
 

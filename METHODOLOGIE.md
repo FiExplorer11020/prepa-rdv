@@ -217,7 +217,7 @@ Elles viennent du plan de travail, qui n'est pas publié. Chaque décision est d
 | D2 | Deux chemins de lecture. A : l'agent lit les pages web avec les outils du fournisseur. B : les rapports annuels se lisent en local, en fenêtres autour des mots-clés. | D'après la documentation de l'API, une page de PDF pèse 1 500 à 3 000 jetons : un rapport de 300 pages lu en entier coûte trop. L'outil de lecture du fournisseur ne rend pas les pages JavaScript. |
 | D3 | Mesurer le coût à la facturation de l'API, avec une clé dédiée et un plafond. Remplacée par D12. | Le cas demande un coût par société. |
 | D4 | Ni LinkedIn ni base de contacts. Les contacts entrent en suggestion non vérifiée : directeur financier nommé par la société, adresses générales publiées. Pas de ligne directe, pas de sonde SMTP ; l'option `--sans-contacts` retire le bloc. | Le cahier des charges (section 10) borne le module pour limiter le risque juridique et d'image. |
-| D5 | Une vitrine statique, construite après les livrables ; la démonstration tourne en local. Non construite. | Pas de clé sur un site public. Le cas ne demande pas de site. |
+| D5 | Une vitrine statique, construite après les livrables ; la démonstration tourne en local. Construite hors horloge, voir D24. | Pas de clé sur un site public. Le cas ne demande pas de site. |
 | D6 | Le dépôt est public, sous licence MIT, et neuf : aucun fichier d'un autre projet n'y entre. | Le cas ne porte que sur cet outil. |
 | D7 | Aucun nom de client ni de travail privé dans les livrables ou le dépôt. La commande `depot` le vérifie avant publication. | Confidentialité. |
 | D8 | Départ sur Sonnet 5.5. On garde le modèle le moins cher qui passe le seuil de vérification. | Sonnet 5.5 coûte la moitié d'Opus 5.5 au tarif de liste. |
@@ -236,6 +236,7 @@ Elles viennent du plan de travail, qui n'est pas publié. Chaque décision est d
 | D21 | Deux règles d'affichage, après l'audit (`affichage.py`). La cellule dit l'entité que la page nomme quand ce n'est pas la société (filiale, division, pays). Pour un ERP, une plateforme d'achats ou un TMS, elle dit « migration prévue ou en cours » quand le commentaire du modèle le dit. Les deux règles valent au brief, à la cartographie et à l'audit. Les cellules en écart sont rejugées telles qu'elles s'affichent, et un second tirage de 12 cellules nouvelles (graine 2027) mesure la porte G4. | Sur les 9 écarts du premier tirage, 8 tenaient à l'affichage. Le modèle avait noté l'entité et le projet, et la cellule les taisait. Corriger la règle plutôt que la cellule garde l'outil sans geste à la main. Le niveau reste le même, la preuve aussi. Mesuré ensuite : la règle du projet rend justes les 2 cellules fausses, celle de l'entité ne change aucun des 6 verdicts « filiale ou division ». |
 | D22 | Une cellule tirée d'une page sur une filiale reste dans la fiche, la filiale signalée (D21), et sa valeur se vérifie pour le groupe pendant le rendez-vous. La porte G4 se mesure sur le second tirage. Choix d'Oscar, propriétaire de la porte, le 14 novembre 2026. | Le cahier des charges veut une filiale signalée comme telle, pas retirée. Pour préparer un rendez-vous, l'outil d'une filiale est une question à poser au groupe. Le premier tirage a servi à écrire les règles, le second ne les a pas vues. L'auditeur juge toujours ces cellules partielles, et la limite reste écrite (§10). |
 | D23 | Une mise en page commune pour les trois PDF (`gabarit.py`), que les deux tableurs reprennent : en-tête bleu-vert, lignes zébrées, filets clairs, quadrillage masqué, en Arial comme les tableurs du squelette, l'en-tête gardé en première ligne pour les filtres. Bandeau de 9 mm au nom de l'outil et au titre court du document, titre en vert, intertitres et en-têtes de tableau en bleu-vert, lignes zébrées, police Inter, mention et numéro de page en pied, par les boîtes de marge de Chrome pour les textes de plusieurs pages. Les briefs gardent une page par société et gagnent un en-tête de tableau. | Squelette repris de documents de travail fournis par Oscar le 14 novembre 2026 : la mise en page et la structure, sans leur contenu ni leur logique. Le bandeau ne porte le nom d'aucune organisation, puisque les PDF sont publics. Le texte des documents et les contrôles ne changent pas. |
+| D24 | La vitrine est un site statique que la commande `vitrine` écrit en Python (`vitrine.py`) depuis les fiches et les livrables ; `depot` l'écrit dans `vitrine/` depuis les fiches nettoyées. Elle ne dit que ce que disent les PDF et les tableurs. L'accueil reprend les mesures des journaux et les niveaux des 72 cellules. Chaque société a sa page : son brief, ses sources, ses trouvailles retenues avec leur citation et, quand la cellule a été tirée, le verdict de l'audit. Pas de script ni de mesure d'audience, `noindex` sur chaque page et en en-tête HTTP. Les deux polices (Fraunces, Figtree, SIL OFL 1.1) sont servies par le site. Vercel la sert sans protection d'accès. | Un lien qui s'ouvre sans compte, pour lire un brief et vérifier une citation sans ouvrir de tableur. Le plan prévoyait Next.js ; un générateur sans dépendance nouvelle suffit pour des pages sans script, et `depot` le contrôle avant de publier : chaque page porte `noindex`, aucune ne contient de script, chaque lien interne mène à un fichier et chaque ancre existe. Construite après la fin de l'horloge, la vitrine ne change pas les fiches ni les livrables. |
 
 ## 9. Ce que les journaux mesurent
 
@@ -312,6 +313,8 @@ sorties/
     agents-outil.jsonl     chaque agent de l'outil, rattaché à sa société ou à l'audit
     jetons-dev.json        les jetons des sessions de développement
     bilan-*.json           les bilans intermédiaires : sonde, lot, avant la correction de l'accord
+vitrine/                   le site statique (D24) : index.html, societes/ (une page par société), les deux textes,
+                           style.css, polices/, telechargements/ (les livrables), vercel.json (en-tête noindex)
 ```
 
 ## 12. Reproduire
@@ -321,9 +324,10 @@ cd outil
 uv sync --frozen
 uv run pytest -q                                                              # tests hors ligne
 PREPA_RDV_SORTIES=../sorties uv run python -m prepa_rdv livrables --ordre societes.csv   # briefs et tableurs
+PREPA_RDV_SORTIES=../sorties uv run python -m prepa_rdv vitrine ../vitrine --ordre societes.csv   # le site statique
 uv run python -m prepa_rdv societe "Nom de la société" --acces claude-cli    # une société nouvelle
 ```
 
 La commande `livrables` recompose les briefs et les tableurs depuis les fiches de `sorties/societes/` sans appeler le
-modèle. La commande `societe` refait une société de bout en bout ; elle demande un abonnement Claude Code
+modèle. La commande `vitrine` réécrit le site depuis les mêmes fiches et les livrables. La commande `societe` refait une société de bout en bout ; elle demande un abonnement Claude Code
 (`claude auth login`). Une relance ne refait que ce qui a changé ; `--forcer` ignore le cache.

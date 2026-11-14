@@ -188,6 +188,17 @@ def _par_societe(fiches: list[dict]) -> list[list[Any]]:
     return lignes
 
 
+# Les six étapes de la chaîne, reprises par « Ton outil » et par la vitrine.
+ETAPES = (
+    ("Résoudre l'entité", "Code", "Nom légal, pays, statut, site, domaines (Wikidata puis GLEIF ; table locale si Wikidata refuse le client)"),
+    ("Chercher", "Modèle", "Plan de requêtes fixe par champ, en anglais et dans la langue du siège, écrit au journal"),
+    ("Lire", "Modèle", "Pages web ouvertes par l'agent, jamais plus de 20 par société"),
+    ("Extraire", "Modèle", "Trouvailles dans un schéma fermé : valeur d'une liste, citation de 25 mots au plus, adresse, date"),
+    ("Vérifier et noter", "Code", "Page relue par le code, citation retrouvée mot pour mot (à défaut, le passage de la page le plus proche qui porte la valeur, au plus « probable »), type de source recalculé, société nommée, date dans la fenêtre, niveau par table"),
+    ("Écrire", "Code", "Fiche, brief d'une page, deux tableurs, journaux"),
+)
+
+
 def ton_outil(fiches: list[dict], erreurs: list[dict], rapport_jetons: str, lien_outil: str = "") -> str:
     lien_ligne = f"\n- Le code, les journaux et la méthode sont publiés sous licence MIT : {lien_outil}" if lien_outil else ""
     b = bilan_mod.bilan_lot(fiches)
@@ -249,14 +260,7 @@ Sur {len(fiches)} sociétés, l'outil a produit {t['trouvailles']} trouvailles. 
 
 ## La chaîne, en six étapes
 
-{table(["Étape", "Qui", "Ce qui en sort"], [
-    ["1. Résoudre l'entité", "Code", "Nom légal, pays, statut, site, domaines (Wikidata puis GLEIF ; table locale si Wikidata refuse le client)"],
-    ["2. Chercher", "Modèle", "Plan de requêtes fixe par champ, en anglais et dans la langue du siège, écrit au journal"],
-    ["3. Lire", "Modèle", "Pages web ouvertes par l'agent, jamais plus de 20 par société"],
-    ["4. Extraire", "Modèle", "Trouvailles dans un schéma fermé : valeur d'une liste, citation de 25 mots au plus, adresse, date"],
-    ["5. Vérifier et noter", "Code", "Page relue par le code, citation retrouvée mot pour mot (à défaut, le passage de la page le plus proche qui porte la valeur, au plus « probable »), type de source recalculé, société nommée, date dans la fenêtre, niveau par table"],
-    ["6. Écrire", "Code", "Fiche, brief d'une page, deux tableurs, journaux"],
-])}
+{table(["Étape", "Qui", "Ce qui en sort"], [[f"{i}. {e}", q, t] for i, (e, q, t) in enumerate(ETAPES, start=1)])}
 
 ## Outils et sources
 
@@ -394,8 +398,9 @@ Chaque fiche porte la date de lecture, l'empreinte de chaque page et la version 
 """
 
 
-def md_vers_html(md: str) -> str:
-    """Convertisseur minimal pour ces deux textes : titres, paragraphes, listes, tableaux, blocs de code, gras et code en ligne."""
+def md_corps(md: str) -> str:
+    """Convertisseur minimal pour ces deux textes : titres, paragraphes, listes, tableaux, blocs de code, gras et code en ligne.
+    Le corps seul, que le PDF et la vitrine habillent chacun à leur façon."""
     def inline(t: str) -> str:
         t = html.escape(t)
         t = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", t)
@@ -436,6 +441,11 @@ def md_vers_html(md: str) -> str:
         elif l.strip():
             sortie.append(f"<p>{inline(l)}</p>")
         i += 1
+    return "".join(sortie)
+
+
+def md_vers_html(md: str) -> str:
+    lignes = md.split("\n")
     titre = next((re.sub(r"\*\*|`", "", l[2:]).strip() for l in lignes if l.startswith("# ")), "")
     css = (gabarit.css_page(titre)
            + f"body{{margin:0;font-family:{gabarit.POLICE};font-size:9.5pt;line-height:1.45;color:#000}}"
@@ -445,7 +455,7 @@ def md_vers_html(md: str) -> str:
            + f"pre{{background:{gabarit.BLEU_VERT_CLAIR};padding:3mm;font-size:7.5pt;white-space:pre-wrap}}"
            + f"code{{font-size:0.9em;background:{gabarit.BLEU_VERT_CLAIR}}}ul,ol{{padding-left:5mm}}li{{margin:0 0 1mm}}"
            + "table,tr{page-break-inside:avoid}h2,h3{page-break-after:avoid}")
-    return f"<!doctype html><html lang='fr'><head><meta charset='utf-8'><style>{css}</style></head><body>{''.join(sortie)}</body></html>"
+    return f"<!doctype html><html lang='fr'><head><meta charset='utf-8'><style>{css}</style></head><body>{md_corps(md)}</body></html>"
 
 
 def ecrire(sorties: Path, fiches: list[dict], transcriptions: Path | None, lien_outil: str = "") -> list[Path]:

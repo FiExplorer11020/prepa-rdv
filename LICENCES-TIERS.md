@@ -62,3 +62,7 @@ Paquets installés par `uv sync --frozen` dans l'environnement de l'outil (outil
 | tzdata | 2026.6 | Apache-2.0 |
 | tzlocal | 5.4.5 | MIT |
 | urllib3 | 2.8.0 | MIT |
+
+## Polices de la vitrine
+
+Fraunces (Copyright 2018 The Fraunces Project Authors) et Figtree (Copyright 2022 The Figtree Project Authors), sous licence SIL Open Font License 1.1. Ce sont des instances statiques de leurs polices variables : Fraunces à la taille optique 144 et SOFT 100, Figtree en 400, 500 et 600. Elles sont dans `outil/prepa_rdv/polices/` et `vitrine/polices/`, avec le texte de leur licence.
