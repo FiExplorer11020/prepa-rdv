@@ -5,6 +5,8 @@
     prepa-rdv societe NOM             une société, de bout en bout
     prepa-rdv lot societes.csv        plusieurs sociétés, deux à la fois
     prepa-rdv livrables               PDF des briefs et deux tableurs, avec leurs contrôles
+    prepa-rdv demander-audit          demandes de l'agent auditeur (36 cellules tirées au sort, en lots)
+    prepa-rdv recevoir-audit LOT      verdicts d'un lot validés, agent enregistré
     prepa-rdv depot DOSSIER           copie publique nettoyée et analysée ; --publier si l'analyse est verte
     prepa-rdv jetons                  jetons de tout le projet
     prepa-rdv horloge debut|pause|reprise|fin
@@ -115,6 +117,28 @@ def cmd_recevoir_relecture(a: argparse.Namespace) -> int:
         return 1
     sous_agents.enregistrer_agent(a.agent_id, a.nom, a.phase, role="relecture")
     print(json.dumps({"societe": a.nom, **r}, ensure_ascii=False))
+    return 0
+
+
+def cmd_demander_audit(a: argparse.Namespace) -> int:
+    from . import audit
+    fiches = run.charger_fiches(dossier_sorties())
+    if not fiches:
+        print("Aucune fiche dans", dossier_sorties() / "societes", file=sys.stderr)
+        return 1
+    for p in (audit.ecrire_second(fiches) if a.second else audit.ecrire_demandes(fiches, a.lots)):
+        print(p)
+    return 0
+
+
+def cmd_recevoir_audit(a: argparse.Namespace) -> int:
+    from . import audit
+    try:
+        r = audit.recevoir(a.lot, a.agent_id, a.phase)
+    except (ErreurModele, FileNotFoundError) as e:
+        print(f"Réponse refusée : {e}", file=sys.stderr)
+        return 1
+    print(json.dumps(r, ensure_ascii=False))
     return 0
 
 
@@ -256,6 +280,17 @@ def main(argv: list[str] | None = None) -> int:
     rr.add_argument("--agent-id", required=True)
     rr.add_argument("--phase", default="run")
     rr.set_defaults(fonction=cmd_recevoir_relecture)
+
+    da = sub.add_parser("demander-audit", help="écrit les demandes de l'agent auditeur, un fichier par lot de cellules")
+    da.add_argument("--lots", type=int, default=3, help="nombre de lots, donc d'agents auditeurs")
+    da.add_argument("--second", action="store_true", help="après une correction : cellules partielles ou fausses rejugées, et 12 cellules neuves")
+    da.set_defaults(fonction=cmd_demander_audit)
+
+    ra = sub.add_parser("recevoir-audit", help="valide les verdicts d'un lot et enregistre l'agent auditeur")
+    ra.add_argument("lot", type=int)
+    ra.add_argument("--agent-id")
+    ra.add_argument("--phase", default="audit")
+    ra.set_defaults(fonction=cmd_recevoir_audit)
 
     s = sub.add_parser("societe", help="une société, de bout en bout")
     s.add_argument("nom")

@@ -216,7 +216,7 @@ def lot_detail(noms: list[str], ctx: Contexte, paralleles: int = 2, forcer: bool
 
 def livrables(sorties: Path, ordre: list[str] | None = None, lien_outil: str = "") -> tuple[dict[str, Any], bool]:
     """Le PDF des briefs, les deux tableurs et leurs contrôles, depuis les fiches du dossier `sorties`."""
-    from . import tableur
+    from . import audit, tableur
     fiches = charger_fiches(sorties, ordre)
     if ordre:
         fiches.sort(key=lambda f: ordre.index(f["societe"]))
@@ -225,10 +225,13 @@ def livrables(sorties: Path, ordre: list[str] | None = None, lien_outil: str = "
     dossier = sorties / "livrables"
     dossier.mkdir(parents=True, exist_ok=True)
     rendu = brief.rendre_lot(contenus, dossier / "briefs.pdf")
-    carto = tableur.ecrire_cartographie(fiches, dossier / "cartographie.xlsx", lien_outil)
+    verdicts, relance, second = (audit.verdicts(sorties, t) for t in audit.TIRAGES)
+    carto = tableur.ecrire_cartographie(fiches, dossier / "cartographie.xlsx", lien_outil, verdicts=verdicts,
+                                        auditeur=audit.MODELE_AUDITEUR, relance=relance, second=second)
     longue = tableur.ecrire_trouvailles(fiches, dossier / "trouvailles.xlsx")
     bilan = {"societes": len(fiches), "pdf": rendu, "problemes_brief": {k: v for k, v in problemes.items() if v},
              "tableurs": {p.name: p.stat().st_size for p in (carto, longue)},
+             "audit": {t: audit.resume(v.values()) for t, v in zip(audit.TIRAGES, (verdicts, relance, second)) if v} or None,
              "sous_10_mo": all(p.stat().st_size < 10_000_000 for p in (dossier / "briefs.pdf", carto, longue))}
     (dossier / "controles.json").write_text(json.dumps(bilan, ensure_ascii=False, indent=1), encoding="utf-8")
     return bilan, bool(rendu["ok"] and not bilan["problemes_brief"] and bilan["sous_10_mo"])

@@ -4,7 +4,7 @@
 
 L'outil prépare un rendez-vous avec la direction financière d'une société : il cherche son ERP, sa plateforme d'achats, son TMS et ses financements court terme en place, sur sources publiques. Chaque information porte une citation recopiée mot pour mot, l'adresse de la page, sa date et un niveau de confiance. Le modèle cherche et remplit un schéma fermé. Le code relit les pages, vérifie et note : le modèle ne note jamais sa propre confiance.
 
-Sur 12 sociétés, l'outil a produit 185 trouvailles. 163 ont passé les contrôles, 22 ont été rejetées. Une société prend 16,4 minutes d'agent en moyenne, pour 5,7 millions de jetons traités, soit 2,39 $ au tarif de liste de l'API : c'est une estimation, car l'accès passe par un abonnement. Construction : 130 minutes de travail actif, planification comptée à part.
+Sur 12 sociétés, l'outil a produit 185 trouvailles. 163 ont passé les contrôles, 22 ont été rejetées. Une société prend 16,4 minutes d'agent en moyenne, pour 5,7 millions de jetons traités, soit 2,39 $ au tarif de liste de l'API : c'est une estimation, car l'accès passe par un abonnement. Construction : 163 minutes de travail actif, planification comptée à part.
 
 ## La chaîne, en six étapes
 
@@ -101,18 +101,20 @@ Le journal complet est dans `sorties/journal/erreurs.jsonl`. Une erreur sans cha
 - Une erreur du contrôle lui-même : le code cherchait la citation du premier agent (25 mots au plus) dans le passage du second (15 mots au plus). Le test échouait dès que la citation était la plus longue des deux, et il a rejeté à tort des lectures concordantes. Il cherche désormais le plus court des deux textes dans l'autre. Sur les 18 lignes relues avant la relance, l'accord passe de 5 à 11.
 - Citations que le code a réparées en gardant un passage de la page : 3. Pages relues rendues par JavaScript : 10.
 - Une page de base de données commerciale (type P5) ne sert que de second avis : une valeur qu'elle seule nomme reste dans le tableur des trouvailles, pas dans le brief. Trouvailles concernées sur ce lot : 2.
-- Audit : la feuille « Audit » de `cartographie.xlsx` liste 36 cellules tirées au sort (graine fixe), à marquer juste ou faux par une personne.
-- Ce que le code ne voit pas : une citation exacte qui ne dit pas ce que le modèle en conclut (extrapolation). L'audit d'un échantillon tiré au sort, relu par une personne, sert à cela.
+- Audit : 36 cellules de la cartographie, tirées au sort avec une graine fixe, ont été jugées par 3 sous-agents auditeurs, un par lot, d'un autre modèle que les agents de recherche (Opus 5.5). L'auditeur ouvre chaque lien et dit si la page soutient la valeur, sans connaître le niveau donné par l'outil. Verdicts : 24 justes, 7 partielles, 2 fausses, 3 invérifiables. Sur les 33 cellules vérifiables, 24 sont justes (73 %). Écarts relevés : LVMH, plateforme d'achats (partiel, filiale ou division) ; Servier, signal récent (partiel, précision non soutenue) ; Deutsche Telekom, ERP (partiel, filiale ou division) ; Fresenius, plateforme d'achats (partiel, filiale ou division) ; Saint-Gobain, ERP (faux, projet ou évaluation) ; Saint-Gobain, financements court terme (partiel, filiale ou division) ; LVMH, ERP (partiel, filiale ou division) ; Vattenfall, ERP (faux, projet ou évaluation) ; SSAB, ERP (partiel, filiale ou division). Le détail, cellule par cellule, est dans la feuille « Audit » de `cartographie.xlsx`.
+- Après l'audit : 8 des 9 écarts venaient de deux oublis d'affichage, notés par l'auditeur « filiale ou division » (6) et « projet ou évaluation » (2). Le modèle avait relevé l'entité que la page nomme et, dans son commentaire, que la migration était prévue ; la cellule ne gardait que le produit. Deux règles l'écrivent désormais dans la cellule, au brief, à la cartographie et à l'audit (D21) : l'entité nommée quand ce n'est pas la société, et « migration prévue ou en cours » pour un ERP, une plateforme d'achats ou un TMS. Les niveaux ne changent pas. Un nouvel auditeur a rejugé les 9 cellules telles qu'elles s'affichent : 2 justes, 7 partielles, 0 fausse, 0 invérifiable. Avec la règle du projet, 2 sur 2 cellules « projet ou évaluation » deviennent justes. Avec celle de l'entité, aucun des 6 verdicts « filiale ou division » ne change, l'auditeur jugeant toujours qu'une page sur une filiale ne dit pas le système du groupe. Le premier tirage passe ainsi à 26 sur 33 vérifiables (79 %). Un second tirage de 12 cellules nouvelles (graine 2027), que les règles n'avaient pas vues, donne 9 justes, 0 partielle, 0 fausse, 3 invérifiables, soit 9 sur 9 vérifiables (100 %). La porte G4, fixée à 90 %, passe sur le second tirage et pas sur le premier tirage corrigé. L'échantillon reste petit, et une seule de ces cellules jugée fausse l'aurait mis à 89 %.
+- Ce que le code ne voit pas : une citation exacte qui ne dit pas ce que l'outil en conclut. L'auditeur la cherche, mais c'est un modèle qui en juge un autre : ses verdicts partiels et faux sont les premiers à relire par une personne.
 
 ## Jetons de tout le projet
 
 | | Appels | Entrée fraîche | Cache écrit | Cache lu | Sortie | Total traité | Coût estimé ($) |
 |---|---|---|---|---|---|---|---|
-| dev / construction | 424 | 850 | 2 107 355 | 190 558 614 | 919 630 | 193 586 449 | 47,10 |
+| dev / construction | 536 | 1 074 | 2 661 270 | 221 335 781 | 1 098 663 | 225 096 788 | 61,27 |
 | dev / planification | 226 | 452 | 3 083 404 | 83 036 656 | 1 236 962 | 87 357 474 | 31,78 |
+| outil / audit | 35 | 78 | 817 973 | 4 840 297 | 188 478 | 5 846 826 | 8,83 |
 | outil / run | 317 | 648 | 3 473 302 | 58 514 831 | 1 354 289 | 63 343 070 | 28,59 |
 | outil / sonde | 64 | 132 | 786 046 | 12 070 573 | 282 380 | 13 139 131 | 6,00 |
-| **Total du cas** | 1 031 | 2 082 | 9 450 107 | 344 180 674 | 3 793 261 | 357 426 124 | 113,47 |
+| **Total du cas** | 1 178 | 2 384 | 10 821 995 | 379 798 138 | 4 160 772 | 394 783 289 | 136,47 |
 
 Coût estimé au tarif de liste du modèle de chaque appel, par million de jetons : Sonnet 5.5 à 2 $ en entrée, 10 $ en sortie et 0,10 $ en lecture du cache ; Opus 5.5 à 4 $ en entrée, 20 $ en sortie et 0,20 $ en lecture du cache. Ce n'est pas une facture : l'accès passe par un abonnement ou par un compte non facturé. Les jetons lus dans le cache dominent le total, car Claude Code relit tout son contexte à chaque appel.
 
@@ -135,6 +137,6 @@ Hors du cas (une session antérieure du même dossier, sans lien avec l'outil) :
 | Verallia | 49 | 100 | 273 977 | 9 306 443 | 124 582 | 9 705 102 | 2,86 |
 | voestalpine | 29 | 60 | 253 793 | 5 622 651 | 105 975 | 5 982 479 | 2,26 |
 
-Temps de construction actif : 130 minutes (plafond du cas : 180).
+Temps de construction actif : 163 minutes (plafond du cas : 180).
 
 Le tableau par société compte aussi les secondes lectures, d'où des totaux plus hauts que dans le tableau des temps et coûts, qui ne compte que l'agent de recherche. Chaque appel est compté au tarif du modèle qui l'a fait : Sonnet 5.5 pour les agents de recherche et les secondes lectures, Opus 5.5 pour la seconde lecture relancée de Barilla.

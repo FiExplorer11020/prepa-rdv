@@ -1,0 +1,103 @@
+{
+ "lot": 1,
+ "modele": "Opus 5.5",
+ "cellules": [
+  {
+   "id": "deutsche-telekom-financement-12",
+   "societe": "Deutsche Telekom",
+   "champ": "Financements court terme",
+   "valeur": "Affacturage (recours non précisé)",
+   "citation": "Deutsche Telekom is party to factoring agreements under which trade receivables from consumers and business customers",
+   "url": "https://report.telekom.com/annual-report-2025/notes/other-disclosures/43-financial-instruments-and-risk-management.html"
+  },
+  {
+   "id": "lvmh-achats-6",
+   "societe": "LVMH",
+   "champ": "Plateforme d'achats",
+   "valeur": "Aprovall : plateforme KYS (Know Your Supplier) de collecte, de partage et d'exploitation des données fournisseurs, utilisée par les équipes achats, juridique et contrôle interne de Moët Hennessy, présentée par la page comme la division Vins et Spiritueux du groupe LVMH. Aucune plateforme de la liste (SAP Ariba, Coupa, Jaggaer, Ivalua, Basware, GEP, Zycus) n'a été trouvée pour LVMH.",
+   "citation": "partnership with Aprovall led to the creation of the KYS – Know Your Supplier platform",
+   "url": "https://www.aprovall.com/?p=5410"
+  },
+  {
+   "id": "ssab-signal-17",
+   "societe": "SSAB",
+   "champ": "Signal récent",
+   "valeur": "Première notation de crédit de SSAB par Moody's, attribuée au troisième trimestre 2026",
+   "citation": "During the third quarter, Moody’s assigned a credit rating to SSAB for the first time.",
+   "url": "https://www.ssab.com/en/news/2026/10/report-for-q3-2026"
+  },
+  {
+   "id": "voestalpine-financement-9",
+   "societe": "voestalpine",
+   "champ": "Financements court terme",
+   "valeur": "Affacturage (recours non précisé)",
+   "citation": "In the voestalpine Group, trade receivables are sold monthly to various banks on a revolving basis.",
+   "url": "https://reports.voestalpine.com/2526/ar/notes/other-notes/d-30-disclosures.html"
+  },
+  {
+   "id": "servier-signal-12",
+   "societe": "Servier",
+   "champ": "Signal récent",
+   "valeur": "Acquisition d'Edgewise (1,55 Md$ à la signature) finalisée le 13 juillet",
+   "citation": "The transaction, completed July 13, was intended to accelerate Servier's expansion into rare neurological diseases.",
+   "url": "https://european-biotechnology.com/latest-news/serviers-1-55b-edgewise-acquisition-backfires-after-phase-3-setback/"
+  },
+  {
+   "id": "verallia-achats-5",
+   "societe": "Verallia",
+   "champ": "Plateforme d'achats",
+   "valeur": "Ivalua",
+   "citation": "Verallia Group achieves 360° supplier visibility and 80% supplier base reduction with Ivalua",
+   "url": "https://www.casestudies.com/company/ivalua/case-study/verallia-group-customer-case-study"
+  },
+  {
+   "id": "deutsche-telekom-erp-6",
+   "societe": "Deutsche Telekom",
+   "champ": "ERP",
+   "valeur": "SAP S/4HANA",
+   "citation": "The roadmap includes migrating SAP applications and transitioning to S/4HANA by 2025, with full migration planned by 2030.",
+   "url": "https://www.t-systems.com/gb/en/success-stories/cloud-and-infrastructure/deutsche-telekom-it-moves-to-rise-with-sap"
+  },
+  {
+   "id": "fresenius-achats-9",
+   "societe": "Fresenius",
+   "champ": "Plateforme d'achats",
+   "valeur": "SAP Ariba",
+   "citation": "Fresenius Kabi has engaged with SAP Ariba to standardise the onboarding of suppliers.",
+   "url": "https://fresenius-kabi.com/sap-ariba"
+  },
+  {
+   "id": "servier-direction_financiere-2",
+   "societe": "Servier",
+   "champ": "Direction financière",
+   "valeur": "Pascal Lemaire",
+   "citation": "Pascal Lemaire Executive Vice President Finance",
+   "url": "https://servier.com/en/servier-group/executive-committee/"
+  },
+  {
+   "id": "servier-financement-10",
+   "societe": "Servier",
+   "champ": "Financements court terme",
+   "valeur": "Ligne de crédit renouvelable",
+   "citation": "White & Case advises Servier on financing for Edgewise Therapeutics acquisition and revolving credit facility refinancing",
+   "url": "https://www.whitecase.com/news/press-release/white-case-advises-servier-financing-edgewise-therapeutics-acquisition-and"
+  },
+  {
+   "id": "saint-gobain-erp-4",
+   "societe": "Saint-Gobain",
+   "champ": "ERP",
+   "valeur": "SAP S/4HANA",
+   "citation": "The outdated, disjointed IT architecture was also blocking their 'OneSG' strategy and a planned migration to SAP S/4HANA.",
+   "url": "https://www.casestudies.com/company/mulesoft/case-study/saint-gobain-deploys-90-workflows-in-6-months-with-mulesoft"
+  },
+  {
+   "id": "nokia-signal-18",
+   "societe": "Nokia",
+   "champ": "Signal récent",
+   "valeur": "Accord pluriannuel Nokia, SAP et Microsoft : migration du paysage SAP vers RISE with SAP sur Microsoft Azure, finance et logistique clé comprises",
+   "citation": "migrating Nokia’s SAP landscape to the RISE with SAP journey",
+   "url": "https://news.sap.com/?p=243821"
+  }
+ ],
+ "sortie": "<racine>/sorties/audit/sortie-1.json"
+}

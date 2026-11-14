@@ -1,0 +1,104 @@
+{
+ "lot": 5,
+ "tirage": "second",
+ "modele": "Opus 5.5",
+ "cellules": [
+  {
+   "id": "barilla-tms-9",
+   "societe": "Barilla",
+   "champ": "TMS et trésorerie",
+   "valeur": "Kyriba",
+   "citation": "Barilla also selected Kyriba to increase cash visibility, improve cash forecasting, and digitize FX, interest rate",
+   "url": "https://www.kyriba.com/news/kyriba-selected-by-barilla-to-provide-a-global-working-capital-treasury-risk-management-platform/"
+  },
+  {
+   "id": "ssab-financement-12",
+   "societe": "SSAB",
+   "champ": "Financements court terme",
+   "valeur": "Billets de trésorerie",
+   "citation": "The Swedish commercial paper program has a limit of SEK 5,000 million",
+   "url": "https://www.ssab.com/company/investors/debt-financing"
+  },
+  {
+   "id": "barilla-signal-18",
+   "societe": "Barilla",
+   "champ": "Signal récent",
+   "valeur": "Changement de direction financière : nomination d'Oddone Incisa comme directeur financier, effective le 15 septembre 2025",
+   "citation": "Barilla Group announces the appointment of Oddone Incisa as new Chief Financial Officer, effective September 15, 2025.",
+   "url": "https://www.eunews.it/en/2025/07/10/barilla-group-appoints-oddone-incisa-as-cfo/"
+  },
+  {
+   "id": "barilla-financement-14",
+   "societe": "Barilla",
+   "champ": "Financements court terme",
+   "valeur": "Affacturage inversé (supply chain finance)",
+   "citation": "The integration will centralize Barilla’s multiple supply chain finance programs into a single Dynamic Discounting",
+   "url": "https://www.kyriba.com/news/kyriba-selected-by-barilla-to-provide-a-global-working-capital-treasury-risk-management-platform/"
+  },
+  {
+   "id": "vattenfall-achats-7",
+   "societe": "Vattenfall",
+   "champ": "Plateforme d'achats",
+   "valeur": "SAP Ariba",
+   "citation": "Vattenfall has begun to implement SAP Ariba as our main sourcing and tendering tool for the organization.",
+   "url": "https://group.vattenfall.com/uk/contentassets/8cd7332db68c478b9816eac515d0c605/sap_aribas_help_center.pdf"
+  },
+  {
+   "id": "nokia-direction_financiere-2",
+   "societe": "Nokia",
+   "champ": "Direction financière",
+   "valeur": "Marco Wirén, Chief Financial Officer (CFO)",
+   "citation": "Nokia CFO Marco Wirén said that the market is now relatively stable",
+   "url": "https://www.fierce-network.com/broadband/ceo-hails-2025-foundational-year-nokia-sales-grow-3"
+  },
+  {
+   "id": "nokia-financement-15",
+   "societe": "Nokia",
+   "champ": "Financements court terme",
+   "valeur": "Affacturage inversé (supply chain finance)",
+   "citation": "Supply chain financing (SCF) offers suppliers the opportunity to receive early payment on approved invoices",
+   "url": "https://www.nokia.com/suppliers/supply-chain-finance/"
+  },
+  {
+   "id": "deutsche-telekom-tms-11",
+   "societe": "Deutsche Telekom",
+   "champ": "TMS et trésorerie",
+   "valeur": "TIP, présenté comme logiciel de trésorerie (« treasury software ») utilisé depuis de nombreuses années ; l'article évoque l'intention de l'étendre à la gestion des garanties à l'échelle du groupe. Le texte de présentation de l'article décrit TIP comme « Treasury Information Platform ». Article de mars 2019, usage actuel non vérifié.",
+   "citation": "Deutsche Telekom has been using the treasury software TIP for many years",
+   "url": "https://www.theglobaltreasurer.com/2019/03/13/digital-guarantee-management-with-tip-at-deutsche-telekom/"
+  },
+  {
+   "id": "vattenfall-financement-9",
+   "societe": "Vattenfall",
+   "champ": "Financements court terme",
+   "valeur": "Billets de trésorerie",
+   "citation": "For short-term funding, Vattenfall has a European Commercial Paper programme (EUR 10 billion)",
+   "url": "https://group.vattenfall.com/investors/funding-and-ratings/programmes-and-credit-facilities/"
+  },
+  {
+   "id": "stadler-rail-signal-9",
+   "societe": "Stadler Rail",
+   "champ": "Signal récent",
+   "valeur": "Deux emprunts obligataires de 150 M CHF chacun, datés du 3 juillet 2026",
+   "citation": "Stadler hat am 3. Juli 2026 zwei Anleihensobligationen über je CHF 150.0 Mio.",
+   "url": "https://a.storyblok.com/f/269997/x/68ae2197d7/stadler-halbjahresbericht-2026-de.pdf"
+  },
+  {
+   "id": "nokia-erp-6",
+   "societe": "Nokia",
+   "champ": "ERP",
+   "valeur": "SAP S/4HANA",
+   "citation": "with its next-generation SAP S/4HANA software environment",
+   "url": "https://news.sap.com/?p=243821"
+  },
+  {
+   "id": "lvmh-signal-8",
+   "societe": "LVMH",
+   "champ": "Signal récent",
+   "valeur": "Recrutement d'un chef de projet Trésorerie et communication bancaire, offre citant la Direction Projets Transformation Finance",
+   "citation": "la Direction Projets Transformation Finance pour optimiser leurs processus et leurs organisations",
+   "url": "https://www.lvmh.com/fr/nous-rejoindre/nos-offres/LVMH03235"
+  }
+ ],
+ "sortie": "<racine>/sorties/audit/sortie-5.json"
+}

@@ -1,0 +1,103 @@
+{
+ "lot": 3,
+ "modele": "Opus 5.5",
+ "cellules": [
+  {
+   "id": "verallia-signal-15",
+   "societe": "Verallia",
+   "champ": "Signal récent",
+   "valeur": "Changement de directrice financière : Cristina Riesgo succède à Nathalie Delbreuve le 1er mars 2026",
+   "citation": "announces the appointment of Cristina Riesgo as Chief Financial Officer, effective March 1st, 2026",
+   "url": "https://www.verallia.com/en/communique-de-presse/cristina-riesgo/"
+  },
+  {
+   "id": "stadler-rail-financement-7",
+   "societe": "Stadler Rail",
+   "champ": "Financements court terme",
+   "valeur": "Ligne de crédit renouvelable",
+   "citation": "partially committed up to CHF 2.8 billion syndicated revolving credit facilities financing",
+   "url": "https://chambers.com/articles/ubs-switzerland-ag-and-an-international-bank-syndicate-arrange-up-to-chf-2-8bn-financing-for-stadler"
+  },
+  {
+   "id": "stadler-rail-direction_financiere-3",
+   "societe": "Stadler Rail",
+   "champ": "Direction financière",
+   "valeur": "Raphael Widmer, Group CFO",
+   "citation": "RAPHAEL WIDMER Group CFO",
+   "url": "https://stadlerrail.com/en/group-executive-board"
+  },
+  {
+   "id": "vattenfall-erp-4",
+   "societe": "Vattenfall",
+   "champ": "ERP",
+   "valeur": "SAP S/4HANA",
+   "citation": "Vattenfall gets ready for SAP S/4HANA",
+   "url": "https://www.natuvion.com/success-stories/vattenfall-erp-consolidation/"
+  },
+  {
+   "id": "voestalpine-achats-7",
+   "societe": "voestalpine",
+   "champ": "Plateforme d'achats",
+   "valeur": "SAP Ariba",
+   "citation": "For operational collaboration with suppliers, voestalpine uses the SAP Business Network (formerly SAP Ariba).",
+   "url": "https://www.voestalpine.com/group/en/group/supplier/"
+  },
+  {
+   "id": "fresenius-financement-13",
+   "societe": "Fresenius",
+   "champ": "Financements court terme",
+   "valeur": "Billets de trésorerie",
+   "citation": "For short-term financing needs, Fresenius SE & Co. KGaA maintains bilateral credit lines and a commercial paper program.",
+   "url": "https://report.fresenius.com/2025/annual-report/management-report/economic-report/financial-position.html"
+  },
+  {
+   "id": "nokia-achats-8",
+   "societe": "Nokia",
+   "champ": "Plateforme d'achats",
+   "valeur": "SAP Ariba",
+   "citation": "Nokia Mobile Networks will use SAP Ariba for RFx management",
+   "url": "https://nokia.com/suppliers/rfx-guidance"
+  },
+  {
+   "id": "deutsche-telekom-achats-9",
+   "societe": "Deutsche Telekom",
+   "champ": "Plateforme d'achats",
+   "valeur": "SAP Ariba",
+   "citation": "SAP Ariba Network is the portal for electronical billing and purchase ordering exchange with our suppliers.",
+   "url": "https://www.telekom.com/en/general/procurement"
+  },
+  {
+   "id": "fresenius-direction_financiere-4",
+   "societe": "Fresenius",
+   "champ": "Direction financière",
+   "valeur": "Sara Hennicken, Chief Financial Officer",
+   "citation": "Sara Hennicken was appointed CFO of Fresenius as of September 1, 2022.",
+   "url": "https://report.fresenius.com/2025/annual-report/to-our-shareholders/management-board.html"
+  },
+  {
+   "id": "ssab-erp-7",
+   "societe": "SSAB",
+   "champ": "ERP",
+   "valeur": "SAP S/4HANA",
+   "citation": "Tibnor använder S/4HANA som den primära källan för sina affärsdata.",
+   "url": "https://news.sap.com/sweden/2025/04/varldspremiar-hos-tibnor-forst-ut-med-saps-nya-molnplattform/"
+  },
+  {
+   "id": "saint-gobain-direction_financiere-2",
+   "societe": "Saint-Gobain",
+   "champ": "Direction financière",
+   "valeur": "Maud Thuaudet, Chief Financial Officer",
+   "citation": "Maud Thuaudet has been appointed Chief Financial Officer",
+   "url": "https://www.glassonweb.com/news/saint-gobain-announces-new-cfo-and-asia-pacific-ceo"
+  },
+  {
+   "id": "fresenius-erp-6",
+   "societe": "Fresenius",
+   "champ": "ERP",
+   "valeur": "SAP ECC",
+   "citation": "von SAP ECC 6 auf S/4HANA migrieren und mithilfe des RISE-Modells von SAP betreiben",
+   "url": "https://www.cio.de/article/3699040/it-management-in-tueckischem-gewaesser.html"
+  }
+ ],
+ "sortie": "<racine>/sorties/audit/sortie-3.json"
+}

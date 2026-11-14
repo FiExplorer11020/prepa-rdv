@@ -3,13 +3,52 @@
  "pdf": {
   "pages": 12,
   "taille_police": 10.0,
-  "octets": 311147,
+  "octets": 312131,
   "ok": true
  },
  "problemes_brief": {},
  "tableurs": {
-  "cartographie.xlsx": 26389,
-  "trouvailles.xlsx": 81315
+  "cartographie.xlsx": 35834,
+  "trouvailles.xlsx": 81314
+ },
+ "audit": {
+  "premier": {
+   "cellules": 36,
+   "juste": 24,
+   "partiel": 7,
+   "faux": 2,
+   "invérifiable": 3,
+   "verifiables": 33,
+   "citation_absente": 0,
+   "ecarts": {
+    "filiale ou division": 6,
+    "précision non soutenue": 1,
+    "projet ou évaluation": 2
+   }
+  },
+  "relance": {
+   "cellules": 9,
+   "juste": 2,
+   "partiel": 7,
+   "faux": 0,
+   "invérifiable": 0,
+   "verifiables": 9,
+   "citation_absente": 0,
+   "ecarts": {
+    "filiale ou division": 6,
+    "précision non soutenue": 1
+   }
+  },
+  "second": {
+   "cellules": 12,
+   "juste": 9,
+   "partiel": 0,
+   "faux": 0,
+   "invérifiable": 3,
+   "verifiables": 9,
+   "citation_absente": 0,
+   "ecarts": {}
+  }
  },
  "sous_10_mo": true
 }

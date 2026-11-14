@@ -6,3 +6,7 @@
 {"ts": "2026-11-14T01:09:27+00:00", "evenement": "fin", "note": "seconde lecture de Barilla relancée avec Opus 5.5 ; test d'accord corrigé, règle P5 appliquée, livrables régénérés"}
 {"ts": "2026-11-14T01:36:50+00:00", "evenement": "reprise", "note": "Oscar demande un dépôt GitHub public avec les livrables, le code et la méthode détaillée, sans geste à la main"}
 {"ts": "2026-11-14T01:56:05+00:00", "evenement": "fin", "note": "Dépôt public publié par prepa-rdv depot et vérifié sans compte : https://github.com/FiExplorer11020/prepa-rdv"}
+{"ts": "2026-11-14T02:02:49+00:00", "evenement": "reprise", "note": "Oscar demande l'audit des 36 cellules par un agent spécialisé"}
+{"ts": "2026-11-14T02:26:00+00:00", "evenement": "pause", "note": "Coupure réseau, posée après coup : dernier appel réussi vers 02 h 25 UTC, auditeur du lot 4 arrêté par ENOTFOUND, connexion revenue à 02 h 50 UTC. Rien n'a pu être fait pendant l'intervalle"}
+{"ts": "2026-11-14T02:50:00+00:00", "evenement": "reprise", "note": "Connexion revenue : auditeur du lot 4 relancé"}
+{"ts": "2026-11-14T02:59:34+00:00", "evenement": "fin", "note": "Audit par agents fait : premier tirage, cellules corrigées rejugées, second tirage ; textes et livrables à régénérer, dépôt à republier"}

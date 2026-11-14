@@ -1,0 +1,80 @@
+{
+ "lot": 4,
+ "tirage": "relance",
+ "modele": "Opus 5.5",
+ "cellules": [
+  {
+   "id": "lvmh-achats-6",
+   "societe": "LVMH",
+   "champ": "Plateforme d'achats",
+   "valeur": "Aprovall : plateforme KYS (Know Your Supplier) de collecte, de partage et d'exploitation des données fournisseurs, utilisée par les équipes achats, juridique et contrôle interne de Moët Hennessy, présentée par la page comme la division Vins et Spiritueux du groupe LVMH. Aucune plateforme de la liste (SAP Ariba, Coupa, Jaggaer, Ivalua, Basware, GEP, Zycus) n'a été trouvée pour LVMH. (entité nommée : Moët Hennessy)",
+   "citation": "partnership with Aprovall led to the creation of the KYS – Know Your Supplier platform",
+   "url": "https://www.aprovall.com/?p=5410"
+  },
+  {
+   "id": "servier-signal-12",
+   "societe": "Servier",
+   "champ": "Signal récent",
+   "valeur": "Acquisition d'Edgewise (1,55 Md$ à la signature) finalisée le 13 juillet",
+   "citation": "The transaction, completed July 13, was intended to accelerate Servier's expansion into rare neurological diseases.",
+   "url": "https://european-biotechnology.com/latest-news/serviers-1-55b-edgewise-acquisition-backfires-after-phase-3-setback/"
+  },
+  {
+   "id": "deutsche-telekom-erp-6",
+   "societe": "Deutsche Telekom",
+   "champ": "ERP",
+   "valeur": "SAP S/4HANA (entité nommée : Deutsche Telekom IT) (migration prévue ou en cours, d'après la page)",
+   "citation": "The roadmap includes migrating SAP applications and transitioning to S/4HANA by 2025, with full migration planned by 2030.",
+   "url": "https://www.t-systems.com/gb/en/success-stories/cloud-and-infrastructure/deutsche-telekom-it-moves-to-rise-with-sap"
+  },
+  {
+   "id": "fresenius-achats-9",
+   "societe": "Fresenius",
+   "champ": "Plateforme d'achats",
+   "valeur": "SAP Ariba (entité nommée : Fresenius Kabi)",
+   "citation": "Fresenius Kabi has engaged with SAP Ariba to standardise the onboarding of suppliers.",
+   "url": "https://fresenius-kabi.com/sap-ariba"
+  },
+  {
+   "id": "saint-gobain-erp-4",
+   "societe": "Saint-Gobain",
+   "champ": "ERP",
+   "valeur": "SAP S/4HANA (migration prévue ou en cours, d'après la page)",
+   "citation": "The outdated, disjointed IT architecture was also blocking their 'OneSG' strategy and a planned migration to SAP S/4HANA.",
+   "url": "https://www.casestudies.com/company/mulesoft/case-study/saint-gobain-deploys-90-workflows-in-6-months-with-mulesoft"
+  },
+  {
+   "id": "saint-gobain-financement-13",
+   "societe": "Saint-Gobain",
+   "champ": "Financements court terme",
+   "valeur": "Affacturage inversé (supply chain finance) (entité nommée : Saint-Gobain China)",
+   "citation": "HSBC China provides Saint-Gobain's suppliers in mainland China with a tier-price financing solution",
+   "url": "https://www.saint-gobain.com.cn/en/node/20560"
+  },
+  {
+   "id": "lvmh-erp-3",
+   "societe": "LVMH",
+   "champ": "ERP",
+   "valeur": "SAP S/4HANA (entité nommée : LVMH Perfumes & Cosmetics)",
+   "citation": "support key phases of our SAP S/4HANA Public Cloud Edition (PCE)",
+   "url": "https://www.lvmh.com/join-us/our-job-offers/SSCPC02560"
+  },
+  {
+   "id": "vattenfall-erp-4",
+   "societe": "Vattenfall",
+   "champ": "ERP",
+   "valeur": "SAP S/4HANA (migration prévue ou en cours, d'après la page)",
+   "citation": "Vattenfall gets ready for SAP S/4HANA",
+   "url": "https://www.natuvion.com/success-stories/vattenfall-erp-consolidation/"
+  },
+  {
+   "id": "ssab-erp-7",
+   "societe": "SSAB",
+   "champ": "ERP",
+   "valeur": "SAP S/4HANA (entité nommée : Tibnor)",
+   "citation": "Tibnor använder S/4HANA som den primära källan för sina affärsdata.",
+   "url": "https://news.sap.com/sweden/2025/04/varldspremiar-hos-tibnor-forst-ut-med-saps-nya-molnplattform/"
+  }
+ ],
+ "sortie": "<racine>/sorties/audit/sortie-4.json"
+}

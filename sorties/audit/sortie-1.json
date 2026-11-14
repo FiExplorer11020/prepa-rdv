@@ -1,0 +1,112 @@
+{
+  "jugements": [
+    {
+      "id": "deutsche-telekom-financement-12",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "La note 43 du rapport annuel 2025 dit que Deutsche Telekom est partie à des contrats d'affacturage cédant ses créances clients de façon renouvelable.",
+      "passage": "Deutsche Telekom is party to factoring agreements under which trade receivables from consumers"
+    },
+    {
+      "id": "lvmh-achats-6",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "partiel",
+      "ecart": "filiale ou division",
+      "raison": "La page présente Moët Hennessy, division Vins et Spiritueux de LVMH, comme cliente d'Aprovall pour la plateforme KYS, sans établir d'usage par le groupe.",
+      "passage": "Moët Hennessy, the “Wines & Spirits” division of the LVMH Group, optimizes its supplier journey"
+    },
+    {
+      "id": "ssab-signal-17",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "Le rapport du troisième trimestre 2026, publié le 28 octobre, dit que Moody's a noté SSAB pour la première fois, en Baa2 investment grade.",
+      "passage": "During the third quarter, Moody’s assigned a credit rating to SSAB for the first time."
+    },
+    {
+      "id": "voestalpine-financement-9",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "Le rapport annuel 2025/26 dit que le groupe cède chaque mois ses créances clients à des banques, avec un recours limité ou nul et une décomptabilisation complète.",
+      "passage": "In the voestalpine Group, trade receivables are sold monthly to various banks"
+    },
+    {
+      "id": "servier-signal-12",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "partiel",
+      "ecart": "précision non soutenue",
+      "raison": "La page rapporte le rachat, finalisé le 13 juillet, de l'activité dystrophie musculaire d'Edgewise et non de la société, pour 1,55 Md$ versés d'emblée, sans parler de signature.",
+      "passage": "after completing its $1.55 billion upfront acquisition of Edgewise Therapeutics' muscular dystrophy business"
+    },
+    {
+      "id": "verallia-achats-5",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "L'étude de cas publiée au nom d'Ivalua nomme Verallia Group comme cliente d'une plateforme achats unifiée, livrée et ouverte à 2 000 utilisateurs.",
+      "passage": "Verallia Group achieves 360° supplier visibility and 80% supplier base reduction with Ivalua"
+    },
+    {
+      "id": "deutsche-telekom-erp-6",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "partiel",
+      "ecart": "filiale ou division",
+      "raison": "La page parle de Deutsche Telekom IT et de son paysage ERP, migré vers RISE with SAP avec S/4HANA prévu d'ici 2025, non du groupe.",
+      "passage": "Deutsche Telekom IT, in collaboration with T-Systems, embarked on its RISE with SAP journey"
+    },
+    {
+      "id": "fresenius-achats-9",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "partiel",
+      "ecart": "filiale ou division",
+      "raison": "La page établit l'usage de SAP Ariba par Fresenius Kabi, pour l'enregistrement des fournisseurs et les appels d'offres, pas par le groupe Fresenius.",
+      "passage": "Fresenius Kabi has engaged with SAP Ariba to standardise the onboarding of suppliers."
+    },
+    {
+      "id": "servier-direction_financiere-2",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "La page du comité exécutif de Servier présente Pascal Lemaire comme Executive Vice President Finance, seul titre financier de la liste.",
+      "passage": "Pascal Lemaire Executive Vice President Finance"
+    },
+    {
+      "id": "servier-financement-10",
+      "page_ouverte": false,
+      "citation_presente": null,
+      "verdict": "invérifiable",
+      "ecart": null,
+      "raison": "Le site renvoie une erreur 403 à chaque tentative, le contenu de la page n'a pas pu être lu.",
+      "passage": null
+    },
+    {
+      "id": "saint-gobain-erp-4",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "faux",
+      "ecart": "projet ou évaluation",
+      "raison": "La page mentionne seulement une migration vers SAP S/4HANA prévue et bloquée par l'ancienne architecture informatique, sans dire qu'elle a commencé ni abouti.",
+      "passage": "was also blocking their 'OneSG' strategy and a planned migration to SAP S/4HANA"
+    },
+    {
+      "id": "nokia-signal-18",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "Le communiqué du 30 juin 2026 annonce l'accord pluriannuel et la migration du paysage SAP vers RISE with SAP sur Azure, l'environnement S/4HANA couvrant finance et logistique.",
+      "passage": "marks a significant step in migrating Nokia’s SAP landscape to the RISE with SAP journey"
+    }
+  ]
+}

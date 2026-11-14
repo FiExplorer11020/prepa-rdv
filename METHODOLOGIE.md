@@ -132,8 +132,8 @@ valeur. La trouvaille entre alors, au plus « probable », puisque le code n'a p
 - Une fiche JSON par société (`fiche.json`), avec chaque trouvaille, chaque contrôle et sa provenance.
 - Un brief d'une page par société : HTML, puis PDF par Chrome sans affichage. La taille du texte diminue jusqu'à ce que
   chaque brief tienne sur une page, et le code vérifie que chaque nombre du brief figure dans la fiche.
-- `cartographie.xlsx` : une ligne par société, et une feuille « Audit » de 36 cellules tirées au sort (graine fixe), à
-  marquer juste ou faux par une personne.
+- `cartographie.xlsx` : une ligne par société, et une feuille « Audit » de 36 cellules tirées au sort (graine fixe),
+  jugées par un agent auditeur (section 10, D20).
 - `trouvailles.xlsx` : toutes les trouvailles, retenues ou rejetées, avec les résultats de chaque contrôle.
 - Les journaux (section 11) et les deux textes, « Ton outil » et « Et à 200 sociétés ? », écrits par le code depuis les
   journaux (`textes.py`).
@@ -173,10 +173,12 @@ l'outil passe par Claude Code (D12, D13) :
 - **par `claude -p`** sur l'abonnement (`--acces claude-cli`), pour une démonstration sur une société nouvelle.
 
 Les agents de recherche et de seconde lecture ont tourné sur Sonnet 5.5. La seconde lecture de Barilla, arrêtée une
-première fois par un garde-fou de l'API, a été relancée sur Opus 5.5.
+première fois par un garde-fou de l'API, a été relancée sur Opus 5.5. Les agents auditeurs ont tourné sur Opus 5.5, un
+autre modèle que celui des cellules qu'ils jugent (D20) : `prepa-rdv demander-audit` écrit une demande par lot,
+`prepa-rdv recevoir-audit` valide les verdicts.
 
 Chaque jeton du projet est compté : les appels de l'outil dans un registre en ajout seul, les sessions de
-développement dans leurs transcriptions (`jetons_dev.py`), par phase (planification, construction, sonde, run) et par
+développement dans leurs transcriptions (`jetons_dev.py`), par phase (planification, construction, sonde, run, audit) et par
 modèle. Le coût en dollars est une estimation au tarif de liste de chaque modèle, car l'accès passe par un abonnement.
 Les totaux sont dans [« Ton outil »](sorties/livrables/ton-outil.md), section « Jetons de tout le projet ».
 
@@ -225,6 +227,8 @@ Elles viennent du plan de travail, qui n'est pas publié. Chaque décision est d
 | D17 | Les rôles des dirigeants se lisent dans la valeur et, à défaut, dans la citation. Une contradiction ne vaut qu'entre deux directeurs financiers. | Un trésorier et un directeur financier ne se contredisent pas : les afficher en contradiction aurait trompé le lecteur du brief. |
 | D18 | Les deux lectures s'accordent quand le plus court des deux textes figure dans l'autre à 0,95, sur au moins six mots qui nomment la valeur. Le niveau reste plafonné à « probable ». | Le premier test ne cherchait que dans un sens et manquait l'accord par construction (section 7). |
 | D19 | Une base de données commerciale (P5) ne fait pas seule un champ du brief. L'identité n'est pas concernée. | La règle était écrite au cahier des charges et le code ne l'appliquait pas. Deux trouvailles concernées, toutes deux chez Barilla. |
+| D20 | Les 36 cellules de l'audit sont jugées par des sous-agents auditeurs d'un autre modèle que les agents de recherche (Opus 5.5), en trois lots de douze. L'auditeur reçoit ce qu'une personne voit dans la feuille (société, champ, valeur, citation, lien), sans le niveau ni les contrôles du code. Quatre verdicts : juste, partiel, faux, invérifiable ; pour partiel et faux, un écart pris dans une liste fermée. Le code refuse une réponse qui oublie une cellule, en juge une deux fois ou se contredit. | Le cas veut un outil qui fait le travail, sans geste à la main. Un modèle qui en juge un autre ne vaut pas une personne : les livrables le disent, et les verdicts partiels et faux sont les premiers à relire. |
+| D21 | Deux règles d'affichage, après l'audit (`affichage.py`). La cellule dit l'entité que la page nomme quand ce n'est pas la société (filiale, division, pays). Pour un ERP, une plateforme d'achats ou un TMS, elle dit « migration prévue ou en cours » quand le commentaire du modèle le dit. Les deux règles valent au brief, à la cartographie et à l'audit. Les cellules en écart sont rejugées telles qu'elles s'affichent, et un second tirage de 12 cellules nouvelles (graine 2027) mesure la porte G4. | Sur les 9 écarts du premier tirage, 8 tenaient à l'affichage. Le modèle avait noté l'entité et le projet, et la cellule les taisait. Corriger la règle plutôt que la cellule garde l'outil sans geste à la main. Le niveau reste le même, la preuve aussi. Mesuré ensuite : la règle du projet rend justes les 2 cellules fausses, celle de l'entité ne change aucun des 6 verdicts « filiale ou division ». |
 
 ## 9. Ce que les journaux mesurent
 
@@ -243,13 +247,21 @@ D'après `sorties/journal/bilan-final.json` et [« Ton outil »](sorties/livrabl
 | Type de source corrigé par le code | 59 sur 185 |
 | Temps d'agent par société | 16,4 minutes en moyenne |
 | Jetons par société | 5,7 millions traités en moyenne, 2,39 $ estimés |
+| Audit, premier tirage | 36 cellules (graine 2026), jugées par des auditeurs Opus 5.5 : 24 justes sur 33 vérifiables (73 %), 7 partielles, 2 fausses, 3 invérifiables |
+| Audit, cellules rejugées | Les 9 cellules en écart, rejugées telles qu'elles s'affichent après D21 : 2 justes (les deux « projet ou évaluation »), 7 partielles. Premier tirage corrigé : 26 sur 33 vérifiables (79 %) |
+| Audit, second tirage | 12 cellules neuves (graine 2027), après les règles d'affichage (D21) : 9 justes sur 9 vérifiables, 3 invérifiables |
 
 Le temps de construction, mesuré par l'horloge, et les jetons de tout le projet sont dans « Ton outil ».
 
 ## 10. Ce que l'outil ne voit pas
 
 - **L'extrapolation.** Une citation exacte peut ne pas dire ce que le modèle en conclut. Aucun contrôle du code ne le
-  voit. La feuille « Audit » de la cartographie sert à cela : 36 cellules tirées au sort, à relire par une personne.
+  voit. Des auditeurs d'un autre modèle la cherchent sur un échantillon tiré au sort (D20). Au premier tirage, 9 cellules
+  sur 33 vérifiables étaient partielles ou fausses. La règle du projet (D21) rend justes les 2 fausses. Les 6 cellules
+  d'une filiale restent partielles pour l'auditeur, même avec l'entité affichée : une page sur une filiale ne dit pas
+  le système du groupe, et c'est une question de périmètre que le code ne tranche pas.
+  Ce sont des modèles qui en jugent un autre : leurs verdicts partiels, faux et invérifiables restent à relire par une
+  personne, dans la feuille « Audit » de la cartographie.
 - **L'absence.** « Non trouvé » veut dire que le plan de requêtes n'a rien donné de vérifiable. Ce n'est pas la preuve
   que la société n'a pas le produit.
 - **Les pages fermées.** Sur un site qui refuse la lecture au code, la trouvaille dépend de la seconde lecture, qui ne
@@ -282,12 +294,14 @@ sorties/
   societes/<société>/      demande.md et demande.json (la demande à l'agent), agent-sortie.json (sa réponse brute),
                            agent.json, fiche.json (trouvailles vérifiées), brief.html, journal.jsonl (chaque étape),
                            relecture-demande.md et relecture-sortie.json (seconde lecture)
+  audit/                   demande-N.md et demande-N.json (un lot de cellules pour un auditeur), sortie-N.json (sa
+                           réponse brute), verdicts.json (les verdicts validés de tous les lots)
   journal/
     horloge.jsonl          début, pauses, reprises et fin de la construction
     decisions.md           les décisions et les relances, datées
     erreurs.jsonl          chaque erreur vue par un contrôle, sa cause, son changement, sa relance
     bilan-final.json       les mesures du lot des douze
-    agents-outil.jsonl     chaque agent de l'outil, rattaché à sa société
+    agents-outil.jsonl     chaque agent de l'outil, rattaché à sa société ou à l'audit
     jetons-dev.json        les jetons des sessions de développement
     bilan-*.json           les bilans intermédiaires : sonde, lot, avant la correction de l'accord
 ```

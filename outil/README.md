@@ -62,6 +62,24 @@ Pour une démo sur une société nouvelle : `uv run python -m prepa_rdv societe 
 Une relance ne refait que ce qui a changé : l'identité, la sortie du modèle et les pages lues sont gardées au cache.
 `--forcer` les ignore. `--sans-contacts` retire le bloc contacts des briefs.
 
+## Audit par un agent
+
+```bash
+uv run python -m prepa_rdv demander-audit             # 36 cellules tirées au sort, trois demandes de douze
+uv run python -m prepa_rdv recevoir-audit 1 --agent-id <id>   # verdicts du lot 1 validés, agent compté en phase audit
+uv run python -m prepa_rdv demander-audit --second    # cellules en écart rejugées telles qu'elles s'affichent, 12 cellules neuves
+uv run python -m prepa_rdv livrables --ordre societes.csv     # la feuille « Audit » reprend les verdicts
+```
+
+Entre les deux commandes, la session lance un sous-agent auditeur par lot, d'un autre modèle que les agents de recherche.
+Il lit `sorties/audit/demande-N.md`, ouvre chaque lien et écrit `sortie-N.json` : juste, partiel, faux ou invérifiable,
+avec l'écart, une raison et le passage de la page. Il ne voit ni le niveau ni les contrôles du code. `recevoir-audit`
+refuse une réponse qui oublie une cellule, en juge une deux fois ou se contredit.
+
+Après un premier audit, `--second` écrit deux lots de plus : les cellules partielles ou fausses, rejugées telles que les
+règles d'affichage les montrent (`affichage.py`), et 12 cellules jamais tirées (graine 2027), qui mesurent la porte G4.
+La feuille « Audit » ajoute le verdict après correction, et la feuille « Audit, second tirage » le second échantillon.
+
 ## Copie publique
 
 ```bash

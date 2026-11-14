@@ -18,7 +18,7 @@ from urllib.parse import urlparse
 
 from pypdf import PdfReader
 
-from . import contacts
+from . import affichage, contacts
 from .listes import nom_court, norm, personne_courte
 from .schema import CHAMPS_BRIEF, LIBELLES_CHAMP, Champ, Niveau
 
@@ -136,9 +136,7 @@ def composer(fiche: dict, contact: str | None = None) -> dict[str, Any]:
         for v in s["valeurs"][:2 if champ == Champ.DIRECTION_FINANCIERE else 3]:
             t = par_id.get(v["ids"][0]) if v["ids"] else None
             ref = f" [{numero[t['url']]}]" if t and t["url"] in numero else ""
-            marques = ""
-            if t and t["verifs"].get("entite") == "filiale":
-                marques += f" (entité nommée : {t['entite_nommee']})"
+            marques = affichage.marques(t, fiche["entite"])
             if t and t["verifs"].get("mode_verification") == "seconde_lecture":
                 marques += " (seconde lecture)"
             if champ == Champ.SIGNAL and t and _annee(t) != "date non lue" and _annee(t) not in _valeur_affichee(v, champ):

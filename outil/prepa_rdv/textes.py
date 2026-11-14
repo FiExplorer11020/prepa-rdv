@@ -60,6 +60,115 @@ def _relances(fiches: list[dict]) -> tuple[str, int, int]:
     return "".join(phrases), relues, accords
 
 
+def _pl(n: int, singulier: str, pluriel: str) -> str:
+    """Le nombre et son nom, au singulier pour zéro et un."""
+    return f"{n} {singulier if n <= 1 else pluriel}"
+
+
+def _champ(c: str) -> str:
+    """Le nom du champ en milieu de phrase : « ERP » et « TMS » gardent leurs capitales."""
+    return c if c.isupper() else c[:1].lower() + c[1:]
+
+
+def _audit(fiches: list[dict]) -> str:
+    """Les lignes de l'audit : les verdicts de l'agent auditeur s'il les a rendus, l'échantillon à relire sinon."""
+    from . import audit
+    from .jetons import dossier_sorties
+    v = audit.verdicts(dossier_sorties())
+    if not v:
+        return ("- Audit : la feuille « Audit » de `cartographie.xlsx` liste 36 cellules tirées au sort (graine fixe), à marquer juste ou "
+                "faux par une personne.\n- Ce que le code ne voit pas : une citation exacte qui ne dit pas ce que le modèle en conclut "
+                "(extrapolation). L'audit d'un échantillon tiré au sort, relu par une personne, sert à cela.")
+    r = audit.resume(v.values())
+    ecarts = [j for j in v.values() if j["verdict"] in ("partiel", "faux")]
+    ecarts_txt = ("Écarts relevés : " + " ; ".join(f"{j['societe']}, {_champ(j['champ'])} ({j['verdict']}, {j['ecart']})" for j in ecarts)
+                  + ". ") if ecarts else "Aucun écart relevé. "
+    lues = {t["id"]: t for f in fiches for t in f["trouvailles"]}
+    absentes = [i for i, j in v.items() if j["citation_presente"] is False]
+    vues_par_code = sum(1 for i in absentes if (lues.get(i) or {}).get("verifs", {}).get("citation_trouvee"))
+    absentes_txt = (f" Sur {_pl(len(absentes), 'page', 'pages')}, l'auditeur dit ne pas retrouver la citation ; le code l'avait retrouvée "
+                    f"mot pour mot sur {vues_par_code}, dans le texte qu'il a lu." if absentes else "")
+    part = 100 * r["juste"] / max(1, r["verifiables"])
+    n_lots = len({j.get("lot") for j in v.values()})
+    qui = (f"{_pl(n_lots, 'sous-agent auditeur', 'sous-agents auditeurs')}, un par lot,") if n_lots > 1 else "un sous-agent auditeur"
+    return (f"- Audit : {r['cellules']} cellules de la cartographie, tirées au sort avec une graine fixe, ont été jugées par {qui} "
+            f"d'un autre modèle que les agents de recherche ({audit.MODELE_AUDITEUR}). L'auditeur ouvre chaque lien et dit si la page "
+            f"soutient la valeur, sans connaître le niveau donné par l'outil. Verdicts : {_pl(r['juste'], 'juste', 'justes')}, "
+            f"{_pl(r['partiel'], 'partielle', 'partielles')}, {_pl(r['faux'], 'fausse', 'fausses')}, "
+            f"{_pl(r['invérifiable'], 'invérifiable', 'invérifiables')}. Sur les {r['verifiables']} cellules vérifiables, {r['juste']} "
+            f"{'est juste' if r['juste'] <= 1 else 'sont justes'} ({_n(part)} %). {ecarts_txt}Le détail, cellule par cellule, est dans la feuille « Audit » de `cartographie.xlsx`."
+            f"{absentes_txt}{_apres_audit(v, ecarts)}\n- Ce que le code ne voit pas : une citation exacte qui ne dit pas ce que l'outil en conclut. L'auditeur la "
+            "cherche, mais c'est un modèle qui en juge un autre : ses verdicts partiels et faux sont les premiers à relire par une personne.")
+
+
+SEUIL_G4 = 90
+
+
+def _verdicts_txt(r: dict) -> str:
+    return (f"{_pl(r['juste'], 'juste', 'justes')}, {_pl(r['partiel'], 'partielle', 'partielles')}, {_pl(r['faux'], 'fausse', 'fausses')}, "
+            f"{_pl(r['invérifiable'], 'invérifiable', 'invérifiables')}")
+
+
+def _part(r: dict) -> str:
+    return f"{r['juste']} sur {r['verifiables']} vérifiables ({_n(100 * r['juste'] / max(1, r['verifiables']))} %)"
+
+
+def _apres_audit(premier: dict[str, dict], ecarts: list[dict]) -> str:
+    """Ce qui a suivi le premier audit : règles d'affichage (D21), cellules rejugées, second tirage, porte G4."""
+    from . import audit
+    from .jetons import dossier_sorties
+    relance, second = audit.verdicts(dossier_sorties(), "relance"), audit.verdicts(dossier_sorties(), "second")
+    if not (relance or second):
+        return ""
+    par_ecart: dict[str, int] = {}
+    for j in ecarts:
+        par_ecart[j["ecart"]] = par_ecart.get(j["ecart"], 0) + 1
+    regles = {"filiale ou division", "projet ou évaluation"}
+    n_regles = sum(n for e, n in par_ecart.items() if e in regles)
+    txt = (f"\n- Après l'audit : {n_regles} des {len(ecarts)} écarts venaient de deux oublis d'affichage, notés par l'auditeur « filiale ou "
+           f"division » ({par_ecart.get('filiale ou division', 0)}) et « projet ou évaluation » ({par_ecart.get('projet ou évaluation', 0)}). "
+           "Le modèle avait relevé l'entité que la page nomme et, dans son commentaire, que la migration était prévue ; la cellule ne "
+           "gardait que le produit. Deux règles l'écrivent désormais dans la cellule, au brief, à la cartographie et à l'audit (D21) : "
+           "l'entité nommée quand ce n'est pas la société, et « migration prévue ou en cours » pour un ERP, une plateforme d'achats ou "
+           "un TMS. Les niveaux ne changent pas.")
+    corrige = None
+    if relance:
+        rr = audit.resume(relance.values())
+        corrige = audit.resume({**premier, **relance}.values())
+        par_cat: dict[str, list[int]] = {}
+        for i, j in relance.items():
+            c = par_cat.setdefault((premier.get(i) or {}).get("ecart") or "", [0, 0])
+            c[0], c[1] = c[0] + (j["verdict"] == "juste"), c[1] + 1
+        txt += f" Un nouvel auditeur a rejugé les {rr['cellules']} cellules telles qu'elles s'affichent : {_verdicts_txt(rr)}."
+        ok, n = par_cat.get("projet ou évaluation", [0, 0])
+        if n:
+            txt += (f" Avec la règle du projet, {ok} sur {_pl(n, 'cellule', 'cellules')} « projet ou évaluation » "
+                    f"{'devient juste' if ok <= 1 else 'deviennent justes'}.")
+        ok, n = par_cat.get("filiale ou division", [0, 0])
+        if n and not ok:
+            txt += (f" Avec celle de l'entité, aucun des {n} verdicts « filiale ou division » ne change, l'auditeur jugeant toujours "
+                    "qu'une page sur une filiale ne dit pas le système du groupe.")
+        elif n:
+            txt += f" Avec celle de l'entité, {ok} sur {_pl(n, 'cellule', 'cellules')} « filiale ou division » {'devient juste' if ok <= 1 else 'deviennent justes'}."
+        txt += f" Le premier tirage passe ainsi à {_part(corrige)}."
+    if second:
+        rs = audit.resume(second.values())
+        txt += (f" Un second tirage de {rs['cellules']} cellules nouvelles (graine {audit.GRAINE_SECONDE}), que les règles n'avaient pas "
+                f"vues, donne {_verdicts_txt(rs)}, soit {_part(rs)}.")
+        p2 = 100 * rs["juste"] / max(1, rs["verifiables"])
+        p1 = 100 * corrige["juste"] / max(1, corrige["verifiables"]) if corrige else None
+        if p2 >= SEUIL_G4 and p1 is not None and p1 < SEUIL_G4:
+            txt += f" La porte G4, fixée à {SEUIL_G4} %, passe sur le second tirage et pas sur le premier tirage corrigé."
+        elif p2 >= SEUIL_G4:
+            txt += f" La porte G4, fixée à {SEUIL_G4} %, est passée."
+        else:
+            txt += f" La porte G4, fixée à {SEUIL_G4} %, n'est pas passée."
+        if 0 < rs["verifiables"] < 30:
+            txt += (f" L'échantillon reste petit, et une seule de ces cellules jugée fausse l'aurait mis à "
+                    f"{_n(100 * (rs['juste'] - 1) / rs['verifiables'])} %.")
+    return txt
+
+
 def table(entetes: list[str], lignes: list[list[Any]]) -> str:
     sortie = ["| " + " | ".join(entetes) + " |", "|" + "|".join("---" for _ in entetes) + "|"]
     sortie += ["| " + " | ".join(str(c) for c in l) + " |" for l in lignes]
@@ -127,6 +236,7 @@ def ton_outil(fiches: list[dict], erreurs: list[dict], rapport_jetons: str, lien
     seules_p5 = sum(1 for f in fiches for x in f["trouvailles"] if x["niveau"] != "non trouvé" and x["champ"] != "identite"
                     and x["verifs"].get("type_source_code") == "P5"
                     and not any(i == x["id"] for v in (f["synthese"].get(x["champ"]) or {}).get("valeurs", []) for i in v.get("ids", [])))
+    audit_txt = _audit(fiches)
     return f"""# Ton outil : comment il fonctionne et où il s'est trompé
 
 ## En bref
@@ -186,8 +296,7 @@ Le journal complet est dans `sorties/journal/erreurs.jsonl`. Une erreur sans cha
 - Une erreur du contrôle lui-même : le code cherchait la citation du premier agent (25 mots au plus) dans le passage du second (15 mots au plus). Le test échouait dès que la citation était la plus longue des deux, et il a rejeté à tort des lectures concordantes. Il cherche désormais le plus court des deux textes dans l'autre. Sur les {ACCORD_AVANT[1]} lignes relues avant la relance, l'accord passe de {ACCORD_AVANT[0]} à {accords_memes_lignes}.
 - Citations que le code a réparées en gardant un passage de la page : {t['reparees']}. Pages relues rendues par JavaScript : {t['lues_rendues']}.
 - Une page de base de données commerciale (type P5) ne sert que de second avis : une valeur qu'elle seule nomme reste dans le tableur des trouvailles, pas dans le brief. Trouvailles concernées sur ce lot : {seules_p5}.
-- Audit : la feuille « Audit » de `cartographie.xlsx` liste 36 cellules tirées au sort (graine fixe), à marquer juste ou faux par une personne.
-- Ce que le code ne voit pas : une citation exacte qui ne dit pas ce que le modèle en conclut (extrapolation). L'audit d'un échantillon tiré au sort, relu par une personne, sert à cela.
+{audit_txt}
 
 ## Jetons de tout le projet
 
@@ -197,7 +306,32 @@ Le tableau par société compte aussi les secondes lectures, d'où des totaux pl
 """
 
 
-def a_200(fiches: list[dict]) -> str:
+def _audit_200(cout: float | None) -> str:
+    """Ce que l'audit a mesuré ici, pour l'étendre à 200 sociétés : verdicts et coût par cellule."""
+    from . import audit
+    from .jetons import dossier_sorties
+    v = audit.verdicts(dossier_sorties())
+    if not v:
+        return ""
+    r = audit.resume(v.values())
+    n = sum(len(audit.verdicts(dossier_sorties(), t)) for t in audit.TIRAGES)
+    cout_txt = f", {_n(cout / n, 2)} $ estimés par cellule" if cout else ""
+    second, relance = audit.verdicts(dossier_sorties(), "second"), audit.verdicts(dossier_sorties(), "relance")
+    if second:
+        rs = audit.resume(second.values())
+        apres = f", {audit.resume({**v, **relance}.values())['juste']} après deux règles d'affichage" if relance else ""
+        return (f" Mesuré ici : {r['juste']} justes sur {r['verifiables']} vérifiables au premier tirage{apres}, {rs['juste']} sur "
+                f"{rs['verifiables']} au second{cout_txt}.")
+    return f" Mesuré ici : {r['juste']} justes sur {r['verifiables']} vérifiables{cout_txt}."
+
+
+def cout_phase(lignes: list[dict], phase: str) -> float | None:
+    """Coût estimé des appels d'une phase de l'outil, d'après les lignes du rapport des jetons."""
+    xs = [l for l in lignes if l.get("portee", "cas") == "cas" and l.get("source") == "outil" and l.get("phase") == phase]
+    return round(sum(l.get("cout_estime_usd") or 0 for l in xs), 2) if xs else None
+
+
+def a_200(fiches: list[dict], cout_audit: float | None = None) -> str:
     b = bilan_mod.bilan_lot(fiches)
     j = [f.get("jetons") or {} for f in fiches]
     traites = [x.get("traites", 0) for x in j if x.get("traites")]
@@ -214,6 +348,7 @@ def a_200(fiches: list[dict]) -> str:
     taux_relues = t["relues_confirmees"] / max(1, t["relues"])
     heures_relecture = 200 * 10 / 60
     incompletes = sum(1 for e in {(x["id_trouvaille"], x["ecrit"]): x for x in erreurs_mod.lire()}.values() if e["cause"] == "page lue incomplète")
+    audit_200 = _audit_200(cout_audit)
     return f"""# Et à 200 sociétés ? Ce qui casse, et ce que je changerais
 
 ## Coût et temps, d'après les {len(fiches)} sociétés mesurées
@@ -243,12 +378,12 @@ def a_200(fiches: list[dict]) -> str:
 ## Contrôle qualité
 
 - Sur le lot mesuré, {_n(taux_rejet * 100)} % des trouvailles proposées par le modèle sont rejetées par les contrôles du code. À 200, ce taux se suit par modèle et par version de consigne.
-- Jeu des {len(fiches)} sociétés relues à la main, rejoué à chaque changement de modèle ou de consigne. Une régression se voit au niveau de chaque cellule.
-- Audit d'un échantillon tiré au sort avec une graine fixe, relu par une personne, pour la seule erreur que le code ne voit pas : la citation exacte dont la conclusion est fausse.
+- Relu par une personne, le jeu des {len(fiches)} sociétés se rejoue à chaque changement de modèle ou de consigne.
+- Audit d'un échantillon tiré au sort par un auditeur d'un autre modèle, pour la citation exacte dont la conclusion est fausse ; une personne relit ses écarts.{audit_200}
 
 ## Mise à jour des fiches
 
-Chaque fiche porte la date de lecture, l'empreinte de chaque page et la version du prompt. Une relance ne refait que les champs dont la page a changé. Une fiche plus vieille que la fenêtre de son type de preuve perd son niveau « confirmé ».
+Chaque fiche porte la date de lecture, l'empreinte de chaque page et la version du prompt. Une relance ne refait que les champs dont la page a changé ; une preuve hors de sa fenêtre redescend à « probable ».
 
 ## Où brancher le résultat, et précautions
 
@@ -311,8 +446,9 @@ def ecrire(sorties: Path, fiches: list[dict], transcriptions: Path | None, lien_
     dossier = sorties / "livrables"
     dossier.mkdir(parents=True, exist_ok=True)
     erreurs = erreurs_mod.lire()
-    rapport_jetons = rapport.formater(rapport.lignes_projet(transcriptions))
-    sources = {"ton-outil": ton_outil(fiches, erreurs, rapport_jetons, lien_outil), "a-200-societes": a_200(fiches)}
+    lignes = rapport.lignes_projet(transcriptions)
+    rapport_jetons = rapport.formater(lignes)
+    sources = {"ton-outil": ton_outil(fiches, erreurs, rapport_jetons, lien_outil), "a-200-societes": a_200(fiches, cout_phase(lignes, "audit"))}
     chemins = []
     for nom, md in sources.items():
         p = dossier / f"{nom}.md"

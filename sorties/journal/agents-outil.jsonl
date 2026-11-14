@@ -17,3 +17,8 @@
 {"ts": "2026-11-13T23:17:33+00:00", "agent_id": "ab27d5f2195bc0203", "societe": "SSAB", "phase": "run", "role": "relecture"}
 {"ts": "2026-11-13T23:18:15+00:00", "agent_id": "a6ef120d5c56a687f", "societe": "Fresenius", "phase": "run", "role": "relecture"}
 {"ts": "2026-11-14T00:48:59+00:00", "agent_id": "adf828636e96267cc", "societe": "Barilla", "phase": "run", "role": "relecture"}
+{"ts": "2026-11-14T02:13:42+00:00", "agent_id": "a96c339c791497607", "societe": "", "phase": "audit", "role": "audit, lot 2"}
+{"ts": "2026-11-14T02:13:48+00:00", "agent_id": "a1e298a8f214cb05a", "societe": "", "phase": "audit", "role": "audit, lot 3"}
+{"ts": "2026-11-14T02:15:56+00:00", "agent_id": "ad2b8dc04d6ff6ef9", "societe": "", "phase": "audit", "role": "audit, lot 1"}
+{"ts": "2026-11-14T02:24:31+00:00", "agent_id": "a1a54d47c107f19d4", "societe": "", "phase": "audit", "role": "audit, lot 5"}
+{"ts": "2026-11-14T02:58:04+00:00", "agent_id": "a6225766ae2f22868", "societe": "", "phase": "audit", "role": "audit, lot 4"}

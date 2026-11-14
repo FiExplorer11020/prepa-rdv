@@ -1,0 +1,112 @@
+{
+  "jugements": [
+    {
+      "id": "saint-gobain-financement-13",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "partiel",
+      "ecart": "filiale ou division",
+      "raison": "La page décrit un financement de la chaîne fournisseurs lancé par Saint-Gobain China avec HSBC China pour les seuls fournisseurs de Chine continentale, pas pour le groupe.",
+      "passage": "HSBC China provides Saint-Gobain's suppliers in mainland China with a tier-price financing solution"
+    },
+    {
+      "id": "vattenfall-tms-8",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "L'offre de Vattenfall AB, publiée en 2018, recrute le responsable du cycle de vie de la solution SAP Treasury centrale de Vattenfall, ce qui vaut usage.",
+      "passage": "release management for the central Vattenfall SAP Treasury solution"
+    },
+    {
+      "id": "vattenfall-direction_financiere-2",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "La page de la direction du groupe Vattenfall liste Kerstin Ahlfont parmi les membres de l'EGM, avec le titre de Chief Financial Officer, sans mention d'intérim.",
+      "passage": "Kerstin Ahlfont Chief Financial Officer"
+    },
+    {
+      "id": "ssab-achats-8",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "Étude de cas SAP Ariba nommant SSAB comme cliente, qui a déployé les solutions Ariba à l'échelle du groupe (sourcing, contrats, dépenses, achat à paiement).",
+      "passage": "SSAB achieves rapid global spend visibility and shifts to higher-value procurement with SAP Ariba"
+    },
+    {
+      "id": "saint-gobain-signal-14",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "L'article du 15 septembre 2026 annonce que Saint-Gobain nomme Annica Hagen Chief Artificial Intelligence Officer et membre du Comité exécutif du Groupe au 1er septembre 2026.",
+      "passage": "Saint-Gobain appoints Annica Hagen as Chief Artificial Intelligence Officer and accelerates AI deployment"
+    },
+    {
+      "id": "ssab-direction_financiere-2",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "Le communiqué SSAB du 28 octobre 2026 sur le rapport du troisième trimestre nomme Leena Craelius comme CFO, aux côtés du PDG Johnny Sjöström.",
+      "passage": "presented by SSAB’s President and CEO Johnny Sjöström, and CFO Leena Craelius"
+    },
+    {
+      "id": "fresenius-signal-17",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "Le rapport annuel 2025 indique qu'en 2025 Fresenius SE & Co. KGaA a placé des obligations pour 1 Md€ au total, en deux tranches.",
+      "passage": "successfully placed bonds with an aggregate volume of €1 billion across two tranches"
+    },
+    {
+      "id": "barilla-direction_financiere-3",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "L'article du 10 juillet 2025 rapporte que le groupe Barilla nomme Oddone Incisa directeur financier à compter du 15 septembre 2025.",
+      "passage": "Barilla Group announces the appointment of Oddone Incisa as new Chief Financial Officer"
+    },
+    {
+      "id": "verallia-direction_financiere-2",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "Le communiqué de Verallia du 5 janvier 2026 annonce la nomination de Cristina Riesgo comme Chief Financial Officer au 1er mars 2026, en remplacement de Nathalie Delbreuve.",
+      "passage": "announces the appointment of Cristina Riesgo as Chief Financial Officer, effective March 1st, 2026"
+    },
+    {
+      "id": "deutsche-telekom-direction_financiere-3",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "Le profil présente Christian P. Illek comme membre du directoire responsable des finances, portefeuille qu'il tient depuis le 1er janvier 2019, sans date de fin.",
+      "passage": "Member of the Board of Management responsible for Finance"
+    },
+    {
+      "id": "voestalpine-signal-15",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "Le communiqué du 11 mai 2026 annonce qu'Eva Aigner est la nouvelle CFO de la division Metal Engineering, membre de son directoire depuis le 1er avril 2026.",
+      "passage": "Eva Aigner is the new Chief Financial Officer of the Metal Engineering Division"
+    },
+    {
+      "id": "lvmh-erp-3",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "partiel",
+      "ecart": "filiale ou division",
+      "raison": "L'offre de LVMH Inc. pour les équipes nord-américaines de LVMH Beauty établit SAP S/4HANA Public Cloud dans cette division, pas à l'échelle du groupe LVMH.",
+      "passage": "LVMH Beauty invites you today to join its North America teams"
+    }
+  ]
+}

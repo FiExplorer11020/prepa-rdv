@@ -1,0 +1,112 @@
+{
+  "jugements": [
+    {
+      "id": "barilla-tms-9",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "Le communiqué de Kyriba de février 2022 dit que Barilla a choisi sa plateforme et l'adopte pour sa trésorerie, ses prévisions de cash et ses risques.",
+      "passage": "Barilla also selected Kyriba to increase cash visibility, improve cash forecasting"
+    },
+    {
+      "id": "ssab-financement-12",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "La page de SSAB décrit des programmes de billets de trésorerie suédois et finlandais pour les emprunts courts, le suédois plafonné à 5 000 millions de couronnes.",
+      "passage": "Swedish and Finnish commercial paper programs are used for borrowing for shorter terms."
+    },
+    {
+      "id": "barilla-signal-18",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "L'article du 10 juillet 2025 rapporte la nomination d'Oddone Incisa comme nouveau directeur financier du groupe Barilla, effective le 15 septembre 2025.",
+      "passage": "appointment of Oddone Incisa as new Chief Financial Officer, effective September 15, 2025"
+    },
+    {
+      "id": "barilla-financement-14",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "La page dit que Barilla gère plusieurs programmes de supply chain finance, que l'intégration de Kyriba doit regrouper dans une solution de Dynamic Discounting.",
+      "passage": "centralize Barilla’s multiple supply chain finance programs into a single Dynamic Discounting solution"
+    },
+    {
+      "id": "vattenfall-achats-7",
+      "page_ouverte": false,
+      "citation_presente": null,
+      "verdict": "invérifiable",
+      "ecart": null,
+      "raison": "Le PDF se télécharge mais WebFetch n'en tire aucun texte lisible, seulement des flux compressés, si bien que la citation n'a pu être vérifiée.",
+      "passage": null
+    },
+    {
+      "id": "nokia-direction_financiere-2",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "L'article du 29 janvier 2026 cite Marco Wirén comme directeur financier de Nokia et ne signale aucun départ.",
+      "passage": "Nokia CFO Marco Wirén said that the market is now relatively stable."
+    },
+    {
+      "id": "nokia-financement-15",
+      "page_ouverte": false,
+      "citation_presente": null,
+      "verdict": "invérifiable",
+      "ecart": null,
+      "raison": "Le site de Nokia renvoie une erreur HTTP 403 à chaque essai, la page n'a pas pu être lue.",
+      "passage": null
+    },
+    {
+      "id": "deutsche-telekom-tms-11",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "L'article de mars 2019 dit que Deutsche Telekom utilise TIP depuis des années et voulait l'étendre aux garanties du groupe ; l'encadré TIPCO le nomme Treasury Information Platform.",
+      "passage": "Deutsche Telekom has been using the treasury software TIP for many years"
+    },
+    {
+      "id": "vattenfall-financement-9",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "La page présente le programme European Commercial Paper de Vattenfall, 10 milliards d'euros, destiné à son financement à court terme.",
+      "passage": "For short-term funding, Vattenfall has a European Commercial Paper programme (EUR 10 billion)"
+    },
+    {
+      "id": "stadler-rail-signal-9",
+      "page_ouverte": false,
+      "citation_presente": null,
+      "verdict": "invérifiable",
+      "ecart": null,
+      "raison": "Le PDF se télécharge mais WebFetch n'y trouve que des images et des flux compressés, sans texte lisible, si bien que la citation n'a pu être vérifiée.",
+      "passage": null
+    },
+    {
+      "id": "nokia-erp-6",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "Le communiqué SAP du 30 juin 2026 dit que Nokia regroupe ses ERP dans un environnement SAP S/4HANA unifié, couvrant la finance et la logistique.",
+      "passage": "the company has been consolidating multiple ERP systems into a unified SAP S/4HANA software landscape"
+    },
+    {
+      "id": "lvmh-signal-8",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "L'offre LVMH03235, publiée le 8 novembre 2026 par le groupe, recrute un chef de projet trésorerie et communication bancaire et cite la Direction Projets Transformation Finance.",
+      "passage": "Chef(fe) de projet – Trésorerie et communication bancaire"
+    }
+  ]
+}

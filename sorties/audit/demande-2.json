@@ -1,0 +1,103 @@
+{
+ "lot": 2,
+ "modele": "Opus 5.5",
+ "cellules": [
+  {
+   "id": "saint-gobain-financement-13",
+   "societe": "Saint-Gobain",
+   "champ": "Financements court terme",
+   "valeur": "Affacturage inversé (supply chain finance)",
+   "citation": "HSBC China provides Saint-Gobain's suppliers in mainland China with a tier-price financing solution",
+   "url": "https://www.saint-gobain.com.cn/en/node/20560"
+  },
+  {
+   "id": "vattenfall-tms-8",
+   "societe": "Vattenfall",
+   "champ": "TMS et trésorerie",
+   "valeur": "SAP Treasury",
+   "citation": "for the central Vattenfall SAP Treasury solution",
+   "url": "https://vakanser.se/jobb/system+manager+sap+treasury+m+f"
+  },
+  {
+   "id": "vattenfall-direction_financiere-2",
+   "societe": "Vattenfall",
+   "champ": "Direction financière",
+   "valeur": "Kerstin Ahlfont, Chief Financial Officer",
+   "citation": "Kerstin Ahlfont Chief Financial Officer",
+   "url": "https://group.vattenfall.com/who-we-are/corporate-governance/group-management"
+  },
+  {
+   "id": "ssab-achats-8",
+   "societe": "SSAB",
+   "champ": "Plateforme d'achats",
+   "valeur": "SAP Ariba",
+   "citation": "Case Study: SSAB achieves rapid global spend visibility and shifts to higher-value procurement with SAP Ariba",
+   "url": "https://www.casestudies.com/company/sap-ariba/case-study/increased-focus-on-higher-value-add-activities-as-a-result-of-global-e-procurement-journey"
+  },
+  {
+   "id": "saint-gobain-signal-14",
+   "societe": "Saint-Gobain",
+   "champ": "Signal récent",
+   "valeur": "Nomination d'Annica Hagen comme Chief Artificial Intelligence Officer et membre du Comité exécutif du Groupe",
+   "citation": "Annica Hagen has been appointed Chief Artificial Intelligence Officer (CAIO) and member of the Group Executive Committee",
+   "url": "https://www.glassonweb.com/news/saint-gobain-appoints-annica-hagen-chief-artificial-intelligence-officer-and-accelerates-ai"
+  },
+  {
+   "id": "ssab-direction_financiere-2",
+   "societe": "SSAB",
+   "champ": "Direction financière",
+   "valeur": "Leena Craelius, directrice financière (CFO)",
+   "citation": "The report will be presented by SSAB’s President and CEO Johnny Sjöström, and CFO Leena Craelius.",
+   "url": "https://www.ssab.com/en/news/2026/10/report-for-q3-2026"
+  },
+  {
+   "id": "fresenius-signal-17",
+   "societe": "Fresenius",
+   "champ": "Signal récent",
+   "valeur": "Placement obligataire de 1 Md€ en deux tranches en 2025",
+   "citation": "In 2025, Fresenius SE & Co. KGaA successfully placed bonds with an aggregate volume of €1 billion across two tranches.",
+   "url": "https://report.fresenius.com/2025/annual-report/management-report/economic-report/financial-position.html"
+  },
+  {
+   "id": "barilla-direction_financiere-3",
+   "societe": "Barilla",
+   "champ": "Direction financière",
+   "valeur": "Oddone Incisa, directeur financier (Chief Financial Officer) du groupe Barilla",
+   "citation": "Barilla Group announces the appointment of Oddone Incisa as new Chief Financial Officer, effective September 15, 2025.",
+   "url": "https://www.eunews.it/en/2025/07/10/barilla-group-appoints-oddone-incisa-as-cfo/"
+  },
+  {
+   "id": "verallia-direction_financiere-2",
+   "societe": "Verallia",
+   "champ": "Direction financière",
+   "valeur": "Cristina Riesgo, Chief Financial Officer (directrice financière), à compter du 1er mars 2026",
+   "citation": "announces the appointment of Cristina Riesgo as Chief Financial Officer, effective March 1st, 2026",
+   "url": "https://www.verallia.com/en/communique-de-presse/cristina-riesgo/"
+  },
+  {
+   "id": "deutsche-telekom-direction_financiere-3",
+   "societe": "Deutsche Telekom",
+   "champ": "Direction financière",
+   "valeur": "Christian P. Illek, membre du directoire responsable des finances (directeur financier)",
+   "citation": "assumed responsibility for the Finance portfolio on the Board of Management on January 1, 2019.",
+   "url": "https://www.telekom.com/en/about-us/corporate-governance/board-of-management/profile-christian-p-illek"
+  },
+  {
+   "id": "voestalpine-signal-15",
+   "societe": "voestalpine",
+   "champ": "Signal récent",
+   "valeur": "Nouvelle CFO de la division Metal Engineering, membre du directoire de la division depuis le 01/04/2026",
+   "citation": "Eva Aigner has been a member of the Management Board of the Metal Engineering Division of the voestalpine Group since April 1, 2026",
+   "url": "https://www.voestalpine.com/group/en/media/press-releases/Eva-Aigner-is-the-new-Chief-Financial-Officer-of-the-Metal-Engineering-Division-of-the-voestalpine-Group/"
+  },
+  {
+   "id": "lvmh-erp-3",
+   "societe": "LVMH",
+   "champ": "ERP",
+   "valeur": "SAP S/4HANA",
+   "citation": "support key phases of our SAP S/4HANA Public Cloud Edition (PCE)",
+   "url": "https://www.lvmh.com/join-us/our-job-offers/SSCPC02560"
+  }
+ ],
+ "sortie": "<racine>/sorties/audit/sortie-2.json"
+}

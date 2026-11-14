@@ -1,0 +1,85 @@
+{
+  "jugements": [
+    {
+      "id": "lvmh-achats-6",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "partiel",
+      "ecart": "filiale ou division",
+      "raison": "La page établit que Moët Hennessy, division Vins et Spiritueux de LVMH, utilise la plateforme KYS d'Aprovall avec ses équipes achats, juridique et contrôle interne, pas le groupe.",
+      "passage": "Moët Hennessy, the “Wines & Spirits” division of the LVMH Group"
+    },
+    {
+      "id": "servier-signal-12",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "partiel",
+      "ecart": "précision non soutenue",
+      "raison": "La page confirme l'opération finalisée le 13 juillet pour 1,55 Md$ versés d'emblée, mais elle porte sur l'activité dystrophie musculaire d'Edgewise et ne mentionne aucune signature.",
+      "passage": "its $1.55 billion upfront acquisition of Edgewise Therapeutics' muscular dystrophy business"
+    },
+    {
+      "id": "deutsche-telekom-erp-6",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "partiel",
+      "ecart": "filiale ou division",
+      "raison": "La page établit que Deutsche Telekom IT a engagé RISE with SAP et prévoit S/4HANA, migration complète d'ici 2030 ; elle ne parle pas du groupe.",
+      "passage": "Deutsche Telekom IT, in collaboration with T-Systems, embarked on its RISE with SAP journey"
+    },
+    {
+      "id": "fresenius-achats-9",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "partiel",
+      "ecart": "filiale ou division",
+      "raison": "La page établit que Fresenius Kabi, partie du groupe Fresenius, utilise SAP Ariba pour l'inscription des fournisseurs et ses enchères ; rien n'y vise le groupe.",
+      "passage": "Working at Fresenius Kabi means being part of Fresenius Group, a global healthcare company."
+    },
+    {
+      "id": "saint-gobain-erp-4",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "La page dit qu'une migration vers SAP S/4HANA était prévue chez Saint-Gobain, bloquée par son architecture informatique ; la valeur la donne bien comme prévue.",
+      "passage": "was also blocking their 'OneSG' strategy and a planned migration to SAP S/4HANA"
+    },
+    {
+      "id": "saint-gobain-financement-13",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "partiel",
+      "ecart": "filiale ou division",
+      "raison": "La page établit que Saint-Gobain China a lancé avec HSBC China un financement de la chaîne fournisseurs, limité à la Chine, sans parler d'affacturage.",
+      "passage": "Saint-Gobain China recently announced that it has partnered with HSBC China"
+    },
+    {
+      "id": "lvmh-erp-3",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "partiel",
+      "ecart": "filiale ou division",
+      "raison": "La page est une offre de LVMH Perfumes & Cosmetics, partie du groupe, pour son déploiement SAP S/4HANA Public Cloud ; elle ne couvre pas tout LVMH.",
+      "passage": "LVMH Beauty is part of the LVMH Group."
+    },
+    {
+      "id": "vattenfall-erp-4",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "La page dit que Vattenfall, après avoir consolidé ses ERP allemands et néerlandais, est prêt pour la migration suivante vers SAP S/4HANA, que la valeur donne comme prévue.",
+      "passage": "Vattenfall is now ideally positioned for the subsequent migration to SAP S/4HANA"
+    },
+    {
+      "id": "ssab-erp-7",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "partiel",
+      "ecart": "filiale ou division",
+      "raison": "La page établit que Tibnor, filiale de SSAB, utilise SAP S/4HANA comme source principale de ses données ; elle ne dit rien de l'ERP du groupe SSAB.",
+      "passage": "Bolaget har cirka 1 100 medarbetare och är ett dotterbolag till SSAB."
+    }
+  ]
+}

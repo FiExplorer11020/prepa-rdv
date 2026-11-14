@@ -1,0 +1,112 @@
+{
+  "jugements": [
+    {
+      "id": "verallia-signal-15",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "Le communiqué de Verallia annonce la nomination de Cristina Riesgo comme directrice financière au 1er mars 2026, en remplacement de Nathalie Delbreuve.",
+      "passage": "appointment of Cristina Riesgo as Chief Financial Officer, effective March 1st, 2026, replacing Nathalie Delbreuve"
+    },
+    {
+      "id": "stadler-rail-financement-7",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "L'article rapporte un financement par crédits renouvelables syndiqués, jusqu'à 2,8 milliards CHF, arrangé par UBS et un syndicat bancaire pour Stadler.",
+      "passage": "partially committed up to CHF 2.8 billion syndicated revolving credit facilities financing"
+    },
+    {
+      "id": "stadler-rail-direction_financiere-3",
+      "page_ouverte": false,
+      "citation_presente": null,
+      "verdict": "invérifiable",
+      "ecart": null,
+      "raison": "Le lien répond, mais WebFetch n'en rapporte que le titre « Group Executive Board | Stadler » ; aucun nom ni aucune fonction n'est lisible.",
+      "passage": null
+    },
+    {
+      "id": "vattenfall-erp-4",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "faux",
+      "ecart": "projet ou évaluation",
+      "raison": "La page décrit la consolidation des ERP de Vattenfall en préparation de S/4HANA ; la migration vers S/4HANA y reste une étape ultérieure.",
+      "passage": "Vattenfall is now ideally positioned for the subsequent migration to SAP S/4HANA"
+    },
+    {
+      "id": "voestalpine-achats-7",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "La page fournisseurs de voestalpine indique que le groupe utilise le SAP Business Network, anciennement SAP Ariba, pour collaborer avec ses fournisseurs.",
+      "passage": "For operational collaboration with suppliers, voestalpine uses the SAP Business Network (formerly SAP Ariba)."
+    },
+    {
+      "id": "fresenius-financement-13",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "Le rapport annuel 2025 indique que Fresenius SE & Co. KGaA dispose d'un programme de billets de trésorerie jusqu'à 1,5 milliard d'euros, utilisé à 70 millions fin 2025.",
+      "passage": "Fresenius SE & Co. KGaA maintains bilateral credit lines and a commercial paper program"
+    },
+    {
+      "id": "nokia-achats-8",
+      "page_ouverte": false,
+      "citation_presente": null,
+      "verdict": "invérifiable",
+      "ecart": null,
+      "raison": "Le lien renvoie une erreur HTTP 403 Forbidden, y compris sous www.nokia.com ; la page n'a pas pu être lue.",
+      "passage": null
+    },
+    {
+      "id": "deutsche-telekom-achats-9",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "La page achats de Deutsche Telekom présente SAP Ariba Network comme le portail des commandes et de la facturation électronique avec ses fournisseurs.",
+      "passage": "SAP Ariba Network is the portal for electronical billing and purchase ordering exchange"
+    },
+    {
+      "id": "fresenius-direction_financiere-4",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "La page du directoire du rapport 2025 présente Sara Hennicken comme Chief Financial Officer de Fresenius depuis le 1er septembre 2022, sans annoncer de départ.",
+      "passage": "Sara Hennicken was appointed CFO of Fresenius as of September 1, 2022."
+    },
+    {
+      "id": "ssab-erp-7",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "partiel",
+      "ecart": "filiale ou division",
+      "raison": "La page établit que Tibnor, filiale de SSAB, utilise SAP S/4HANA ; elle ne dit rien de l'ERP du groupe SSAB.",
+      "passage": "Bolaget har cirka 1 100 medarbetare och är ett dotterbolag till SSAB."
+    },
+    {
+      "id": "saint-gobain-direction_financiere-2",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "L'article du 21 février 2025 annonce la nomination de Maud Thuaudet comme directrice financière du groupe Saint-Gobain, avec entrée au comité exécutif le 1er avril 2025.",
+      "passage": "Maud Thuaudet has been appointed Chief Financial Officer"
+    },
+    {
+      "id": "fresenius-erp-6",
+      "page_ouverte": true,
+      "citation_presente": true,
+      "verdict": "juste",
+      "ecart": null,
+      "raison": "L'article de novembre 2022 indique que le groupe Fresenius veut migrer de SAP ECC 6 vers S/4HANA, donc qu'il utilise alors SAP ECC.",
+      "passage": "Mit dem Walldorfer Softwarehaus will der Gesundheitskonzern von SAP ECC 6 auf S/4HANA migrieren"
+    }
+  ]
+}

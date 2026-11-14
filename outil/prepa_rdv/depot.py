@@ -43,6 +43,7 @@ DOSSIERS = {
     "sorties/livrables": "sorties/livrables",
     "sorties/societes": "sorties/societes",
     "sorties/journal": "sorties/journal",
+    "sorties/audit": "sorties/audit",
 }
 NOMS_EXCLUS = {".venv", "__pycache__", ".pytest_cache", ".ruff_cache", ".mypy_cache", ".DS_Store", ".git"}
 SUFFIXES_EXCLUS = {".pyc", ".pyo"}

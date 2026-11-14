@@ -27,12 +27,12 @@
 ## Contrôle qualité
 
 - Sur le lot mesuré, 12 % des trouvailles proposées par le modèle sont rejetées par les contrôles du code. À 200, ce taux se suit par modèle et par version de consigne.
-- Jeu des 12 sociétés relues à la main, rejoué à chaque changement de modèle ou de consigne. Une régression se voit au niveau de chaque cellule.
-- Audit d'un échantillon tiré au sort avec une graine fixe, relu par une personne, pour la seule erreur que le code ne voit pas : la citation exacte dont la conclusion est fausse.
+- Relu par une personne, le jeu des 12 sociétés se rejoue à chaque changement de modèle ou de consigne.
+- Audit d'un échantillon tiré au sort par un auditeur d'un autre modèle, pour la citation exacte dont la conclusion est fausse ; une personne relit ses écarts. Mesuré ici : 24 justes sur 33 vérifiables au premier tirage, 26 après deux règles d'affichage, 9 sur 9 au second, 0,15 $ estimés par cellule.
 
 ## Mise à jour des fiches
 
-Chaque fiche porte la date de lecture, l'empreinte de chaque page et la version du prompt. Une relance ne refait que les champs dont la page a changé. Une fiche plus vieille que la fenêtre de son type de preuve perd son niveau « confirmé ».
+Chaque fiche porte la date de lecture, l'empreinte de chaque page et la version du prompt. Une relance ne refait que les champs dont la page a changé ; une preuve hors de sa fenêtre redescend à « probable ».
 
 ## Où brancher le résultat, et précautions
 
