@@ -169,9 +169,9 @@ Les plans C et F changent le sens de « coût par société » ou de « qualité
 
 À chaque porte, une ligne dans `decisions.md` du dépôt : date, porte, décision, raison, chiffre qui l'appuie. Ce journal sert au texte « ton outil » : il montre la démarche, pas seulement le résultat.
 
-## Où on en est (14 novembre 2026, 2 h 10)
+## Où on en est (14 novembre 2026, 2 h 56)
 
-Construction et run des douze sociétés faits en 111 minutes de travail actif, sur 180 permises, dont 22 pour la relance de la seconde lecture de Barilla et ses suites. La planification (plan, cahier des charges, ce document) est comptée à part.
+Construction, run des douze sociétés et dépôt public faits en 130 minutes de travail actif, sur 180 permises, dont 22 pour la relance de la seconde lecture de Barilla et ses suites et 19 pour le dépôt public. La planification (plan, cahier des charges, ce document) est comptée à part.
 
 | Porte | État | Mesure |
 |---|---|---|
@@ -179,9 +179,9 @@ Construction et run des douze sociétés faits en 111 minutes de travail actif, 
 | G2 Chaîne | Passée | Six contrôles, brief d'une page, deux tableurs, sur deux sociétés puis sur douze |
 | G3 Run | Passée | 12 fiches écrites, 185 trouvailles, 163 gardées, dont 43 hors fenêtre et 4 sans date (29 %, sous la moitié : fenêtres de départ conservées). 26 lignes relues par un second agent, 15 accords. Chaque société a son journal |
 | G4 Audit | À faire par Oscar | 36 cellules à marquer juste ou faux dans la feuille « Audit » de `cartographie.xlsx`. Erreurs documentées avec correction et relance : 5 (2 de la sonde, 3 réparées par le code). Une erreur du contrôle lui-même, dans le test d'accord des secondes lectures, corrigée et testée (D18) |
-| G5 Livrables | Fichiers prêts | `briefs.pdf` (12 pages, 0,3 Mo), `cartographie.xlsx`, `trouvailles.xlsx`, `ton-outil.pdf` (5 pages), `a-200-societes.pdf` (2 pages). Reste le dépôt public MIT et le lien de l'outil, que seul Oscar publie |
+| G5 Livrables | Passée | `briefs.pdf` (12 pages, 0,3 Mo), `cartographie.xlsx`, `trouvailles.xlsx`, `ton-outil.pdf` (5 pages), `a-200-societes.pdf` (2 pages). Dépôt public sous licence MIT, https://github.com/FiExplorer11020/prepa-rdv, construit, analysé et publié par `prepa-rdv depot` : aucun constat (noms, secrets, chemins, adresse retirée, licences), `pip-audit` sans vulnérabilité sur 58 paquets. Vérifié sans compte : clone neuf, tests verts, analyse refaite sur le clone. Lien de l'outil dans `cartographie.xlsx` et dans « Ton outil » |
 | G6 Démo | À répéter | Mode `claude-cli` après `claude auth login`, ou sous-agents dans une session Claude Code. Pas encore répétée |
 
 Ce qui a été appris à la mesure, et qui change l'outil par rapport au plan : le lecteur du code perd des phrases sur les pages construites par JavaScript (D16) ; le premier test d'accord des secondes lectures ne cherchait que dans un sens et manquait l'accord par construction, un second agent limité à 15 mots recopiant un extrait plus court que la citation du premier (D18) ; une base de données commerciale ne fait pas seule un champ, règle écrite mais appliquée seulement depuis la relance de Barilla (D19) ; un modèle recopie parfois de mémoire, d'où la réparation de citation (D14) ; les rôles des dirigeants se lisent dans la citation quand la valeur n'est que le nom (D17).
 
-Ce qui reste, et qui ne tient plus qu'à Oscar : marquer les 36 cellules de l'audit, publier le dépôt (licence MIT à son nom), ajouter le lien de l'outil au tableur par `livrables --lien-outil`, répéter la démo. Aucune clé de la Console n'a été nécessaire.
+Ce qui reste, et qui ne tient plus qu'à Oscar : marquer les 36 cellules de l'audit et répéter la démo. Aucune clé de la Console n'a été nécessaire.

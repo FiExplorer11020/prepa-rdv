@@ -163,7 +163,15 @@ def normaliser(texte: str) -> tuple[str, int]:
 
 
 def _fichiers(dest: Path) -> list[Path]:
-    return sorted(p for p in dest.rglob("*") if p.is_file() and ".git" not in p.relative_to(dest).parts)
+    """Les fichiers que la publication emporterait : pour un dépôt git, ceux que `git add -A` prendrait ;
+    sinon tout le dossier, hors environnements et caches locaux."""
+    if (dest / ".git").exists():
+        r = subprocess.run(["git", "-C", str(dest), "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
+                           capture_output=True, text=True)
+        if r.returncode == 0:
+            return sorted({dest / x for x in r.stdout.split("\0") if x and (dest / x).is_file()})
+    return sorted(p for p in dest.rglob("*") if p.is_file() and not any(
+        part in NOMS_EXCLUS for part in p.relative_to(dest).parts))
 
 
 def nettoyer_textes(dest: Path, remplacements: list[tuple[str, str]], rapport: Rapport) -> None:

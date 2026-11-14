@@ -5,3 +5,4 @@
 {"ts": "2026-11-14T00:47:31+00:00", "evenement": "reprise", "note": "Oscar demande de relancer la seconde lecture de Barilla avec un autre modèle (Opus 5.5)"}
 {"ts": "2026-11-14T01:09:27+00:00", "evenement": "fin", "note": "seconde lecture de Barilla relancée avec Opus 5.5 ; test d'accord corrigé, règle P5 appliquée, livrables régénérés"}
 {"ts": "2026-11-14T01:36:50+00:00", "evenement": "reprise", "note": "Oscar demande un dépôt GitHub public avec les livrables, le code et la méthode détaillée, sans geste à la main"}
+{"ts": "2026-11-14T01:56:05+00:00", "evenement": "fin", "note": "Dépôt public publié par prepa-rdv depot et vérifié sans compte : https://github.com/FiExplorer11020/prepa-rdv"}

@@ -111,3 +111,13 @@ def test_ne_vide_pas_un_dossier_etranger(tmp_path):
     with pytest.raises(ValueError):
         depot.vider(r / "sorties", r.resolve())
     assert (autre / "important.txt").exists()
+
+
+def test_l_analyse_ignore_les_environnements_locaux(tmp_path):
+    dest = tmp_path / "copie"
+    (dest / "outil/.venv/bin").mkdir(parents=True)
+    (dest / "outil/.venv/bin/activate").write_text(f"VIRTUAL_ENV={MAISON}/x\n", encoding="utf-8")
+    (dest / "README.md").write_text("propre\n", encoding="utf-8")
+    rapport = depot.Rapport(dossier=dest)
+    depot.analyser(dest, [NOM_TU], [], rapport)
+    assert rapport.constats == []
