@@ -1,4 +1,4 @@
-"""Mise en page commune des PDF : bandeau, titre, intertitres, tableaux zébrés, pied de page numéroté (D23).
+"""Mise en page commune des PDF et des tableurs : bandeau, titre, intertitres, tableaux zébrés, pied de page numéroté (D23).
 
 Le squelette vient de documents de travail fournis par Oscar le 14 novembre 2026 : la mise en page et la structure
 seulement, sans leur contenu. Bandeau plein de 9 mm, titre en vert, intertitres et en-têtes de tableau en bleu-vert,

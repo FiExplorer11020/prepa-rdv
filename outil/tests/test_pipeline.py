@@ -190,6 +190,12 @@ def test_tableurs(ctx, tmp_path):
     assert ws.cell(row=2, column=en_tete.index("ERP : source") + 1).hyperlink is not None
     assert load_workbook(long)["Trouvailles"].max_row == 4
     assert carto.stat().st_size < 10_000_000
+    for feuille in (ws, load_workbook(long)["Trouvailles"]):  # le gabarit des PDF (D23)
+        assert feuille["A1"].fill.fgColor.rgb.endswith("009597") and feuille["A1"].font.color.rgb.endswith("FFFFFF")
+        assert feuille["A1"].font.b and feuille["A2"].font.name == "Arial" and not feuille.sheet_view.showGridLines
+        assert feuille["A2"].fill.fill_type is None
+    assert load_workbook(long)["Trouvailles"]["A3"].fill.fgColor.rgb.endswith("E6F4F4")  # zébrure dès la deuxième ligne de données
+    assert ws.cell(row=2, column=en_tete.index("ERP : source") + 1).font.color.rgb.endswith("009597")
 
 
 def test_audit_a_graine_fixe(ctx):

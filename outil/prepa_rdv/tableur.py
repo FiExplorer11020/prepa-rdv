@@ -10,10 +10,10 @@ from pathlib import Path
 from typing import Any
 
 from openpyxl import Workbook
-from openpyxl.styles import Alignment, Font, PatternFill
+from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
-from . import affichage
+from . import affichage, gabarit
 from .schema import CHAMPS_BRIEF, LIBELLES_CHAMP, Champ, Niveau
 
 CHAMPS_CARTO = (*CHAMPS_BRIEF, Champ.SIGNAL)
@@ -24,8 +24,13 @@ LEGENDE = [
     ("absence déclarée", "Un document de la société dit qu'elle n'a pas le produit."),
     ("contradiction", "Deux valeurs incompatibles au même niveau : les deux sont affichées."),
 ]
-EN_TETE = PatternFill("solid", fgColor="1F2937")
-BLANC = Font(bold=True, color="FFFFFF")
+# Le gabarit des PDF (D23) : en-tête bleu-vert, lignes zébrées, filets clairs. Les tableurs du squelette repris sont en Arial.
+POLICE = "Arial"
+EN_TETE = PatternFill("solid", fgColor=gabarit.BLEU_VERT[1:].upper())
+ZEBRE = PatternFill("solid", fgColor=gabarit.BLEU_VERT_CLAIR[1:].upper())
+FILET = Border(bottom=Side(style="thin", color=gabarit.FILET[1:].upper()))
+BLANC = Font(name=POLICE, size=10, bold=True, color="FFFFFF")
+NOTE = Font(name=POLICE, size=10)
 
 
 def valeur_cellule(v: dict, t: dict | None, entite: dict) -> str:
@@ -50,13 +55,22 @@ def _style(ws, largeurs: list[int]) -> None:
     for c in ws[1]:
         c.fill, c.font = EN_TETE, BLANC
         c.alignment = Alignment(wrap_text=True, vertical="center")
+    for ligne in ws.iter_rows(min_row=2):  # zébrure dès la deuxième ligne de données, comme les PDF ; une teinte de verdict reste
+        for c in ligne:
+            f = c.font
+            c.font, c.border = Font(name=POLICE, size=10, bold=f.b, italic=f.i, underline=f.u, color=f.color), FILET
+            if c.row % 2 and c.fill.fill_type is None:
+                c.fill = ZEBRE
+    ws.sheet_view.showGridLines = False
+    ws.oddFooter.left.text, ws.oddFooter.right.text = gabarit.PIED, "&P"
     ws.freeze_panes = "B2"
     ws.auto_filter.ref = ws.dimensions
 
 
 def _lien(ws, cellule, url: str | None) -> None:
     if url:
-        cellule.value, cellule.hyperlink, cellule.font = url, url, Font(color="1D4ED8", underline="single")
+        cellule.value, cellule.hyperlink = url, url
+        cellule.font = Font(name=POLICE, size=10, color=gabarit.BLEU_VERT[1:].upper(), underline="single")
 
 
 def echantillon_audit(fiches: list[dict], n: int = 36, graine: int = 2026, exclure: set[str] | None = None) -> list[dict[str, Any]]:
@@ -118,10 +132,12 @@ def ecrire_audit(au, cellules: list[dict], verdicts: dict[str, dict] | None, aud
             au.cell(row=r, column=13).fill = PatternFill("solid", fgColor=TEINTES_VERDICT[relance[a["id"]]["verdict"]])
     _style(au, [18, 22, 28, 12, 60, 40, 14, 20, 50, 40] + ([36, 14, 50] if relance else []) + [22])
     qui = f"un sous-agent auditeur ({auditeur})" if auditeur else "un sous-agent auditeur"
-    au.cell(row=au.max_row + 2, column=1, value=(
+    au.cell(row=au.max_row + 2, column=1).font = NOTE
+    au.cell(row=au.max_row, column=1, value=(
         f"Verdicts écrits par {qui}, qui n'a pas produit ces cellules et ne connaissait pas leur niveau. Il a ouvert chaque lien "
         "et dit si la page soutient la valeur. C'est un modèle qui en juge un autre, pas une relecture par une personne."))
-    au.cell(row=au.max_row + 1, column=1, value="Justes : {juste} ; partielles : {partiel} ; fausses : {faux} ; invérifiables : {invérifiable}."
+    au.cell(row=au.max_row + 1, column=1).font = NOTE
+    au.cell(row=au.max_row, column=1, value="Justes : {juste} ; partielles : {partiel} ; fausses : {faux} ; invérifiables : {invérifiable}."
             .format(**compte))
 
 
@@ -158,7 +174,7 @@ def ecrire_cartographie(fiches: list[dict], chemin: Path, lien_outil: str = "", 
             c.alignment = Alignment(wrap_text=True, vertical="top")
     _style(ws, [18, 12, 14, 16, 22, 28] + [30, 36, 12] * len(CHAMPS_CARTO) + [12, 14, 12, 10, 10])
     if lien_outil:
-        ws.cell(row=ws.max_row + 2, column=1, value="Outil").font = Font(bold=True)
+        ws.cell(row=ws.max_row + 2, column=1, value="Outil").font = Font(name=POLICE, size=10, bold=True, color=gabarit.VERT[1:].upper())
         _lien(ws, ws.cell(row=ws.max_row, column=2), lien_outil)
 
     lg = wb.create_sheet("Légende")

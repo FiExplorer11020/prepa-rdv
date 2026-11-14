@@ -169,9 +169,9 @@ Les plans C et F changent le sens de « coût par société » ou de « qualité
 
 À chaque porte, une ligne dans `decisions.md` du dépôt : date, porte, décision, raison, chiffre qui l'appuie. Ce journal sert au texte « ton outil » : il montre la démarche, pas seulement le résultat.
 
-## Où on en est (14 novembre 2026, 16 h 53)
+## Où on en est (14 novembre 2026, 17 h 40)
 
-Construction, run des douze sociétés et dépôt public faits en 130 minutes de travail actif, sur 180 permises, dont 22 pour la relance de la seconde lecture de Barilla et ses suites et 19 pour le dépôt public. L'audit par agents, demandé ensuite par Oscar, porte le total à 163 minutes : 33 pour l'audit, après une coupure réseau de 24 minutes déclarée en pause. L'écriture du choix d'Oscar sur le périmètre des filiales (D22) ajoute 6 minutes, soit 168 au total. Le gabarit commun des PDF (D23) en ajoute 6, soit 174. La planification (plan, cahier des charges, ce document) est comptée à part.
+Construction, run des douze sociétés et dépôt public faits en 130 minutes de travail actif, sur 180 permises, dont 22 pour la relance de la seconde lecture de Barilla et ses suites et 19 pour le dépôt public. L'audit par agents, demandé ensuite par Oscar, porte le total à 163 minutes : 33 pour l'audit, après une coupure réseau de 24 minutes déclarée en pause. L'écriture du choix d'Oscar sur le périmètre des filiales (D22) ajoute 6 minutes, soit 168 au total. Le gabarit commun des PDF (D23) en ajoute 6, soit 174. Les deux tableurs, alignés ensuite sur ce gabarit, en ajoutent 5, soit 179. La planification (plan, cahier des charges, ce document) est comptée à part.
 
 | Porte | État | Mesure |
 |---|---|---|
