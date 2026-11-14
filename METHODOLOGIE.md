@@ -229,6 +229,7 @@ Elles viennent du plan de travail, qui n'est pas publié. Chaque décision est d
 | D19 | Une base de données commerciale (P5) ne fait pas seule un champ du brief. L'identité n'est pas concernée. | La règle était écrite au cahier des charges et le code ne l'appliquait pas. Deux trouvailles concernées, toutes deux chez Barilla. |
 | D20 | Les 36 cellules de l'audit sont jugées par des sous-agents auditeurs d'un autre modèle que les agents de recherche (Opus 5.5), en trois lots de douze. L'auditeur reçoit ce qu'une personne voit dans la feuille (société, champ, valeur, citation, lien), sans le niveau ni les contrôles du code. Quatre verdicts : juste, partiel, faux, invérifiable ; pour partiel et faux, un écart pris dans une liste fermée. Le code refuse une réponse qui oublie une cellule, en juge une deux fois ou se contredit. | Le cas veut un outil qui fait le travail, sans geste à la main. Un modèle qui en juge un autre ne vaut pas une personne : les livrables le disent, et les verdicts partiels et faux sont les premiers à relire. |
 | D21 | Deux règles d'affichage, après l'audit (`affichage.py`). La cellule dit l'entité que la page nomme quand ce n'est pas la société (filiale, division, pays). Pour un ERP, une plateforme d'achats ou un TMS, elle dit « migration prévue ou en cours » quand le commentaire du modèle le dit. Les deux règles valent au brief, à la cartographie et à l'audit. Les cellules en écart sont rejugées telles qu'elles s'affichent, et un second tirage de 12 cellules nouvelles (graine 2027) mesure la porte G4. | Sur les 9 écarts du premier tirage, 8 tenaient à l'affichage. Le modèle avait noté l'entité et le projet, et la cellule les taisait. Corriger la règle plutôt que la cellule garde l'outil sans geste à la main. Le niveau reste le même, la preuve aussi. Mesuré ensuite : la règle du projet rend justes les 2 cellules fausses, celle de l'entité ne change aucun des 6 verdicts « filiale ou division ». |
+| D22 | Une cellule tirée d'une page sur une filiale reste dans la fiche, la filiale signalée (D21), et sa valeur se vérifie pour le groupe pendant le rendez-vous. La porte G4 se mesure sur le second tirage. Choix d'Oscar, propriétaire de la porte, le 14 novembre 2026. | Le cahier des charges veut une filiale signalée comme telle, pas retirée. Pour préparer un rendez-vous, l'outil d'une filiale est une question à poser au groupe. Le premier tirage a servi à écrire les règles, le second ne les a pas vues. L'auditeur juge toujours ces cellules partielles, et la limite reste écrite (§10). |
 
 ## 9. Ce que les journaux mesurent
 
@@ -249,7 +250,7 @@ D'après `sorties/journal/bilan-final.json` et [« Ton outil »](sorties/livrabl
 | Jetons par société | 5,7 millions traités en moyenne, 2,39 $ estimés |
 | Audit, premier tirage | 36 cellules (graine 2026), jugées par des auditeurs Opus 5.5 : 24 justes sur 33 vérifiables (73 %), 7 partielles, 2 fausses, 3 invérifiables |
 | Audit, cellules rejugées | Les 9 cellules en écart, rejugées telles qu'elles s'affichent après D21 : 2 justes (les deux « projet ou évaluation »), 7 partielles. Premier tirage corrigé : 26 sur 33 vérifiables (79 %) |
-| Audit, second tirage | 12 cellules neuves (graine 2027), après les règles d'affichage (D21) : 9 justes sur 9 vérifiables, 3 invérifiables |
+| Audit, second tirage | 12 cellules neuves (graine 2027), après les règles d'affichage (D21) : 9 justes sur 9 vérifiables, 3 invérifiables. La porte G4 (90 %) se mesure sur ce tirage (D22) |
 
 Le temps de construction, mesuré par l'horloge, et les jetons de tout le projet sont dans « Ton outil ».
 
@@ -259,7 +260,8 @@ Le temps de construction, mesuré par l'horloge, et les jetons de tout le projet
   voit. Des auditeurs d'un autre modèle la cherchent sur un échantillon tiré au sort (D20). Au premier tirage, 9 cellules
   sur 33 vérifiables étaient partielles ou fausses. La règle du projet (D21) rend justes les 2 fausses. Les 6 cellules
   d'une filiale restent partielles pour l'auditeur, même avec l'entité affichée : une page sur une filiale ne dit pas
-  le système du groupe, et c'est une question de périmètre que le code ne tranche pas.
+  le système du groupe. Elles restent dans la fiche, la filiale signalée, et leur valeur se vérifie pour le groupe
+  pendant le rendez-vous (D22).
   Ce sont des modèles qui en jugent un autre : leurs verdicts partiels, faux et invérifiables restent à relire par une
   personne, dans la feuille « Audit » de la cartographie.
 - **L'absence.** « Non trouvé » veut dire que le plan de requêtes n'a rien donné de vérifiable. Ce n'est pas la preuve

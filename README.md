@@ -42,8 +42,9 @@ Le cahier des charges et la planification sont dans [`conception/`](conception/)
 - Une société prend en moyenne 16,4 minutes d'agent et 5,7 millions de jetons traités, soit 2,39 $ estimés au tarif de
   liste de l'API. L'accès passe par un abonnement : ce chiffre est estimé, il n'est pas facturé.
 - Des auditeurs d'un autre modèle (Opus 5.5) ont jugé 36 cellules tirées au sort, sans connaître leur niveau : 24 justes
-  sur 33 vérifiables, 26 après deux règles d'affichage. Un second tirage de 12 cellules neuves donne 9 justes sur 9
-  vérifiables. Le détail est dans la feuille « Audit » de la cartographie.
+  sur 33 vérifiables, 26 après deux règles d'affichage. Un second tirage de 12 cellules neuves, sur lequel se mesure la
+  porte de 90 %, donne 9 justes sur 9 vérifiables. Une cellule tirée d'une page sur une filiale reste dans la fiche, la
+  filiale signalée. Le détail est dans la feuille « Audit » de la cartographie.
 - Le temps de construction, les jetons de tout le projet et les quatorze erreurs relevées sont détaillés dans
   [« Ton outil »](sorties/livrables/ton-outil.md).
 

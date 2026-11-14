@@ -185,10 +185,36 @@ def test_les_feuilles_et_les_textes_reprennent_la_relance_et_le_second_tirage(so
     t = textes._audit(fiches)
     assert "(D21)" in t
     assert "Le premier tirage passe ainsi à 36 sur 36 vérifiables (100 %)" in t
-    assert "Un second tirage de 6 cellules nouvelles (graine 2027)" in t and "La porte G4, fixée à 90 %, est passée." in t
+    assert "Un second tirage de 6 cellules nouvelles (graine 2027)" in t
+    assert ("La porte G4, fixée à 90 %, se mesure sur ce tirage plutôt que sur le premier, qui a servi à écrire les règles, "
+            "et elle est passée.") in t
     assert "Avec la règle du projet, 1 sur 1 cellule « projet ou évaluation » devient juste." in t
+    assert "la filiale signalée" not in t   # aucune cellule de filiale en écart : pas de phrase sur le périmètre
     assert "—" not in t
     assert "35 justes sur 36 vérifiables au premier tirage, 36 après deux règles d'affichage, 6 sur 6 au second, 0,10 $ estimés par cellule." in textes._audit_200(4.3)
+
+
+def test_une_cellule_de_filiale_reste_un_signal_et_la_porte_se_mesure_sur_le_second_tirage(sorties, fiches):
+    """Choix d'Oscar du 14 novembre 2026 (D22) : une page sur une filiale garde sa cellule, la filiale signalée."""
+    from prepa_rdv import textes
+    audit.ecrire_demandes(fiches, n=3)
+    filiale = lambda js: [_jugement(j["id"], "partiel", "filiale ou division") for j in js[:4]] + js[4:]   # noqa: E731
+    for k in (1, 2, 3):
+        _repondre(sorties, k, filiale if k == 1 else (lambda js: js))
+        audit.recevoir(k)
+    audit.ecrire_second(fiches, n=12)
+    _repondre(sorties, 4, lambda js: [_jugement(j["id"], "partiel", "filiale ou division") for j in js])   # l'auditeur maintient
+    audit.recevoir(4)
+    _repondre(sorties, 5)
+    audit.recevoir(5)
+    t = textes._audit(fiches)
+    assert "aucun des 4 verdicts « filiale ou division » ne change" in t
+    assert ("Une cellule tirée d'une page sur une filiale reste dans la fiche, la filiale signalée comme le prévoit le cahier "
+            "des charges, et sa valeur se vérifie pour le groupe pendant le rendez-vous (D22).") in t
+    assert "Le premier tirage passe ainsi à 32 sur 36 vérifiables (89 %)." in t
+    assert ("La porte G4, fixée à 90 %, se mesure sur ce tirage plutôt que sur le premier, qui a servi à écrire les règles, "
+            "et elle est passée.") in t
+    assert "—" not in t
 
 
 def test_la_cellule_dit_l_entite_nommee_et_la_migration_prevue():

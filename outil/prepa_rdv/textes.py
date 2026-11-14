@@ -114,7 +114,7 @@ def _part(r: dict) -> str:
 
 
 def _apres_audit(premier: dict[str, dict], ecarts: list[dict]) -> str:
-    """Ce qui a suivi le premier audit : règles d'affichage (D21), cellules rejugées, second tirage, porte G4."""
+    """Ce qui a suivi le premier audit : règles d'affichage (D21), cellules rejugées, second tirage, porte G4 (D22)."""
     from . import audit
     from .jetons import dossier_sorties
     relance, second = audit.verdicts(dossier_sorties(), "relance"), audit.verdicts(dossier_sorties(), "second")
@@ -131,7 +131,6 @@ def _apres_audit(premier: dict[str, dict], ecarts: list[dict]) -> str:
            "gardait que le produit. Deux règles l'écrivent désormais dans la cellule, au brief, à la cartographie et à l'audit (D21) : "
            "l'entité nommée quand ce n'est pas la société, et « migration prévue ou en cours » pour un ERP, une plateforme d'achats ou "
            "un TMS. Les niveaux ne changent pas.")
-    corrige = None
     if relance:
         rr = audit.resume(relance.values())
         corrige = audit.resume({**premier, **relance}.values())
@@ -150,19 +149,22 @@ def _apres_audit(premier: dict[str, dict], ecarts: list[dict]) -> str:
                     "qu'une page sur une filiale ne dit pas le système du groupe.")
         elif n:
             txt += f" Avec celle de l'entité, {ok} sur {_pl(n, 'cellule', 'cellules')} « filiale ou division » {'devient juste' if ok <= 1 else 'deviennent justes'}."
+        if n > ok:  # choix d'Oscar du 14 novembre 2026 : la cellule reste un signal (D22)
+            txt += (" Une cellule tirée d'une page sur une filiale reste dans la fiche, la filiale signalée comme le prévoit le cahier "
+                    "des charges, et sa valeur se vérifie pour le groupe pendant le rendez-vous (D22).")
         txt += f" Le premier tirage passe ainsi à {_part(corrige)}."
     if second:
         rs = audit.resume(second.values())
         txt += (f" Un second tirage de {rs['cellules']} cellules nouvelles (graine {audit.GRAINE_SECONDE}), que les règles n'avaient pas "
                 f"vues, donne {_verdicts_txt(rs)}, soit {_part(rs)}.")
-        p2 = 100 * rs["juste"] / max(1, rs["verifiables"])
-        p1 = 100 * corrige["juste"] / max(1, corrige["verifiables"]) if corrige else None
-        if p2 >= SEUIL_G4 and p1 is not None and p1 < SEUIL_G4:
-            txt += f" La porte G4, fixée à {SEUIL_G4} %, passe sur le second tirage et pas sur le premier tirage corrigé."
-        elif p2 >= SEUIL_G4:
-            txt += f" La porte G4, fixée à {SEUIL_G4} %, est passée."
+        passee = 100 * rs["juste"] / max(1, rs["verifiables"]) >= SEUIL_G4
+        if relance:  # le premier tirage a servi à écrire les règles : la porte se mesure sur le second (D22)
+            statut = "elle est passée" if passee else "elle n'est pas passée"
+            txt += (f" La porte G4, fixée à {SEUIL_G4} %, se mesure sur ce tirage plutôt que sur le premier, qui a servi à écrire les "
+                    f"règles, et {statut}.")
         else:
-            txt += f" La porte G4, fixée à {SEUIL_G4} %, n'est pas passée."
+            statut = "est passée" if passee else "n'est pas passée"
+            txt += f" Sur ce tirage, la porte G4, fixée à {SEUIL_G4} %, {statut}."
         if 0 < rs["verifiables"] < 30:
             txt += (f" L'échantillon reste petit, et une seule de ces cellules jugée fausse l'aurait mis à "
                     f"{_n(100 * (rs['juste'] - 1) / rs['verifiables'])} %.")
