@@ -352,6 +352,52 @@ def _ordre(racine: Path) -> list[str] | None:
     return [x.strip() for x in lignes[1:] if x.strip()]
 
 
+DEBUT_REPONSES, FIN_REPONSES = "<!-- reponses -->", "<!-- /reponses -->"
+
+
+def tableau_des_reponses(sorties: Path, ordre: list[str] | None) -> str:
+    """Les réponses de chaque fiche en Markdown, pour qu'elles se lisent sur GitHub sans ouvrir de fichier."""
+    from . import brief, run
+    fiches = run.charger_fiches(sorties)
+    rang = {n: i for i, n in enumerate(ordre or [])}
+    fiches.sort(key=lambda f: rang.get(f["societe"], len(rang)))
+    dossiers = {json.loads(d.read_text(encoding="utf-8"))["societe"]: d.parent.name
+                for d in (sorties / "societes").glob("*/fiche.json")}
+    blocs = []
+    for f in fiches:
+        c = brief.composer(f)
+        urls = {s["n"]: s["url"] for s in c["sources"]}
+        dossier = dossiers.get(f["societe"], _slug(f["societe"]))
+
+        def lier(texte: str) -> str:
+            texte = texte.replace("|", "\\|")
+            return re.sub(r"\[(\d+)\]", lambda m: f"[[{m[1]}]]({urls[int(m[1])]})" if int(m[1]) in urls else m[0], texte)
+
+        lignes = [f"<details><summary><b>{c['societe']}</b></summary>", "",
+                  "| Champ | Réponse | Niveau |", "|---|---|---|"]
+        lignes += [f"| {l['champ']} | {lier(l['valeur'])} | {l['niveau']} |" for l in c["lignes"]]
+        lignes += ["", f"Le dossier complet : [`sorties/societes/{dossier}/`](sorties/societes/{dossier}/).", "", "</details>"]
+        blocs.append("\n".join(lignes))
+    return "\n\n".join(blocs)
+
+
+def _slug(nom: str) -> str:
+    import unicodedata
+    t = unicodedata.normalize("NFKD", nom).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z0-9]+", "-", t).strip("-")
+
+
+def inserer_reponses(readme: Path, sorties: Path, ordre: list[str] | None) -> bool:
+    texte = readme.read_text(encoding="utf-8")
+    if DEBUT_REPONSES not in texte or FIN_REPONSES not in texte:
+        return False
+    avant, reste = texte.split(DEBUT_REPONSES, 1)
+    _, apres = reste.split(FIN_REPONSES, 1)
+    corps = tableau_des_reponses(sorties, ordre)
+    readme.write_text(f"{avant}{DEBUT_REPONSES}\n{corps}\n{FIN_REPONSES}{apres}", encoding="utf-8")
+    return True
+
+
 def construire(dest: Path, prive: Path | None = None, lien_outil: str = "", recomposer: bool = True,
                audit: bool = True, racine: Path | None = None) -> Rapport:
     racine = (racine or racine_du_cas()).resolve()
@@ -364,6 +410,8 @@ def construire(dest: Path, prive: Path | None = None, lien_outil: str = "", reco
     rapport.adresses_retirees = caviarder_fiches(dest / "sorties")
     if recomposer:
         rapport.livrables, rapport.livrables_ok = recomposer_livrables(dest / "sorties", lien_outil, _ordre(racine))
+    if (dest / "README.md").exists():
+        inserer_reponses(dest / "README.md", dest / "sorties", _ordre(racine))
     derniere_passe(dest, rapport.adresses_retirees, rapport)
     texte, rapport.licences_douteuses = licences()
     (dest / "LICENCES-TIERS.md").write_text(texte, encoding="utf-8")
