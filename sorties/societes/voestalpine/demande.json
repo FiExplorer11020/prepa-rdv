@@ -1,0 +1,42 @@
+{
+ "societe": "voestalpine",
+ "empreinte_prompt": "6ee5257d0713",
+ "plan": {
+  "direction_financiere": [
+   "voestalpine Chief Financial Officer",
+   "voestalpine Group Treasurer",
+   "voestalpine investor relations management team",
+   "voestalpine Finanzvorstand",
+   "voestalpine Treasury Leiter"
+  ],
+  "erp": [
+   "voestalpine SAP S/4HANA",
+   "voestalpine ERP implementation",
+   "voestalpine Oracle OR Dynamics OR Workday ERP",
+   "voestalpine annual report SAP"
+  ],
+  "achats": [
+   "voestalpine SAP Ariba supplier",
+   "voestalpine Coupa OR Jaggaer OR Ivalua",
+   "voestalpine supplier portal procurement platform"
+  ],
+  "tms": [
+   "voestalpine treasury management system",
+   "voestalpine Kyriba",
+   "voestalpine SAP Treasury"
+  ],
+  "financement": [
+   "voestalpine supply chain finance",
+   "voestalpine reverse factoring",
+   "voestalpine receivables securitisation programme",
+   "voestalpine factoring programme",
+   "voestalpine annual report supplier finance arrangements",
+   "voestalpine Factoring Forderungen Geschäftsbericht"
+  ],
+  "signal": [
+   "voestalpine finance transformation treasury 2026",
+   "voestalpine ERP migration"
+  ]
+ },
+ "sortie": "<racine>/sorties/societes/voestalpine/agent-sortie.json"
+}

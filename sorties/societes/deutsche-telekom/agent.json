@@ -1,0 +1,311 @@
+{
+ "empreinte_prompt": "6ee5257d0713",
+ "modele": "claude-sonnet-5-5 (sous-agent)",
+ "plan": {
+  "direction_financiere": [
+   "Deutsche Telekom Chief Financial Officer",
+   "Deutsche Telekom Group Treasurer",
+   "Deutsche Telekom investor relations management team",
+   "Deutsche Telekom Finanzvorstand",
+   "Deutsche Telekom Treasury Leiter"
+  ],
+  "erp": [
+   "Deutsche Telekom SAP S/4HANA",
+   "Deutsche Telekom ERP implementation",
+   "Deutsche Telekom Oracle OR Dynamics OR Workday ERP",
+   "Deutsche Telekom annual report SAP"
+  ],
+  "achats": [
+   "Deutsche Telekom SAP Ariba supplier",
+   "Deutsche Telekom Coupa OR Jaggaer OR Ivalua",
+   "Deutsche Telekom supplier portal procurement platform"
+  ],
+  "tms": [
+   "Deutsche Telekom treasury management system",
+   "Deutsche Telekom Kyriba",
+   "Deutsche Telekom SAP Treasury"
+  ],
+  "financement": [
+   "Deutsche Telekom supply chain finance",
+   "Deutsche Telekom reverse factoring",
+   "Deutsche Telekom receivables securitisation programme",
+   "Deutsche Telekom factoring programme",
+   "Deutsche Telekom annual report supplier finance arrangements",
+   "Deutsche Telekom Factoring Forderungen Geschäftsbericht"
+  ],
+  "signal": [
+   "Deutsche Telekom finance transformation treasury 2026",
+   "Deutsche Telekom ERP migration"
+  ]
+ },
+ "prompt": "Société : Deutsche Telekom (nom légal retenu : Deutsche Telekom AG)\nPays du siège : Germany. Statut : coté.\nSite officiel : https://www.telekom.com. Domaines de la société : telekom.com.\nAttention, identité à confirmer : Wikidata non interrogé : PREPA_RDV_CONTACT absent ; ISIN, LEI et nom légal à confirmer.\n\nPlan de requêtes (suis-le, complète-le si besoin) :\n- direction_financiere : Deutsche Telekom Chief Financial Officer | Deutsche Telekom Group Treasurer | Deutsche Telekom investor relations management team | Deutsche Telekom Finanzvorstand | Deutsche Telekom Treasury Leiter\n- erp : Deutsche Telekom SAP S/4HANA | Deutsche Telekom ERP implementation | Deutsche Telekom Oracle OR Dynamics OR Workday ERP | Deutsche Telekom annual report SAP\n- achats : Deutsche Telekom SAP Ariba supplier | Deutsche Telekom Coupa OR Jaggaer OR Ivalua | Deutsche Telekom supplier portal procurement platform\n- tms : Deutsche Telekom treasury management system | Deutsche Telekom Kyriba | Deutsche Telekom SAP Treasury\n- financement : Deutsche Telekom supply chain finance | Deutsche Telekom reverse factoring | Deutsche Telekom receivables securitisation programme | Deutsche Telekom factoring programme | Deutsche Telekom annual report supplier finance arrangements | Deutsche Telekom Factoring Forderungen Geschäftsbericht\n- signal : Deutsche Telekom finance transformation treasury 2026 | Deutsche Telekom ERP migration\n\nRéponds uniquement par l'objet JSON du schéma.",
+ "sortie": {
+  "trouvailles": [
+   {
+    "champ": "identite",
+    "valeur": "Deutsche Telekom AG",
+    "precision": "Même page : ISIN DE0005557508, WKN 555750, ticker DTE, siège à Bonn (Allemagne), registre du commerce Amtsgericht Bonn HRB 6794.",
+    "statut_valeur": "present",
+    "citation": "© 2026 Deutsche Telekom AG",
+    "citation_langue": "en",
+    "traduction_fr": "© 2026 Deutsche Telekom AG (mention de droit d'auteur)",
+    "url": "https://www.telekom.com/en/investor-relations/share",
+    "entite_nommee": "Deutsche Telekom AG",
+    "type_source": "P1",
+    "date_source": null
+   },
+   {
+    "champ": "identite",
+    "valeur": "ISIN DE0005557508",
+    "precision": "Même page : WKN 555750, ticker DTE, siège à Bonn (Allemagne), registre du commerce Amtsgericht Bonn HRB 6794. Le LEI n'est pas affiché sur cette page.",
+    "statut_valeur": "present",
+    "citation": "DE0005557508",
+    "citation_langue": "en",
+    "traduction_fr": "DE0005557508 (code ISIN de l'action)",
+    "url": "https://www.telekom.com/en/investor-relations/share",
+    "entite_nommee": "Deutsche Telekom AG",
+    "type_source": "P1",
+    "date_source": null
+   },
+   {
+    "champ": "direction_financiere",
+    "valeur": "Christian P. Illek, membre du directoire responsable des finances (directeur financier)",
+    "precision": "La page le présente comme « Member of the Board of Management responsible for Finance » et ne parle pas de « CFO ». Il est en charge des finances depuis le 1er janvier 2019. Son départ fin avril 2027 est annoncé dans le communiqué du 2 septembre 2026 (voir les deux trouvailles suivantes et le signal).",
+    "statut_valeur": "present",
+    "citation": "assumed responsibility for the Finance portfolio on the Board of Management on January 1, 2019.",
+    "citation_langue": "en",
+    "traduction_fr": "a pris la responsabilité du portefeuille Finance au sein du directoire le 1er janvier 2019.",
+    "url": "https://www.telekom.com/en/about-us/corporate-governance/board-of-management/profile-christian-p-illek",
+    "entite_nommee": "Deutsche Telekom AG",
+    "type_source": "P1",
+    "date_source": null
+   },
+   {
+    "champ": "direction_financiere",
+    "valeur": "Dhananjay Mirchandani, directeur financier désigné (CFO), en fonction à compter du 1er mai 2027",
+    "precision": "Le communiqué le nomme « designated CFO of Deutsche Telekom » et lui confie le poste de membre du directoire responsable des finances « effective 05/01/2027 » (lu mois/jour/année). Il dirige Group Controlling depuis 2024 : planification financière du Groupe, pilotage de la performance, gestion des flux de trésorerie (« cash flow management ») et des risques.",
+    "statut_valeur": "present",
+    "citation": "Since 2024, he has led Group Controlling at Deutsche Telekom, where he is responsible for the Group’s financial planning",
+    "citation_langue": "en",
+    "traduction_fr": "Depuis 2024, il dirige le Group Controlling de Deutsche Telekom, où il est responsable de la planification financière du Groupe",
+    "url": "https://www.telekom.com/en/newsroom/latest-updates/media-information/2026/09/deutsche-telekom-reorganizes-leadership-functions",
+    "entite_nommee": "Deutsche Telekom",
+    "type_source": "P1",
+    "date_source": "2026-09-02"
+   },
+   {
+    "champ": "direction_financiere",
+    "valeur": "Joop Jansen, Senior Vice President Finance de Deutsche Telekom IT (filiale informatique, pas le groupe)",
+    "precision": "Cité dans l'étude de cas de T-Systems sur la migration vers RISE with SAP ; la même page dit que Deutsche Telekom IT, avec T-Systems, a lancé son parcours RISE with SAP. Responsable finance de la filiale, à ne pas confondre avec le directeur financier du groupe.",
+    "statut_valeur": "present",
+    "citation": "Joop Jansen, Senior Vice President Finance at Deutsche Telekom IT",
+    "citation_langue": "en",
+    "traduction_fr": "Joop Jansen, Senior Vice President Finance chez Deutsche Telekom IT",
+    "url": "https://www.t-systems.com/gb/en/success-stories/cloud-and-infrastructure/deutsche-telekom-it-moves-to-rise-with-sap",
+    "entite_nommee": "Deutsche Telekom IT",
+    "type_source": "P2",
+    "date_source": null
+   },
+   {
+    "champ": "erp",
+    "valeur": "SAP S/4HANA",
+    "precision": "Feuille de route citée par l'étude de cas (S/4HANA visé pour 2025, migration complète prévue en 2030), pas la preuve d'une bascule achevée. La page parle d'un parcours « RISE with SAP » de Deutsche Telekom IT avec T-Systems et, en sous-titre, de plus de 500 systèmes ERP (« Moving over 500 ERP systems to the cloud to RISE with SAP »).",
+    "statut_valeur": "present",
+    "citation": "The roadmap includes migrating SAP applications and transitioning to S/4HANA by 2025, with full migration planned by 2030.",
+    "citation_langue": "en",
+    "traduction_fr": "La feuille de route prévoit la migration des applications SAP et le passage à S/4HANA d'ici 2025, avec une migration complète prévue d'ici 2030.",
+    "url": "https://www.t-systems.com/gb/en/success-stories/cloud-and-infrastructure/deutsche-telekom-it-moves-to-rise-with-sap",
+    "entite_nommee": "Deutsche Telekom IT",
+    "type_source": "P2",
+    "date_source": null
+   },
+   {
+    "champ": "erp",
+    "valeur": "SAP S/4HANA",
+    "precision": "Article de CIO.de daté du 16 mars 2026 sur la transformation SAP de Telekom : la migration vers S/4HANA était en cours depuis trois mois. L'article ne nomme pas de version précise de S/4HANA.",
+    "statut_valeur": "present",
+    "citation": "Die Migration auf S/4HANA läuft jetzt seit drei Monaten",
+    "citation_langue": "de",
+    "traduction_fr": "La migration vers S/4HANA est en cours depuis trois mois",
+    "url": "https://www.cio.de/article/4141604/sap-transformation-bei-der-telekom-weniger-systeme-mehr-standard-2.html",
+    "entite_nommee": "Deutsche Telekom",
+    "type_source": "P3",
+    "date_source": "2026-03-16"
+   },
+   {
+    "champ": "erp",
+    "valeur": "autre",
+    "precision": "One-Finance Instance (OFI), système financier centralisé depuis des années selon l'article (CIO.de, 16 mars 2026). La phrase ne nomme pas l'éditeur ; l'article traite de la consolidation et de la migration SAP.",
+    "statut_valeur": "present",
+    "citation": "Das einzige System, das wir schon seit Jahren zentral haben, ist das Finanzsystem One-Finance Instance (OFI).",
+    "citation_langue": "de",
+    "traduction_fr": "Le seul système que nous avons depuis des années de façon centralisée est le système financier One-Finance Instance (OFI).",
+    "url": "https://www.cio.de/article/4141604/sap-transformation-bei-der-telekom-weniger-systeme-mehr-standard-2.html",
+    "entite_nommee": "Deutsche Telekom",
+    "type_source": "P3",
+    "date_source": "2026-03-16"
+   },
+   {
+    "champ": "achats",
+    "valeur": "SAP Ariba",
+    "precision": "SAP Ariba Network, décrit par la page de la société comme le portail d'échange de facturation électronique et de bons de commande avec les fournisseurs.",
+    "statut_valeur": "present",
+    "citation": "SAP Ariba Network is the portal for electronical billing and purchase ordering exchange with our suppliers.",
+    "citation_langue": "en",
+    "traduction_fr": "SAP Ariba Network est le portail d'échange de facturation électronique et de bons de commande avec nos fournisseurs.",
+    "url": "https://www.telekom.com/en/general/procurement",
+    "entite_nommee": "Deutsche Telekom AG",
+    "type_source": "P1",
+    "date_source": null
+   },
+   {
+    "champ": "achats",
+    "valeur": "autre",
+    "precision": "One.Source 2.0, portail fournisseurs principal de Deutsche Telekom AG ; les extraits lus ne disent pas sur quelle technologie il repose.",
+    "statut_valeur": "present",
+    "citation": "One.Source 2.0 is Deutsche Telekom AG's main supplier portal.",
+    "citation_langue": "en",
+    "traduction_fr": "One.Source 2.0 est le principal portail fournisseurs de Deutsche Telekom AG.",
+    "url": "https://www.telekom.com/en/general/procurement",
+    "entite_nommee": "Deutsche Telekom AG",
+    "type_source": "P1",
+    "date_source": null
+   },
+   {
+    "champ": "tms",
+    "valeur": "autre",
+    "precision": "TIP, présenté comme logiciel de trésorerie (« treasury software ») utilisé depuis de nombreuses années ; l'article évoque l'intention de l'étendre à la gestion des garanties à l'échelle du groupe. Le texte de présentation de l'article décrit TIP comme « Treasury Information Platform ». Article de mars 2019, usage actuel non vérifié.",
+    "statut_valeur": "present",
+    "citation": "Deutsche Telekom has been using the treasury software TIP for many years",
+    "citation_langue": "en",
+    "traduction_fr": "Deutsche Telekom utilise depuis de nombreuses années le logiciel de trésorerie TIP",
+    "url": "https://www.theglobaltreasurer.com/2019/03/13/digital-guarantee-management-with-tip-at-deutsche-telekom/",
+    "entite_nommee": "Deutsche Telekom",
+    "type_source": "P3",
+    "date_source": "2019-03-13"
+   },
+   {
+    "champ": "financement",
+    "valeur": "Affacturage (recours non précisé)",
+    "precision": "Note 43 du rapport annuel 2025 : accords d'affacturage portant sur des créances commerciales de clients particuliers et professionnels, avec des entités structurées créées à cette seule fin ; l'extrait lu décrit sept autres entités financées par émission de commercial paper auprès de tiers hors Groupe. La note ne dit pas si c'est avec ou sans recours. Le rapport de gestion 2025 limite ces accords au secteur United States à fin 2025.",
+    "statut_valeur": "present",
+    "citation": "Deutsche Telekom is party to factoring agreements under which trade receivables from consumers and business customers",
+    "citation_langue": "en",
+    "traduction_fr": "Deutsche Telekom est partie à des accords d'affacturage dans le cadre desquels des créances commerciales de clients particuliers et professionnels",
+    "url": "https://report.telekom.com/annual-report-2025/notes/other-disclosures/43-financial-instruments-and-risk-management.html",
+    "entite_nommee": "Deutsche Telekom",
+    "type_source": "P1",
+    "date_source": "2025"
+   },
+   {
+    "champ": "financement",
+    "valeur": "Affacturage (recours non précisé)",
+    "precision": "Note 2 du rapport annuel 2025 : créances commerciales d'une valeur comptable de 356 millions EUR (446 millions EUR au 31 décembre 2024) données en garantie en lien avec des accords d'affacturage conclus par T-Mobile US, filiale du groupe. Recours non précisé.",
+    "statut_valeur": "present",
+    "citation": "in connection with factoring agreements concluded by T‑Mobile US, were pledged as collateral.",
+    "citation_langue": "en",
+    "traduction_fr": "en lien avec des accords d'affacturage conclus par T‑Mobile US, ont été données en garantie.",
+    "url": "https://report.telekom.com/annual-report-2025/notes/notes-to-the-statement-of-financial-position/2-trade-receivables.html",
+    "entite_nommee": "T‑Mobile US",
+    "type_source": "P1",
+    "date_source": "2025"
+   },
+   {
+    "champ": "financement",
+    "valeur": "Affacturage (recours non précisé)",
+    "precision": "Rapport de gestion 2025 : créances cédées de 1,8 milliard EUR au 31 décembre 2025 (2,0 milliards EUR au 31 décembre 2024). La page dit que les instruments de financement hors bilan relèvent surtout de la vente de créances par affacturage, qu'à fin 2025 cela ne concerne que les accords du secteur opérationnel United States, et que ces accords servent notamment à la gestion active des créances.",
+    "statut_valeur": "present",
+    "citation": "Total receivables sold as of December 31, 2025 amounted to EUR 1.8 billion (December 31, 2024: EUR 2.0 billion).",
+    "citation_langue": "en",
+    "traduction_fr": "Le total des créances cédées au 31 décembre 2025 s'élevait à 1,8 milliard d'euros (31 décembre 2024 : 2,0 milliards d'euros).",
+    "url": "https://report.telekom.com/annual-report-2025/management-report/development-of-business-in-the-group/profitability-and-financial-position-of-the-group.html",
+    "entite_nommee": "Deutsche Telekom",
+    "type_source": "P1",
+    "date_source": "2025"
+   },
+   {
+    "champ": "financement",
+    "valeur": "Titrisation de créances",
+    "precision": "Note 2 du rapport annuel 2025 : créances commerciales d'une valeur comptable de 2 213 millions EUR données en garantie en lien avec des titres adossés à des actifs (ABS) émis par T-Mobile US, filiale du groupe. La note 43 décrit ces ABS comme « collateralized by trade receivables ».",
+    "statut_valeur": "present",
+    "citation": "in connection with asset-backed securities issued by T‑Mobile US",
+    "citation_langue": "en",
+    "traduction_fr": "en lien avec des titres adossés à des actifs (ABS) émis par T‑Mobile US",
+    "url": "https://report.telekom.com/annual-report-2025/notes/notes-to-the-statement-of-financial-position/2-trade-receivables.html",
+    "entite_nommee": "T‑Mobile US",
+    "type_source": "P1",
+    "date_source": "2025"
+   },
+   {
+    "champ": "financement",
+    "valeur": "Billets de trésorerie",
+    "precision": "Programme global de commercial paper (marchés européen ECP et américain USCP), émetteur Deutsche Telekom AG, plafond de 20 milliards USD, durée de 1 à 365 jours. La page dit qu'au 30 septembre 2026 aucun CP n'était émis et que le programme sert à optimiser les charges d'intérêts sans faire partie de la réserve de liquidité.",
+    "statut_valeur": "present",
+    "citation": "Our global CP Program enables both issues in the European CP market (ECP) and in the U.S. CP market (USCP).",
+    "citation_langue": "en",
+    "traduction_fr": "Notre programme mondial de CP permet des émissions à la fois sur le marché européen des CP (ECP) et sur le marché américain des CP (USCP).",
+    "url": "https://www.telekom.com/en/investor-relations/debt-capital/financing-mix/commercial-paper-disclaimer/commercial-paper",
+    "entite_nommee": "Deutsche Telekom AG",
+    "type_source": "P1",
+    "date_source": "2026-09-30"
+   },
+   {
+    "champ": "financement",
+    "valeur": "autre",
+    "precision": "Lignes de crédit bancaires bilatérales (« bilateral credit lines » selon la page) : 20 banques principales, 12,0 milliards EUR au total, durée de deux à trois ans, sans covenant financier limitant, sans déclencheur de notation ni clause MAC, non tirées au 30 septembre 2026, présentées comme réserve de liquidité. La page ne dit pas si elles sont confirmées, renouvelables ou syndiquées.",
+    "statut_valeur": "present",
+    "citation": "At present, Deutsche Telekom has 20 core banks providing a credit line of EUR 12.0 billion in total.",
+    "citation_langue": "en",
+    "traduction_fr": "À l'heure actuelle, Deutsche Telekom dispose de 20 banques principales qui fournissent une ligne de crédit de 12,0 milliards d'euros au total.",
+    "url": "https://www.telekom.com/en/investor-relations/debt-capital/financing-mix/bank-financing",
+    "entite_nommee": "Deutsche Telekom",
+    "type_source": "P1",
+    "date_source": "2026-09-30"
+   },
+   {
+    "champ": "signal",
+    "valeur": "Changement de directeur financier annoncé le 2 septembre 2026 : Dhananjay Mirchandani succède à Christian Illek le 1er mai 2027",
+    "precision": "Communiqué « Deutsche Telekom reorganizes leadership functions » : Christian Illek quitte la société fin avril 2027, après l'assemblée générale, pour des raisons d'âge (« age-related reasons »). Dhananjay Mirchandani, aujourd'hui à la tête de Group Controlling, devient membre du directoire responsable des finances « effective 05/01/2027 ».",
+    "statut_valeur": "present",
+    "citation": "Change at the helm of Deutsche Telekom’s Finance division: Dr. Christian Illek will leave the company at the end of April",
+    "citation_langue": "en",
+    "traduction_fr": "Changement à la tête de la division Finance de Deutsche Telekom : le Dr Christian Illek quittera la société fin avril",
+    "url": "https://www.telekom.com/en/newsroom/latest-updates/media-information/2026/09/deutsche-telekom-reorganizes-leadership-functions",
+    "entite_nommee": "Deutsche Telekom",
+    "type_source": "P1",
+    "date_source": "2026-09-02"
+   },
+   {
+    "champ": "signal",
+    "valeur": "Consolidation et migration SAP jusqu'en 2030",
+    "precision": "Article de CIO.de du 16 mars 2026 : la Deutsche Telekom s'est lancée dans un projet de consolidation et de migration SAP jusqu'en 2030. Le même article donne « de 83 à 40 applications centrales » (il compte des applications, pas des systèmes ERP).",
+    "statut_valeur": "present",
+    "citation": "Die Deutsche Telekom hat sich mit der SAP-Konsolidierung und -Migration bis 2030 ein Mammutprojekt vorgenommen.",
+    "citation_langue": "de",
+    "traduction_fr": "Avec la consolidation et la migration SAP jusqu'en 2030, la Deutsche Telekom s'est donné un projet colossal.",
+    "url": "https://www.cio.de/article/4141604/sap-transformation-bei-der-telekom-weniger-systeme-mehr-standard-2.html",
+    "entite_nommee": "Deutsche Telekom",
+    "type_source": "P3",
+    "date_source": "2026-03-16"
+   }
+  ],
+  "champs_sans_resultat": [],
+  "remarques": [
+   "La demande ne définit pas P1 à P5. J'ai suivi l'ordre des moyens indiqué : P1 documents et pages de la société, P2 communiqués et études de cas d'éditeurs ou d'intégrateurs, P3 presse spécialisée, P4 offres d'emploi, P5 autre.",
+   "Identité : nom légal, ISIN, WKN, ticker et registre du commerce (Amtsgericht Bonn HRB 6794) lus sur la page relations investisseurs de telekom.com. Le LEI n'apparaît sur aucune page lue : non confirmé. Le PDF d'informations réglementaires de telekom.com a répondu 404.",
+   "Dates : les pages du rapport annuel 2025 n'affichent pas de date de publication, j'ai noté l'année du rapport (2025). Pour les pages relations investisseurs sur les lignes de crédit et le programme de commercial paper, j'ai noté la date de situation affichée (30 septembre 2026). Le communiqué de direction affiche « 09-02-2026 » : je le lis comme le 2 septembre 2026 (mois-jour-année), ce que confirment l'adresse en /2026/09/ et la date « 05/01/2027 » du même texte, qui désigne le 1er mai 2027 après un départ fin avril.",
+   "Trésorier : aucune page de la société lue ne nomme un trésorier ni un responsable de Group Treasury. La note 43 du rapport annuel 2025 dit seulement « Group Treasury is responsible for implementing the financial policy and for ongoing risk management. » La page « Bank financing » liste deux contacts sous « Debt Market » (Schäfer Markus, Zhiltsova Galina), sans titre de trésorier. Un article de 2019 cite un « Vice President Treasury Management & Systems » nommé David Hoeren, et une notice d'orateur tierce le dit aujourd'hui à Deutsche Telekom Services Europe (HR Service Management) après un poste à Group Treasury : piste non vérifiée sur une page de la société, probablement pas un trésorier actuel.",
+   "Affacturage et titrisation : les éléments nommés concernent T-Mobile US, filiale du groupe (secteur United States). Le rapport de gestion 2025 précise qu'à fin 2025 l'affacturage ne relève que de ce secteur.",
+   "Lignes de crédit : la page relations investisseurs parle de « bilateral credit lines » sans dire si elles sont confirmées, renouvelables ou syndiquées. Je les ai classées « autre » pour ne rien déduire.",
+   "Affacturage inversé (supply chain finance), escompte dynamique, crédit documentaire ou forfaiting : aucune trouvaille. Les notes 14 (dettes fournisseurs) et 43 du rapport annuel 2025 ne mentionnent aucun supplier finance, sans dire qu'il n'y en a pas : pas d'absence déclarée. Écartés : la coopération Commerzbank et T-Systems de 2023 (offre de T-Systems à des clients, pas un financement de Deutsche Telekom) et l'homonyme Telkom (Afrique du Sud), qui a un programme de supply chain finance.",
+   "TMS : seule trouvaille, l'article de The Global Treasurer de 2019 sur TIP, dont l'usage actuel n'est pas vérifié. Des offres d'emploi relayées par des agrégateurs, vues dans les résultats de recherche, évoquent SAP Treasury and Risk Management, SAP Payment Factory et SAP In-House Cash chez Deutsche Telekom ; la page hw.glich.co a répondu 410 et la page fuchsjobs.de n'avait pas de texte, donc aucune citation possible. Kyriba : rien trouvé.",
+   "Achats : la page procurement de telekom.com nomme SAP Ariba Network et One.Source 2.0. Deux pistes non lues, faute de lecture possible : une étude de cas SAP sur Deutsche Telekom AG (SAP Business Network for Procurement, SAP Ariba Sourcing ; sap.com a répondu 403, copie sur https://www.casestudies.com/company/sap/case-study/revolutionizing-procure-to-pay-to-drive-customer-satisfaction-and-strategic-savings) et une étude de cas titrée « Case Study: Deutsche Telekom achieves 100% compliant, efficient and transparent procurement with Ivalua » (https://www.casestudies.com/company/ivalua/case-study/digitizing-procurement-to-drive-compliance-efficiency-and-transparency), dont le contenu n'est pas vérifié.",
+   "ERP : l'étude de cas T-Systems (filiale du groupe) parle de « Deutsche Telekom IT » et de plus de 500 systèmes ERP ; l'article CIO.de de mars 2026 parle de 83 à 40 applications centrales. Les calendriers diffèrent (S/4HANA d'ici 2025 selon T-Systems, migration en cours depuis trois mois en mars 2026 selon CIO.de) : l'état exact et le périmètre de la bascule ne sont pas établis.",
+   "Limites : 20 ouvertures de pages sur 20 autorisées, dont 4 en échec (403, 404, 404, 410) ; 23 recherches faites, les deux suivantes ont été refusées par l'outil (budget de recherche de la session épuisé)."
+  ]
+ },
+ "sessions": [
+  "af4b11132012c5e03"
+ ],
+ "acces": "sous-agent"
+}

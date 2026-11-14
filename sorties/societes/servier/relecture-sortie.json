@@ -1,0 +1,36 @@
+{
+  "lectures": [
+    {
+      "id": "servier-erp-5",
+      "lue": true,
+      "passage": "full Procure-to-Pay backed by SAP ERP",
+      "contexte": null,
+      "titre": "Servier Turns to Procurement Industry Innovator Determine to Execute Strategic Mission-Critical Upgrade, Expansion and Deep SAP Integration",
+      "date_page": "January 23, 2018"
+    },
+    {
+      "id": "servier-erp-6",
+      "lue": true,
+      "passage": "Swipha chose SAP’s flagship S/4HANA platform",
+      "contexte": null,
+      "titre": "Swiss Pharma Nigeria Ltd Leaps into 4IR Capabilities with SAP S/4HANA Deployment",
+      "date_page": "December 14, 2021"
+    },
+    {
+      "id": "servier-achats-8",
+      "lue": true,
+      "passage": "Servier has been using the Determine Procurement Solution since 2007",
+      "contexte": null,
+      "titre": "Pharmaceutical group Servier, boosts its digital transformation with the Determine Procurement Cloud Platform",
+      "date_page": "September 15, 2020"
+    },
+    {
+      "id": "servier-achats-9",
+      "lue": true,
+      "passage": "Servier Group has expanded use of the functional spectrum of the Determine Cloud Platform",
+      "contexte": null,
+      "titre": "Servier Turns to Procurement Industry Innovator Determine to Execute Strategic Mission-Critical Upgrade, Expansion and Deep SAP Integration",
+      "date_page": "January 23, 2018"
+    }
+  ]
+}

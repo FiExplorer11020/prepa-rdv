@@ -1,0 +1,41 @@
+{
+ "societe": "SSAB",
+ "empreinte_prompt": "6ee5257d0713",
+ "plan": {
+  "direction_financiere": [
+   "SSAB Chief Financial Officer",
+   "SSAB Group Treasurer",
+   "SSAB investor relations management team",
+   "SSAB CFO ekonomichef",
+   "SSAB factoring kundfordringar årsredovisning"
+  ],
+  "erp": [
+   "SSAB SAP S/4HANA",
+   "SSAB ERP implementation",
+   "SSAB Oracle OR Dynamics OR Workday ERP",
+   "SSAB annual report SAP"
+  ],
+  "achats": [
+   "SSAB SAP Ariba supplier",
+   "SSAB Coupa OR Jaggaer OR Ivalua",
+   "SSAB supplier portal procurement platform"
+  ],
+  "tms": [
+   "SSAB treasury management system",
+   "SSAB Kyriba",
+   "SSAB SAP Treasury"
+  ],
+  "financement": [
+   "SSAB supply chain finance",
+   "SSAB reverse factoring",
+   "SSAB receivables securitisation programme",
+   "SSAB factoring programme",
+   "SSAB annual report supplier finance arrangements"
+  ],
+  "signal": [
+   "SSAB finance transformation treasury 2026",
+   "SSAB ERP migration"
+  ]
+ },
+ "sortie": "<racine>/sorties/societes/ssab/agent-sortie.json"
+}

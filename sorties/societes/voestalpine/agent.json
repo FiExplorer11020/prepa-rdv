@@ -1,0 +1,270 @@
+{
+ "empreinte_prompt": "6ee5257d0713",
+ "modele": "claude-sonnet-5-5 (sous-agent)",
+ "plan": {
+  "direction_financiere": [
+   "voestalpine Chief Financial Officer",
+   "voestalpine Group Treasurer",
+   "voestalpine investor relations management team",
+   "voestalpine Finanzvorstand",
+   "voestalpine Treasury Leiter"
+  ],
+  "erp": [
+   "voestalpine SAP S/4HANA",
+   "voestalpine ERP implementation",
+   "voestalpine Oracle OR Dynamics OR Workday ERP",
+   "voestalpine annual report SAP"
+  ],
+  "achats": [
+   "voestalpine SAP Ariba supplier",
+   "voestalpine Coupa OR Jaggaer OR Ivalua",
+   "voestalpine supplier portal procurement platform"
+  ],
+  "tms": [
+   "voestalpine treasury management system",
+   "voestalpine Kyriba",
+   "voestalpine SAP Treasury"
+  ],
+  "financement": [
+   "voestalpine supply chain finance",
+   "voestalpine reverse factoring",
+   "voestalpine receivables securitisation programme",
+   "voestalpine factoring programme",
+   "voestalpine annual report supplier finance arrangements",
+   "voestalpine Factoring Forderungen Geschäftsbericht"
+  ],
+  "signal": [
+   "voestalpine finance transformation treasury 2026",
+   "voestalpine ERP migration"
+  ]
+ },
+ "prompt": "Société : voestalpine (nom légal retenu : voestalpine AG)\nPays du siège : Austria. Statut : coté.\nSite officiel : https://www.voestalpine.com. Domaines de la société : voestalpine.com.\nAttention, identité à confirmer : Wikidata non interrogé : PREPA_RDV_CONTACT absent ; ISIN, LEI et nom légal à confirmer.\n\nPlan de requêtes (suis-le, complète-le si besoin) :\n- direction_financiere : voestalpine Chief Financial Officer | voestalpine Group Treasurer | voestalpine investor relations management team | voestalpine Finanzvorstand | voestalpine Treasury Leiter\n- erp : voestalpine SAP S/4HANA | voestalpine ERP implementation | voestalpine Oracle OR Dynamics OR Workday ERP | voestalpine annual report SAP\n- achats : voestalpine SAP Ariba supplier | voestalpine Coupa OR Jaggaer OR Ivalua | voestalpine supplier portal procurement platform\n- tms : voestalpine treasury management system | voestalpine Kyriba | voestalpine SAP Treasury\n- financement : voestalpine supply chain finance | voestalpine reverse factoring | voestalpine receivables securitisation programme | voestalpine factoring programme | voestalpine annual report supplier finance arrangements | voestalpine Factoring Forderungen Geschäftsbericht\n- signal : voestalpine finance transformation treasury 2026 | voestalpine ERP migration\n\nRéponds uniquement par l'objet JSON du schéma.",
+ "sortie": {
+  "trouvailles": [
+   {
+    "champ": "identite",
+    "valeur": "voestalpine AG",
+    "precision": "Nom légal et siège (voestalpine-Straße 1, A-4020 Linz, Austria) lus sur la page Information du rapport annuel 2025/26.",
+    "statut_valeur": "present",
+    "citation": "© 2026 voestalpine AG",
+    "citation_langue": "en",
+    "traduction_fr": "© 2026 voestalpine AG",
+    "url": "https://reports.voestalpine.com/2526/ar/the-group/investor-relations/information.html",
+    "entite_nommee": "voestalpine AG",
+    "type_source": "P1",
+    "date_source": "2026-03-31"
+   },
+   {
+    "champ": "identite",
+    "valeur": "AT0000937503",
+    "precision": "ISIN de voestalpine AG affiché sur la page Information du rapport annuel 2025/26, avec le code 93750 de la Bourse de Vienne. Le LEI n'est confirmé par aucune page lue.",
+    "statut_valeur": "present",
+    "citation": "AT0000937503",
+    "citation_langue": "en",
+    "traduction_fr": "AT0000937503",
+    "url": "https://reports.voestalpine.com/2526/ar/the-group/investor-relations/information.html",
+    "entite_nommee": "voestalpine AG",
+    "type_source": "P1",
+    "date_source": "2026-03-31"
+   },
+   {
+    "champ": "direction_financiere",
+    "valeur": "Gerald Mayer",
+    "precision": "Chief Financial Officer (CFO) de voestalpine AG, membre du directoire depuis le 01/04/2024, page du rapport annuel 2025/26. La même page place sous sa responsabilité notamment Corporate Accounting and Reporting, Controlling et Group Treasury, puis la fiscalité, les systèmes d'information de gestion, la gestion des risques, les assurances et l'informatique.",
+    "statut_valeur": "present",
+    "citation": "Mag. Gerald Mayer Chief Financial Officer (CFO)",
+    "citation_langue": "en",
+    "traduction_fr": "Mag. Gerald Mayer, directeur financier (CFO)",
+    "url": "https://reports.voestalpine.com/2526/ar/the-group/corporate-governance/management-board.html",
+    "entite_nommee": "voestalpine AG",
+    "type_source": "P1",
+    "date_source": null
+   },
+   {
+    "champ": "direction_financiere",
+    "valeur": "Günther Pastl",
+    "precision": "Head of Group Treasury de voestalpine, invité de l'épisode 16 du podcast myPODCAST (Group Treasury and green bonds - the financial world of voestalpine), consacré au financement de l'entreprise. La page n'affiche aucune date.",
+    "statut_valeur": "present",
+    "citation": "Host Sylvia Reim speaks with Günther Pastl, Head of Group Treasury at voestalpine",
+    "citation_langue": "en",
+    "traduction_fr": "L'animatrice Sylvia Reim s'entretient avec Günther Pastl, responsable de la trésorerie du groupe (Head of Group Treasury) chez voestalpine",
+    "url": "https://mypodcast-voestalpine.podigee.io/18-neue-episode",
+    "entite_nommee": "voestalpine",
+    "type_source": "P1",
+    "date_source": null
+   },
+   {
+    "champ": "erp",
+    "valeur": "SAP S/4HANA",
+    "precision": "Conversion le 21/11/2022 des systèmes SAP ERP productifs de la Steel Division. Page de voestalpine group-IT GmbH, qui se décrit comme le partenaire informatique mondial du groupe. Le périmètre de la page est la Steel Division ; elle ne cite pas les autres divisions.",
+    "statut_valeur": "present",
+    "citation": "On November 21, 2022, the Steel Division's productive SAP ERP systems were successfully converted to the current product version SAP S/4HANA.",
+    "citation_langue": "en",
+    "traduction_fr": "Le 21 novembre 2022, les systèmes SAP ERP productifs de la Steel Division ont été convertis avec succès vers la version actuelle du produit, SAP S/4HANA.",
+    "url": "https://www.voestalpine.com/group-it/en/NewsStories/S4HANA/?year=2023",
+    "entite_nommee": "voestalpine Steel Division",
+    "type_source": "P1",
+    "date_source": "2023-04-18"
+   },
+   {
+    "champ": "erp",
+    "valeur": "SAP S/4HANA",
+    "precision": "Entretien avec le CIO de voestalpine, Markus Schaal. L'article place le passage au noyau SAP S/4HANA parmi les plus gros chantiers de sa liste de priorités et dit que le nombre d'instances SAP doit être réduit. Première migration faite dans la Steel Division, d'autres annoncées sans précision de divisions.",
+    "statut_valeur": "present",
+    "citation": "Die erste S/4HANA-Migration wurde bereits im November letzten Jahres in der Steel Division erfolgreich durchgeführt, weitere werden folgen.",
+    "citation_langue": "de",
+    "traduction_fr": "La première migration vers S/4HANA a déjà été menée à bien en novembre de l'an dernier dans la Steel Division, d'autres suivront.",
+    "url": "https://www.cio.de/article/3696826/wie-voestalpine-die-it-transformiert.html",
+    "entite_nommee": "Voestalpine",
+    "type_source": "P3",
+    "date_source": "2023-07-03"
+   },
+   {
+    "champ": "achats",
+    "valeur": "SAP Ariba",
+    "precision": "La page fournisseurs de voestalpine parle du SAP Business Network (anciennement SAP Ariba) pour la collaboration opérationnelle avec les fournisseurs, et d'un SAP Ariba Business Network qui consolide la collaboration au sein du groupe voestalpine sur une plateforme numérique centrale.",
+    "statut_valeur": "present",
+    "citation": "For operational collaboration with suppliers, voestalpine uses the SAP Business Network (formerly SAP Ariba).",
+    "citation_langue": "en",
+    "traduction_fr": "Pour la collaboration opérationnelle avec les fournisseurs, voestalpine utilise le SAP Business Network (anciennement SAP Ariba).",
+    "url": "https://www.voestalpine.com/group/en/group/supplier/",
+    "entite_nommee": "voestalpine",
+    "type_source": "P1",
+    "date_source": null
+   },
+   {
+    "champ": "achats",
+    "valeur": "Jaggaer",
+    "precision": "Étude de cas JAGGAER sur une solution de gestion de la relation fournisseurs (SRM), reprise par le site agrégateur casestudies.com. La page n'affiche pas de date et évoque environ 400 utilisateurs achats. Elle ne dit pas si cette solution est encore utilisée aujourd'hui.",
+    "statut_valeur": "present",
+    "citation": "To address this, voestalpine selected JAGGAER’s supplier relationship management (SRM) solution",
+    "citation_langue": "en",
+    "traduction_fr": "Pour y répondre, voestalpine a choisi la solution de gestion de la relation fournisseurs (SRM) de JAGGAER",
+    "url": "https://www.casestudies.com/company/jaggaer/case-study/voestalpine-brings-the-local-market-global",
+    "entite_nommee": "voestalpine",
+    "type_source": "P5",
+    "date_source": null
+   },
+   {
+    "champ": "financement",
+    "valeur": "Affacturage (recours non précisé)",
+    "precision": "Cessions mensuelles de créances commerciales à diverses banques, en revolving. Au 31/03/2026 : premier type d'accord 1 340,5 M EUR cédés (31/03/2025 : 1 284,5 M EUR) ; second type, créances non assurées, 321,3 M EUR (31/03/2025 : 296,3 M EUR). Commission de service de 0,15 % des créances cédées. Pour le premier type, la société cédante n'assume la responsabilité du défaut que jusqu'à 8 % en général du niveau de rétention de l'assurance-crédit.",
+    "statut_valeur": "present",
+    "citation": "In the voestalpine Group, trade receivables are sold monthly to various banks on a revolving basis.",
+    "citation_langue": "en",
+    "traduction_fr": "Dans le groupe voestalpine, les créances commerciales sont cédées chaque mois à diverses banques, de manière renouvelable.",
+    "url": "https://reports.voestalpine.com/2526/ar/notes/other-notes/d-30-disclosures.html",
+    "entite_nommee": "voestalpine Group",
+    "type_source": "P1",
+    "date_source": "2026-03-31"
+   },
+   {
+    "champ": "financement",
+    "valeur": "Affacturage sans recours",
+    "precision": "Second type d'accord d'affacturage : créances non assurées de 321,3 M EUR cédées au 31/03/2026 (296,3 M EUR au 31/03/2025). La page dit que la banque acquéreuse assume 100 % du risque de défaut et que toutes les créances sont décomptabilisées en totalité. Le classement « sans recours » traduit ce libellé de la page.",
+    "statut_valeur": "present",
+    "citation": "The acquiring bank assumes 100% of the default risk.",
+    "citation_langue": "en",
+    "traduction_fr": "La banque acquéreuse assume 100 % du risque de défaut.",
+    "url": "https://reports.voestalpine.com/2526/ar/notes/other-notes/d-30-disclosures.html",
+    "entite_nommee": "voestalpine AG",
+    "type_source": "P1",
+    "date_source": "2026-03-31"
+   },
+   {
+    "champ": "financement",
+    "valeur": "Affacturage inversé (supply chain finance)",
+    "precision": "Dettes fournisseurs sous accords d'affacturage inversé : 30,8 M EUR au 31/03/2026 (21,3 M EUR au 31/03/2025). Le tableau de la note D.23 totalise 852,3 M EUR de dettes sous les trois modèles de supplier finance (729,5 M EUR au 31/03/2025).",
+    "statut_valeur": "present",
+    "citation": "early payment from a bank, and voestalpine then pays the bank when the invoice under the reverse factoring agreement is due",
+    "citation_langue": "en",
+    "traduction_fr": "paiement anticipé par une banque, puis voestalpine paie la banque lorsque la facture relevant de l'accord d'affacturage inversé arrive à échéance",
+    "url": "https://reports.voestalpine.com/2526/ar/notes/notes-to-the-statement-of-financial-position-equity-and-liabilities/d-23-supplier-finance-arrangements.html",
+    "entite_nommee": "voestalpine",
+    "type_source": "P1",
+    "date_source": "2026-03-31"
+   },
+   {
+    "champ": "financement",
+    "valeur": "autre",
+    "precision": "Traites (bills of exchange) émises au profit des fournisseurs, que ceux-ci peuvent céder avec escompte à un établissement financier : 723,9 M EUR de dettes fournisseurs au 31/03/2026 (678,2 M EUR au 31/03/2025), première ligne du tableau de la note D.23.",
+    "statut_valeur": "present",
+    "citation": "Under the bills of exchange payment model, suppliers are given the option to receive early payment by selling their receivables to a financial institution",
+    "citation_langue": "en",
+    "traduction_fr": "Dans le modèle de paiement par traites, les fournisseurs ont la possibilité de recevoir un paiement anticipé en cédant leurs créances à un établissement financier",
+    "url": "https://reports.voestalpine.com/2526/ar/notes/notes-to-the-statement-of-financial-position-equity-and-liabilities/d-23-supplier-finance-arrangements.html",
+    "entite_nommee": "voestalpine",
+    "type_source": "P1",
+    "date_source": "2026-03-31"
+   },
+   {
+    "champ": "financement",
+    "valeur": "autre",
+    "precision": "Programme avec un prestataire de services de paiement (modèle de supplier finance) : 97,6 M EUR de dettes fournisseurs au 31/03/2026 contre 30,0 M EUR au 31/03/2025. Le nom du prestataire n'a pas été relevé sur la page.",
+    "statut_valeur": "present",
+    "citation": "invoices from suppliers are paid by the payment service provider on the due date, while voestalpine has the option to extend the payment terms",
+    "citation_langue": "en",
+    "traduction_fr": "les factures des fournisseurs sont payées par le prestataire de services de paiement à l'échéance, tandis que voestalpine a la possibilité d'allonger les délais de paiement",
+    "url": "https://reports.voestalpine.com/2526/ar/notes/notes-to-the-statement-of-financial-position-equity-and-liabilities/d-23-supplier-finance-arrangements.html",
+    "entite_nommee": "voestalpine",
+    "type_source": "P1",
+    "date_source": "2026-03-31"
+   },
+   {
+    "champ": "financement",
+    "valeur": "autre",
+    "precision": "Lignes de crédit contractuellement garanties (committed credit lines) de 1 500,0 M EUR au 31/03/2026, contre 1 200,0 M EUR au 31/03/2025, lues dans la note D.25 sur les instruments financiers. La phrase citée ne parle pas de ligne revolving, d'où le classement « autre ».",
+    "statut_valeur": "present",
+    "citation": "voestalpine AG carries contractually guaranteed credit lines of EUR 1,500.0 million",
+    "citation_langue": "en",
+    "traduction_fr": "voestalpine AG dispose de lignes de crédit contractuellement garanties de 1 500,0 millions d'euros",
+    "url": "https://reports.voestalpine.com/2526/ar/notes/other-notes/d-25-financial-instruments.html",
+    "entite_nommee": "voestalpine AG",
+    "type_source": "P1",
+    "date_source": "2026-03-31"
+   },
+   {
+    "champ": "signal",
+    "valeur": "Nouvelle CFO de la division Metal Engineering, membre du directoire de la division depuis le 01/04/2026",
+    "precision": "Eva Aigner succède à Martin Reisetbauer, qui part à la retraite le 01/06/2026. Son périmètre de CFO couvre contrôle de gestion, finance, comptabilité et gestion des risques, ainsi que l'informatique, la protection des données, le centre de santé au travail et les affaires juridiques (communiqué du 11 mai 2026).",
+    "statut_valeur": "present",
+    "citation": "Eva Aigner has been a member of the Management Board of the Metal Engineering Division of the voestalpine Group since April 1, 2026",
+    "citation_langue": "en",
+    "traduction_fr": "Eva Aigner est membre du directoire de la division Metal Engineering du groupe voestalpine depuis le 1er avril 2026",
+    "url": "https://www.voestalpine.com/group/en/media/press-releases/Eva-Aigner-is-the-new-Chief-Financial-Officer-of-the-Metal-Engineering-Division-of-the-voestalpine-Group/",
+    "entite_nommee": "voestalpine Group",
+    "type_source": "P1",
+    "date_source": "2026-05-11"
+   },
+   {
+    "champ": "signal",
+    "valeur": "Mandat du CFO du groupe, Gerald Mayer, renouvelé pour la période du 01/04/2027 au 31/03/2032",
+    "precision": "Décision du conseil de surveillance du 18/03/2026, lue sur la page du directoire du rapport annuel 2025/26. La même page indique que son mandat en cours se termine le 31/03/2027.",
+    "statut_valeur": "present",
+    "citation": "Reappointment for the term from 04/01/2027 to 03/31/2032 by resolution of the Supervisory Board dated 03/18/2026",
+    "citation_langue": "en",
+    "traduction_fr": "Reconduction pour la période du 01/04/2027 au 31/03/2032 par décision du conseil de surveillance du 18/03/2026",
+    "url": "https://reports.voestalpine.com/2526/ar/the-group/corporate-governance/management-board.html",
+    "entite_nommee": "voestalpine AG",
+    "type_source": "P1",
+    "date_source": "2026-03-18"
+   }
+  ],
+  "champs_sans_resultat": [
+   "tms"
+  ],
+  "remarques": [
+   "Identité : nom légal voestalpine AG, siège à Linz et ISIN AT0000937503 lus sur la page Information du rapport annuel 2025/26. Le LEI n'est confirmé par aucune page lue.",
+   "ERP : seule la Steel Division est documentée (conversion le 21/11/2022 ; l'article du 03/07/2023 annonce d'autres migrations sans les nommer). Aucune page lue ne dit ce que font tourner les autres divisions ni si du SAP ECC subsiste.",
+   "Achats : la page fournisseurs de voestalpine cite le SAP Business Network (anciennement SAP Ariba). La page casestudies.com sur JAGGAER, sans date, décrit une solution SRM ; aucune page lue ne dit si les deux coexistent. Elle est classée P5 faute de page d'éditeur lisible : les originaux sap.com et jaggaer.com ont renvoyé des erreurs 403 et 404.",
+   "TMS et trésorerie : aucune page lue ne nomme un système de trésorerie. Les recherches sur Kyriba, SAP Treasury et Bellin, et celles sur les offres d'emploi de trésorerie, n'ont rien donné de lisible.",
+   "Financement : la note D.30 ne mentionne ni titrisation ni billets de trésorerie, et la note D.25 (lue sur ses 100 000 premiers caractères, sur 105 692) ne mentionne ni billets de trésorerie, ni titrisation, ni lettre de crédit, ni crédit documentaire, ni forfaiting. Ce n'est pas une absence déclarée. Les lignes de crédit sont décrites comme contractuellement garanties : le mot revolving n'apparaît pas dans les phrases lues.",
+   "Direction financière : l'épisode du podcast avec Günther Pastl n'affiche pas de date, son poste actuel n'est donc pas reconfirmé par une page datée.",
+   "Limite : le budget de 20 pages lues est atteint et aucune offre d'emploi pertinente n'a pu être lue."
+  ]
+ },
+ "sessions": [
+  "a2090716f082a84e5"
+ ],
+ "acces": "sous-agent"
+}

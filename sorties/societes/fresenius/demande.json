@@ -1,0 +1,42 @@
+{
+ "societe": "Fresenius",
+ "empreinte_prompt": "6ee5257d0713",
+ "plan": {
+  "direction_financiere": [
+   "Fresenius Chief Financial Officer",
+   "Fresenius Group Treasurer",
+   "Fresenius investor relations management team",
+   "Fresenius Finanzvorstand",
+   "Fresenius Treasury Leiter"
+  ],
+  "erp": [
+   "Fresenius SAP S/4HANA",
+   "Fresenius ERP implementation",
+   "Fresenius Oracle OR Dynamics OR Workday ERP",
+   "Fresenius annual report SAP"
+  ],
+  "achats": [
+   "Fresenius SAP Ariba supplier",
+   "Fresenius Coupa OR Jaggaer OR Ivalua",
+   "Fresenius supplier portal procurement platform"
+  ],
+  "tms": [
+   "Fresenius treasury management system",
+   "Fresenius Kyriba",
+   "Fresenius SAP Treasury"
+  ],
+  "financement": [
+   "Fresenius supply chain finance",
+   "Fresenius reverse factoring",
+   "Fresenius receivables securitisation programme",
+   "Fresenius factoring programme",
+   "Fresenius annual report supplier finance arrangements",
+   "Fresenius Factoring Forderungen Geschäftsbericht"
+  ],
+  "signal": [
+   "Fresenius finance transformation treasury 2026",
+   "Fresenius ERP migration"
+  ]
+ },
+ "sortie": "<racine>/sorties/societes/fresenius/agent-sortie.json"
+}

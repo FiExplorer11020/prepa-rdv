@@ -1,0 +1,18 @@
+{
+ "nom_saisi": "Nokia",
+ "nom_retenu": "Nokia Oyj",
+ "qid": null,
+ "pays": "Finland",
+ "statut": "coté",
+ "isin": [],
+ "lei": null,
+ "lei_controle": null,
+ "nom_gleif": null,
+ "site": "https://www.nokia.com",
+ "domaines": [
+  "nokia.com"
+ ],
+ "alias": [],
+ "a_confirmer": "Wikidata non interrogé : PREPA_RDV_CONTACT absent ; ISIN, LEI et nom légal à confirmer",
+ "source": "table locale"
+}

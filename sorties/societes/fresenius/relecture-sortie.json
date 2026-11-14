@@ -1,0 +1,52 @@
+{
+  "lectures": [
+    {
+      "id": "fresenius-identite-2",
+      "lue": true,
+      "passage": "ISIN: DE000FRE5EN2 // WKN: FRE5EN",
+      "contexte": null,
+      "titre": "FAQ | Fresenius SE & Co. KGaA",
+      "date_page": null
+    },
+    {
+      "id": "fresenius-identite-3",
+      "lue": true,
+      "passage": "Fresenius SE into a partnership limited by shares (KGaA) took effect on January 28, 2011",
+      "contexte": null,
+      "titre": "FAQ | Fresenius SE & Co. KGaA",
+      "date_page": null
+    },
+    {
+      "id": "fresenius-erp-7",
+      "lue": true,
+      "passage": "The company successfully migrated its key SAP systems into the cloud with RISE with SAP",
+      "contexte": null,
+      "titre": "Fresenius moves more than 130 SAP systems to the cloud – a digitalization milestone on its #FutureFresenius journey | FSE",
+      "date_page": "June 23, 2023"
+    },
+    {
+      "id": "fresenius-erp-8",
+      "lue": true,
+      "passage": "in enabling end-to-end value realization through SAP S/4HANA adoption",
+      "contexte": null,
+      "titre": "Practitioner Perspectives – Lars Hölzer on Fresenius Kabi’s Journey to Place GBS at the Core of Its S/4Hana Enterprise Transformation - Everest Group Research Portal",
+      "date_page": "October 17, 2025"
+    },
+    {
+      "id": "fresenius-tms-10",
+      "lue": true,
+      "passage": "SAP is the leading treasury management system",
+      "contexte": null,
+      "titre": "Twin treasury pillars: FX risk and more at DAX-listed Fresenius",
+      "date_page": "April 11, 2019"
+    },
+    {
+      "id": "fresenius-tms-11",
+      "lue": true,
+      "passage": "Fresenius relies on the Treasury Information Platform TIP",
+      "contexte": null,
+      "titre": "Twin treasury pillars: FX risk and more at DAX-listed Fresenius",
+      "date_page": "April 11, 2019"
+    }
+  ]
+}

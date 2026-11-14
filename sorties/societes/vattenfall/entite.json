@@ -1,0 +1,18 @@
+{
+ "nom_saisi": "Vattenfall",
+ "nom_retenu": "Vattenfall AB",
+ "qid": null,
+ "pays": "Sweden",
+ "statut": "public (État suédois)",
+ "isin": [],
+ "lei": null,
+ "lei_controle": null,
+ "nom_gleif": null,
+ "site": "https://group.vattenfall.com",
+ "domaines": [
+  "vattenfall.com"
+ ],
+ "alias": [],
+ "a_confirmer": "Wikidata non interrogé : PREPA_RDV_CONTACT absent ; ISIN, LEI et nom légal à confirmer",
+ "source": "table locale"
+}

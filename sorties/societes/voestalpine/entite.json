@@ -1,0 +1,18 @@
+{
+ "nom_saisi": "voestalpine",
+ "nom_retenu": "voestalpine AG",
+ "qid": null,
+ "pays": "Austria",
+ "statut": "coté",
+ "isin": [],
+ "lei": null,
+ "lei_controle": null,
+ "nom_gleif": null,
+ "site": "https://www.voestalpine.com",
+ "domaines": [
+  "voestalpine.com"
+ ],
+ "alias": [],
+ "a_confirmer": "Wikidata non interrogé : PREPA_RDV_CONTACT absent ; ISIN, LEI et nom légal à confirmer",
+ "source": "table locale"
+}

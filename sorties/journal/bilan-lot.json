@@ -1,0 +1,398 @@
+{
+ "societes": [
+  {
+   "societe": "Barilla",
+   "trouvailles": 19,
+   "niveaux": {
+    "probable": 11,
+    "non trouvé": 8
+   },
+   "rejets": {
+    "refus HTTP": 8
+   },
+   "gardees": 11,
+   "hors_fenetre": 10,
+   "sans_date": 0,
+   "type_corrige": 12,
+   "pages_vivantes": 0,
+   "pages_lues": 6,
+   "pages_refusees": 3,
+   "jetons": {
+    "entree": 68,
+    "cache_ecrit": 320535,
+    "cache_lu": 6252619,
+    "sortie": 122623,
+    "recherches_web": 0,
+    "appels": 33,
+    "cout_estime_usd": 2.653,
+    "duree_s": 1076.83,
+    "traites": 6695845
+   },
+   "duree_s": 0.0
+  },
+  {
+   "societe": "Deutsche Telekom",
+   "trouvailles": 19,
+   "niveaux": {
+    "non trouvé": 2,
+    "confirmé": 11,
+    "probable": 6
+   },
+   "rejets": {
+    "citation introuvable": 1,
+    "refus HTTP": 1
+   },
+   "gardees": 17,
+   "hors_fenetre": 1,
+   "sans_date": 0,
+   "type_corrige": 2,
+   "pages_vivantes": 7,
+   "pages_lues": 11,
+   "pages_refusees": 1,
+   "jetons": {
+    "entree": 36,
+    "cache_ecrit": 289780,
+    "cache_lu": 3583557,
+    "sortie": 138360,
+    "recherches_web": 0,
+    "appels": 18,
+    "cout_estime_usd": 2.4665,
+    "duree_s": 1009.452,
+    "traites": 4011733
+   },
+   "duree_s": 16.5
+  },
+  {
+   "societe": "Fresenius",
+   "trouvailles": 18,
+   "niveaux": {
+    "probable": 5,
+    "non trouvé": 6,
+    "confirmé": 6,
+    "absence déclarée": 1
+   },
+   "rejets": {
+    "refus HTTP": 6
+   },
+   "gardees": 12,
+   "hors_fenetre": 1,
+   "sans_date": 0,
+   "type_corrige": 3,
+   "pages_vivantes": 0,
+   "pages_lues": 7,
+   "pages_refusees": 4,
+   "jetons": {
+    "entree": 76,
+    "cache_ecrit": 245262,
+    "cache_lu": 6715621,
+    "sortie": 106359,
+    "recherches_web": 0,
+    "appels": 37,
+    "cout_estime_usd": 2.3485,
+    "duree_s": 984.8,
+    "traites": 7067318
+   },
+   "duree_s": 11.0
+  },
+  {
+   "societe": "LVMH",
+   "trouvailles": 9,
+   "niveaux": {
+    "confirmé": 3,
+    "probable": 5,
+    "non trouvé": 1
+   },
+   "rejets": {
+    "citation introuvable": 1
+   },
+   "gardees": 8,
+   "hors_fenetre": 2,
+   "sans_date": 0,
+   "type_corrige": 3,
+   "pages_vivantes": 4,
+   "pages_lues": 8,
+   "pages_refusees": 0,
+   "jetons": {
+    "entree": 50,
+    "cache_ecrit": 261013,
+    "cache_lu": 4822475,
+    "sortie": 118862,
+    "recherches_web": 0,
+    "appels": 24,
+    "cout_estime_usd": 2.3235,
+    "duree_s": 1075.589,
+    "traites": 5202400
+   },
+   "duree_s": 9.4
+  },
+  {
+   "societe": "Nokia",
+   "trouvailles": 20,
+   "niveaux": {
+    "probable": 16,
+    "non trouvé": 3,
+    "confirmé": 1
+   },
+   "rejets": {
+    "robots": 2,
+    "citation introuvable": 1
+   },
+   "gardees": 17,
+   "hors_fenetre": 6,
+   "sans_date": 0,
+   "type_corrige": 8,
+   "pages_vivantes": 2,
+   "pages_lues": 11,
+   "pages_refusees": 1,
+   "jetons": {
+    "entree": 56,
+    "cache_ecrit": 275522,
+    "cache_lu": 5643483,
+    "sortie": 129848,
+    "recherches_web": 0,
+    "appels": 28,
+    "cout_estime_usd": 2.5517,
+    "duree_s": 1065.503,
+    "traites": 6048909
+   },
+   "duree_s": 39.9
+  },
+  {
+   "societe": "Saint-Gobain",
+   "trouvailles": 14,
+   "niveaux": {
+    "probable": 12,
+    "non trouvé": 1,
+    "confirmé": 1
+   },
+   "rejets": {
+    "citation introuvable": 1
+   },
+   "gardees": 13,
+   "hors_fenetre": 2,
+   "sans_date": 0,
+   "type_corrige": 9,
+   "pages_vivantes": 1,
+   "pages_lues": 9,
+   "pages_refusees": 0,
+   "jetons": {
+    "entree": 48,
+    "cache_ecrit": 335294,
+    "cache_lu": 4687462,
+    "sortie": 133102,
+    "recherches_web": 0,
+    "appels": 23,
+    "cout_estime_usd": 2.6381,
+    "duree_s": 1045.696,
+    "traites": 5155906
+   },
+   "duree_s": 0.0
+  },
+  {
+   "societe": "Servier",
+   "trouvailles": 12,
+   "niveaux": {
+    "non trouvé": 7,
+    "confirmé": 2,
+    "probable": 3
+   },
+   "rejets": {
+    "citation introuvable": 1,
+    "page introuvable": 2,
+    "refus HTTP": 3,
+    "robots": 1
+   },
+   "gardees": 5,
+   "hors_fenetre": 0,
+   "sans_date": 0,
+   "type_corrige": 6,
+   "pages_vivantes": 3,
+   "pages_lues": 5,
+   "pages_refusees": 4,
+   "jetons": {
+    "entree": 66,
+    "cache_ecrit": 245819,
+    "cache_lu": 5987686,
+    "sortie": 107536,
+    "recherches_web": 0,
+    "appels": 32,
+    "cout_estime_usd": 2.2888,
+    "duree_s": 940.624,
+    "traites": 6341107
+   },
+   "duree_s": 8.8
+  },
+  {
+   "societe": "SSAB",
+   "trouvailles": 18,
+   "niveaux": {
+    "confirmé": 8,
+    "non trouvé": 5,
+    "probable": 5
+   },
+   "rejets": {
+    "refus HTTP": 3,
+    "robots": 1,
+    "citation introuvable": 1
+   },
+   "gardees": 13,
+   "hors_fenetre": 3,
+   "sans_date": 0,
+   "type_corrige": 2,
+   "pages_vivantes": 3,
+   "pages_lues": 6,
+   "pages_refusees": 3,
+   "jetons": {
+    "entree": 42,
+    "cache_ecrit": 250464,
+    "cache_lu": 4068285,
+    "sortie": 104691,
+    "recherches_web": 0,
+    "appels": 21,
+    "cout_estime_usd": 2.08,
+    "duree_s": 829.731,
+    "traites": 4423482
+   },
+   "duree_s": 8.9
+  },
+  {
+   "societe": "Stadler Rail",
+   "trouvailles": 11,
+   "niveaux": {
+    "confirmé": 2,
+    "probable": 7,
+    "non trouvé": 2
+   },
+   "rejets": {
+    "société non nommée": 2
+   },
+   "gardees": 9,
+   "hors_fenetre": 2,
+   "sans_date": 0,
+   "type_corrige": 7,
+   "pages_vivantes": 3,
+   "pages_lues": 7,
+   "pages_refusees": 0,
+   "jetons": {
+    "entree": 40,
+    "cache_ecrit": 249451,
+    "cache_lu": 3508356,
+    "sortie": 113351,
+    "recherches_web": 0,
+    "appels": 19,
+    "cout_estime_usd": 2.1081,
+    "duree_s": 881.686,
+    "traites": 3871198
+   },
+   "duree_s": 13.6
+  },
+  {
+   "societe": "Vattenfall",
+   "trouvailles": 14,
+   "niveaux": {
+    "non trouvé": 2,
+    "probable": 9,
+    "confirmé": 3
+   },
+   "rejets": {
+    "citation introuvable": 2
+   },
+   "gardees": 12,
+   "hors_fenetre": 8,
+   "sans_date": 0,
+   "type_corrige": 3,
+   "pages_vivantes": 5,
+   "pages_lues": 10,
+   "pages_refusees": 0,
+   "jetons": {
+    "entree": 40,
+    "cache_ecrit": 252675,
+    "cache_lu": 3721085,
+    "sortie": 105019,
+    "recherches_web": 0,
+    "appels": 20,
+    "cout_estime_usd": 2.0541,
+    "duree_s": 792.424,
+    "traites": 4078819
+   },
+   "duree_s": 10.7
+  },
+  {
+   "societe": "Verallia",
+   "trouvailles": 15,
+   "niveaux": {
+    "probable": 12,
+    "confirmé": 3
+   },
+   "rejets": {},
+   "gardees": 15,
+   "hors_fenetre": 1,
+   "sans_date": 0,
+   "type_corrige": 2,
+   "pages_vivantes": 0,
+   "pages_lues": 8,
+   "pages_refusees": 0,
+   "jetons": {
+    "entree": 100,
+    "cache_ecrit": 273977,
+    "cache_lu": 9306443,
+    "sortie": 124582,
+    "recherches_web": 0,
+    "appels": 49,
+    "cout_estime_usd": 2.8616,
+    "duree_s": 1141.964,
+    "traites": 9705102
+   },
+   "duree_s": 10.9
+  },
+  {
+   "societe": "voestalpine",
+   "trouvailles": 16,
+   "niveaux": {
+    "non trouvé": 1,
+    "confirmé": 10,
+    "probable": 5
+   },
+   "rejets": {
+    "citation introuvable": 1
+   },
+   "gardees": 15,
+   "hors_fenetre": 3,
+   "sans_date": 0,
+   "type_corrige": 2,
+   "pages_vivantes": 11,
+   "pages_lues": 11,
+   "pages_refusees": 0,
+   "jetons": {
+    "entree": 60,
+    "cache_ecrit": 253793,
+    "cache_lu": 5622651,
+    "sortie": 105975,
+    "recherches_web": 0,
+    "appels": 29,
+    "cout_estime_usd": 2.2566,
+    "duree_s": 974.855,
+    "traites": 5982479
+   },
+   "duree_s": 10.4
+  }
+ ],
+ "total": {
+  "trouvailles": 185,
+  "gardees": 147,
+  "hors_fenetre": 39,
+  "sans_date": 0,
+  "part_hors_fenetre_ou_sans_date": 0.27,
+  "rejets": {
+   "refus HTTP": 21,
+   "citation introuvable": 9,
+   "robots": 4,
+   "page introuvable": 2,
+   "société non nommée": 2
+  },
+  "pages_lues": 99,
+  "pages_refusees": 16,
+  "traites": 68584298,
+  "cout_estime_usd": 28.63
+ }
+}

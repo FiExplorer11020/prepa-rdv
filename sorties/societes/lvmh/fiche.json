@@ -1,0 +1,654 @@
+{
+ "societe": "LVMH",
+ "run_id": "20261114T010019Z",
+ "date_fiche": "2026-11-14",
+ "version_outil": "0.1.0",
+ "modele": "claude-sonnet-5-5 (sous-agent)",
+ "empreinte_prompt": "6ee5257d0713",
+ "entite": {
+  "nom_saisi": "LVMH",
+  "nom_retenu": "LVMH Moët Hennessy Louis Vuitton SE",
+  "qid": null,
+  "pays": "France",
+  "statut": "coté",
+  "isin": [],
+  "lei": null,
+  "lei_controle": null,
+  "nom_gleif": null,
+  "site": "https://www.lvmh.com",
+  "domaines": [
+   "lvmh.com"
+  ],
+  "alias": [],
+  "a_confirmer": "Wikidata non interrogé : PREPA_RDV_CONTACT absent ; ISIN, LEI et nom légal à confirmer",
+  "source": "table locale"
+ },
+ "plan_requetes": {
+  "direction_financiere": [
+   "LVMH Chief Financial Officer",
+   "LVMH Group Treasurer",
+   "LVMH investor relations management team",
+   "LVMH directeur financier",
+   "LVMH trésorerie groupe"
+  ],
+  "erp": [
+   "LVMH SAP S/4HANA",
+   "LVMH ERP implementation",
+   "LVMH Oracle OR Dynamics OR Workday ERP",
+   "LVMH annual report SAP"
+  ],
+  "achats": [
+   "LVMH SAP Ariba supplier",
+   "LVMH Coupa OR Jaggaer OR Ivalua",
+   "LVMH supplier portal procurement platform"
+  ],
+  "tms": [
+   "LVMH treasury management system",
+   "LVMH Kyriba",
+   "LVMH SAP Treasury"
+  ],
+  "financement": [
+   "LVMH supply chain finance",
+   "LVMH reverse factoring",
+   "LVMH receivables securitisation programme",
+   "LVMH factoring programme",
+   "LVMH annual report supplier finance arrangements",
+   "LVMH affacturage titrisation créances document d'enregistrement universel"
+  ],
+  "signal": [
+   "LVMH finance transformation treasury 2026",
+   "LVMH ERP migration"
+  ]
+ },
+ "trouvailles": [
+  {
+   "champ": "identite",
+   "valeur": "LVMH Moët Hennessy - Louis Vuitton SE",
+   "precision": "Société européenne immatriculée au RCS de Paris sous le numéro 775 670 417, siège au 22 avenue Montaigne, 75008 Paris (même phrase de la page). ISIN et LEI non confirmés par une page lue.",
+   "statut_valeur": "present",
+   "citation": "LVMH Moët Hennessy – Louis Vuitton, a Société Européenne",
+   "citation_langue": "en",
+   "traduction_fr": "LVMH Moët Hennessy - Louis Vuitton, société européenne",
+   "url": "https://www.lvmh.com/en/legal-terms",
+   "entite_nommee": "LVMH Moët Hennessy – Louis Vuitton",
+   "type_source": "P1",
+   "date_source": null,
+   "id": "lvmh-identite-1",
+   "societe": "LVMH",
+   "valeur_normalisee": "LVMH Moët Hennessy - Louis Vuitton SE",
+   "date_lecture": "2026-11-14T01:00:19.124559Z",
+   "empreinte_source": "9959af723ce11d71ec2fb87383ffad5296408f3537d67e042b630277a4d48e1c",
+   "modele": "claude-sonnet-5-5 (sous-agent)",
+   "version_outil": "0.1.0",
+   "empreinte_prompt": "6ee5257d0713",
+   "verifs": {
+    "mode_verification": "code",
+    "refus_du_code": null,
+    "lu_via": "direct",
+    "citation_du_modele": null,
+    "score_avant_reparation": null,
+    "citation_trouvee": true,
+    "score_similarite": 1.0,
+    "citation_mots": 9,
+    "citation_longueur_ok": true,
+    "adresse_ok": true,
+    "statut_http": 200,
+    "domaine": "www.lvmh.com",
+    "type_source_code": "P1",
+    "type_corrige": false,
+    "entite": "groupe",
+    "date_page": null,
+    "date_retenue": "2026-11-14",
+    "page_vivante": true,
+    "sans_date": false,
+    "age_mois": 0,
+    "dans_fenetre": true,
+    "page_numero": null,
+    "erreurs": []
+   },
+   "niveau": "confirmé"
+  },
+  {
+   "champ": "direction_financiere",
+   "valeur": "Cécile Cabanis, directrice financière (CFO) du groupe LVMH",
+   "precision": "Chief Financial Officer du groupe LVMH. La date de nomination, le 1er février 2025, est écrite dans la phrase citée.",
+   "statut_valeur": "present",
+   "citation": "On February 1, 2025, she is appointed Chief Financial Officer of the LVMH Group.",
+   "citation_langue": "en",
+   "traduction_fr": "Le 1er février 2025, elle est nommée directrice financière du groupe LVMH.",
+   "url": "https://www.lvmh.com/en/our-group/governance/cecile-cabanis",
+   "entite_nommee": "LVMH Group",
+   "type_source": "P1",
+   "date_source": null,
+   "id": "lvmh-direction_financiere-2",
+   "societe": "LVMH",
+   "valeur_normalisee": "Cécile Cabanis, directrice financière (CFO) du groupe LVMH",
+   "date_lecture": "2026-11-14T01:00:19.125691Z",
+   "empreinte_source": "68dd4dae165cb6a8702364f52331656888e0759438d810d617d1726b821ee8d4",
+   "modele": "claude-sonnet-5-5 (sous-agent)",
+   "version_outil": "0.1.0",
+   "empreinte_prompt": "6ee5257d0713",
+   "verifs": {
+    "mode_verification": "code",
+    "refus_du_code": null,
+    "lu_via": "direct",
+    "citation_du_modele": null,
+    "score_avant_reparation": null,
+    "citation_trouvee": true,
+    "score_similarite": 1.0,
+    "citation_mots": 14,
+    "citation_longueur_ok": true,
+    "adresse_ok": true,
+    "statut_http": 200,
+    "domaine": "www.lvmh.com",
+    "type_source_code": "P1",
+    "type_corrige": false,
+    "entite": "groupe",
+    "date_page": null,
+    "date_retenue": "2026-11-14",
+    "page_vivante": true,
+    "sans_date": false,
+    "age_mois": 0,
+    "dans_fenetre": true,
+    "page_numero": null,
+    "erreurs": []
+   },
+   "niveau": "confirmé"
+  },
+  {
+   "champ": "erp",
+   "valeur": "SAP S/4HANA",
+   "precision": "Offre d'emploi, donc un signal et non une preuve de déploiement : consultant fonctionnel SAP S/4HANA Finance (réf. SSCPC02560) pour la Public Cloud Edition (PCE). La page nomme LVMH Perfumes & Cosmetics et mentionne aussi LVMH Beauty.",
+   "statut_valeur": "present",
+   "citation": "support key phases of our SAP S/4HANA Public Cloud Edition (PCE)",
+   "citation_langue": "en",
+   "traduction_fr": "soutenir les phases clés de notre SAP S/4HANA Public Cloud Edition (PCE)",
+   "url": "https://www.lvmh.com/join-us/our-job-offers/SSCPC02560",
+   "entite_nommee": "LVMH Perfumes & Cosmetics",
+   "type_source": "P4",
+   "date_source": "2026-10-15",
+   "id": "lvmh-erp-3",
+   "societe": "LVMH",
+   "valeur_normalisee": "SAP S/4HANA",
+   "date_lecture": "2026-11-14T01:00:19.126008Z",
+   "empreinte_source": "fefe9b0129ffa8c9afde359b2c73f5093cc1b7c0547f2224154e9e30901e6dce",
+   "modele": "claude-sonnet-5-5 (sous-agent)",
+   "version_outil": "0.1.0",
+   "empreinte_prompt": "6ee5257d0713",
+   "verifs": {
+    "mode_verification": "code",
+    "refus_du_code": null,
+    "lu_via": "direct",
+    "citation_du_modele": null,
+    "score_avant_reparation": null,
+    "citation_trouvee": true,
+    "score_similarite": 1.0,
+    "citation_mots": 11,
+    "citation_longueur_ok": true,
+    "adresse_ok": true,
+    "statut_http": 200,
+    "domaine": "www.lvmh.com",
+    "type_source_code": "P4",
+    "type_corrige": false,
+    "entite": "groupe",
+    "date_page": null,
+    "date_retenue": "2026-10-15",
+    "page_vivante": false,
+    "sans_date": false,
+    "age_mois": 0,
+    "dans_fenetre": true,
+    "page_numero": null,
+    "erreurs": []
+   },
+   "niveau": "probable"
+  },
+  {
+   "champ": "erp",
+   "valeur": "SAP S/4HANA",
+   "precision": "Presse spécialisée brésilienne, article en portugais : SAP S/4HANA Cloud Public Edition mis en œuvre pour LVMH Beauty avec l'intégrateur Delaware, projet réalisé via Grow with SAP (mentions de la même page).",
+   "statut_valeur": "present",
+   "citation": "implementou o software de gestão S/4 Hana, da SAP, rodando na nuvem pública",
+   "citation_langue": "pt",
+   "traduction_fr": "a mis en œuvre le logiciel de gestion S/4 Hana, de SAP, fonctionnant sur le cloud public",
+   "url": "https://www.baguete.com.br/noticias/lvmh-beauty-adota-s4-hana-com-delaware",
+   "entite_nommee": "LVMH Beauty",
+   "type_source": "P3",
+   "date_source": "2024-07-01",
+   "id": "lvmh-erp-4",
+   "societe": "LVMH",
+   "valeur_normalisee": "SAP S/4HANA",
+   "date_lecture": "2026-11-14T01:00:19.126885Z",
+   "empreinte_source": "04968f0b3b087cf5018cda7bade6a00729e5dc321053cea6e6993f02621f01f8",
+   "modele": "claude-sonnet-5-5 (sous-agent)",
+   "version_outil": "0.1.0",
+   "empreinte_prompt": "6ee5257d0713",
+   "verifs": {
+    "mode_verification": "code",
+    "refus_du_code": null,
+    "lu_via": "direct",
+    "citation_du_modele": null,
+    "score_avant_reparation": null,
+    "citation_trouvee": true,
+    "score_similarite": 1.0,
+    "citation_mots": 13,
+    "citation_longueur_ok": true,
+    "adresse_ok": true,
+    "statut_http": 200,
+    "domaine": "www.baguete.com.br",
+    "type_source_code": "P3",
+    "type_corrige": false,
+    "entite": "groupe",
+    "date_page": "2024-07-01",
+    "date_retenue": "2024-07-01",
+    "page_vivante": false,
+    "sans_date": false,
+    "age_mois": 28,
+    "dans_fenetre": false,
+    "page_numero": null,
+    "erreurs": []
+   },
+   "niveau": "probable"
+  },
+  {
+   "champ": "erp",
+   "valeur": "SAP ECC",
+   "precision": "Page SAP LeanIX de septembre 2023 : deux instances SAP ECC existantes chez Moët Hennessy, avec migration annoncée vers une instance unique de SAP S/4HANA et bascule visée début 2024. La page ne dit pas si cette bascule a eu lieu.",
+   "statut_valeur": "present",
+   "citation": "From their two legacy instances of SAP ECC Chorus/Cocktail",
+   "citation_langue": "en",
+   "traduction_fr": "À partir de leurs deux anciennes instances de SAP ECC Chorus/Cocktail",
+   "url": "https://leanix.net/en/blog/erp-mo%C3%ABt-hennessy",
+   "entite_nommee": "Moët Hennessy",
+   "type_source": "P2",
+   "date_source": "2023-09-21",
+   "id": "lvmh-erp-5",
+   "societe": "LVMH",
+   "valeur_normalisee": "SAP ECC",
+   "date_lecture": "2026-11-14T01:00:19.127299Z",
+   "empreinte_source": "1e65f4d6920143f5039481c8049964b5ae8e4780d38a16d461aeaed6afcdd5d0",
+   "modele": "claude-sonnet-5-5 (sous-agent)",
+   "version_outil": "0.1.0",
+   "empreinte_prompt": "6ee5257d0713",
+   "verifs": {
+    "mode_verification": "code",
+    "refus_du_code": null,
+    "lu_via": "direct",
+    "citation_du_modele": null,
+    "score_avant_reparation": null,
+    "citation_trouvee": true,
+    "score_similarite": 1.0,
+    "citation_mots": 9,
+    "citation_longueur_ok": true,
+    "adresse_ok": true,
+    "statut_http": 200,
+    "domaine": "www.leanix.net",
+    "type_source_code": "P3",
+    "type_corrige": true,
+    "entite": "groupe",
+    "date_page": "2023-09-21",
+    "date_retenue": "2023-09-21",
+    "page_vivante": false,
+    "sans_date": false,
+    "age_mois": 37,
+    "dans_fenetre": false,
+    "page_numero": null,
+    "erreurs": []
+   },
+   "niveau": "probable"
+  },
+  {
+   "champ": "achats",
+   "valeur": "autre",
+   "precision": "Aprovall : plateforme KYS (Know Your Supplier) de collecte, de partage et d'exploitation des données fournisseurs, utilisée par les équipes achats, juridique et contrôle interne de Moët Hennessy, présentée par la page comme la division Vins et Spiritueux du groupe LVMH. Aucune plateforme de la liste (SAP Ariba, Coupa, Jaggaer, Ivalua, Basware, GEP, Zycus) n'a été trouvée pour LVMH.",
+   "statut_valeur": "present",
+   "citation": "partnership with Aprovall led to the creation of the KYS – Know Your Supplier platform",
+   "citation_langue": "en",
+   "traduction_fr": "le partenariat avec Aprovall a conduit à la création de la plateforme KYS - Know Your Supplier",
+   "url": "https://www.aprovall.com/?p=5410",
+   "entite_nommee": "Moët Hennessy",
+   "type_source": "P2",
+   "date_source": null,
+   "id": "lvmh-achats-6",
+   "societe": "LVMH",
+   "valeur_normalisee": "autre",
+   "date_lecture": "2026-11-14T01:00:19.128432Z",
+   "empreinte_source": "42d1cd9dfec0176c4fbeaa0bd5c246d1da9bdd8ae09b0499a9389982e311ee55",
+   "modele": "claude-sonnet-5-5 (sous-agent)",
+   "version_outil": "0.1.0",
+   "empreinte_prompt": "6ee5257d0713",
+   "verifs": {
+    "mode_verification": "code",
+    "refus_du_code": null,
+    "lu_via": "direct",
+    "citation_du_modele": null,
+    "score_avant_reparation": null,
+    "citation_trouvee": true,
+    "score_similarite": 1.0,
+    "citation_mots": 15,
+    "citation_longueur_ok": true,
+    "adresse_ok": true,
+    "statut_http": 200,
+    "domaine": "www.aprovall.com",
+    "type_source_code": "P3",
+    "type_corrige": true,
+    "entite": "groupe",
+    "date_page": "2026-04-30",
+    "date_retenue": "2026-04-30",
+    "page_vivante": false,
+    "sans_date": false,
+    "age_mois": 6,
+    "dans_fenetre": true,
+    "page_numero": null,
+    "erreurs": []
+   },
+   "niveau": "probable"
+  },
+  {
+   "champ": "financement",
+   "valeur": "Billets de trésorerie",
+   "precision": "Programme Negotiable European Commercial Paper (NeuCP) de 15 Md EUR, émetteur LVMH SE. La même page liste deux programmes USCP de 15 Md USD (émetteurs LVMH SE, et LVMH Inc. avec la garantie de LVMH SE). Ce sont des tailles de programme, pas des encours. La mention Last update : July 29, 2026 figure dans la section EMTN de la page, pas dans celle des commercial papers.",
+   "statut_valeur": "present",
+   "citation": "Negotiable European Commercial Paper (NeuCP)",
+   "citation_langue": "en",
+   "traduction_fr": "Billets de trésorerie négociables européens (NeuCP)",
+   "url": "https://www.lvmh.com/investors/investors-and-analysts/debt-financing/",
+   "entite_nommee": "LVMH SE",
+   "type_source": "P1",
+   "date_source": "2026-07-29",
+   "id": "lvmh-financement-7",
+   "societe": "LVMH",
+   "valeur_normalisee": "Billets de trésorerie",
+   "date_lecture": "2026-11-14T01:00:19.129096Z",
+   "empreinte_source": "23cc1551e07763478660a069c41802a6d7e083e76f3e7b0147763739f37032a0",
+   "modele": "claude-sonnet-5-5 (sous-agent)",
+   "version_outil": "0.1.0",
+   "empreinte_prompt": "6ee5257d0713",
+   "verifs": {
+    "mode_verification": "code",
+    "refus_du_code": null,
+    "lu_via": "jina",
+    "citation_du_modele": null,
+    "score_avant_reparation": null,
+    "citation_trouvee": true,
+    "score_similarite": 1.0,
+    "citation_mots": 5,
+    "citation_longueur_ok": true,
+    "adresse_ok": true,
+    "statut_http": 200,
+    "domaine": "www.lvmh.com",
+    "type_source_code": "P1",
+    "type_corrige": false,
+    "entite": "groupe",
+    "date_page": null,
+    "date_retenue": "2026-11-14",
+    "page_vivante": true,
+    "sans_date": false,
+    "age_mois": 0,
+    "dans_fenetre": true,
+    "page_numero": null,
+    "erreurs": []
+   },
+   "niveau": "confirmé"
+  },
+  {
+   "champ": "signal",
+   "valeur": "Recrutement d'un chef de projet Trésorerie et communication bancaire, offre citant la Direction Projets Transformation Finance",
+   "precision": "Offre d'emploi LVMH (réf. LVMH03235) publiée le 08.11.2026, signal et non preuve de déploiement. Autres passages de la même offre : le programme FX FOR HOUSES qui met à disposition des services bancaires, un binôme avec le responsable des applications finance, les changements de système, les migrations et les montées de version.",
+   "statut_valeur": "present",
+   "citation": "la Direction Projets Transformation Finance pour optimiser leurs processus et leurs organisations",
+   "citation_langue": "fr",
+   "traduction_fr": null,
+   "url": "https://www.lvmh.com/fr/nous-rejoindre/nos-offres/LVMH03235",
+   "entite_nommee": "LVMH",
+   "type_source": "P4",
+   "date_source": "2026-11-08",
+   "id": "lvmh-signal-8",
+   "societe": "LVMH",
+   "valeur_normalisee": "Recrutement d'un chef de projet Trésorerie et communication bancaire, offre citant la Direction Projets Transformation Finance",
+   "date_lecture": "2026-11-14T01:00:19.130954Z",
+   "empreinte_source": "8d5dd1082c15c861f01e1c805de2490d0ac3f3d34f384f9f27fa169ae7819bd7",
+   "modele": "claude-sonnet-5-5 (sous-agent)",
+   "version_outil": "0.1.0",
+   "empreinte_prompt": "6ee5257d0713",
+   "verifs": {
+    "mode_verification": "code",
+    "refus_du_code": null,
+    "lu_via": "direct",
+    "citation_du_modele": null,
+    "score_avant_reparation": null,
+    "citation_trouvee": true,
+    "score_similarite": 1.0,
+    "citation_mots": 12,
+    "citation_longueur_ok": true,
+    "adresse_ok": true,
+    "statut_http": 200,
+    "domaine": "www.lvmh.com",
+    "type_source_code": "P1",
+    "type_corrige": true,
+    "entite": "groupe",
+    "date_page": null,
+    "date_retenue": "2026-11-14",
+    "page_vivante": true,
+    "sans_date": false,
+    "age_mois": 0,
+    "dans_fenetre": true,
+    "page_numero": null,
+    "erreurs": []
+   },
+   "niveau": "confirmé"
+  },
+  {
+   "champ": "signal",
+   "valeur": "Offre d'emploi pour un projet SAP S/4HANA Public Cloud Edition, avec tests d'interfaces avant recette",
+   "precision": "Offre publiée le 10.15.2026 (réf. SSCPC02560), signal et non preuve de déploiement. D'autres phrases de la même offre évoquent une formation à SAP S/4 PCE menée par des partenaires externes. La page nomme LVMH Perfumes & Cosmetics et cite LVMH Beauty.",
+   "statut_valeur": "present",
+   "citation": "support end-to-end interface testing across applications and S/4 PCE prior to UAT.",
+   "citation_langue": "en",
+   "traduction_fr": "soutenir les tests d'interfaces de bout en bout entre les applications et S/4 PCE avant la recette utilisateur (UAT).",
+   "url": "https://www.lvmh.com/join-us/our-job-offers/SSCPC02560",
+   "entite_nommee": "LVMH Perfumes & Cosmetics",
+   "type_source": "P4",
+   "date_source": "2026-10-15",
+   "id": "lvmh-signal-9",
+   "societe": "LVMH",
+   "valeur_normalisee": "Offre d'emploi pour un projet SAP S/4HANA Public Cloud Edition, avec tests d'interfaces avant recette",
+   "date_lecture": "2026-11-14T01:00:19.131531Z",
+   "empreinte_source": "fefe9b0129ffa8c9afde359b2c73f5093cc1b7c0547f2224154e9e30901e6dce",
+   "modele": "claude-sonnet-5-5 (sous-agent)",
+   "version_outil": "0.1.0",
+   "empreinte_prompt": "6ee5257d0713",
+   "verifs": {
+    "mode_verification": "code",
+    "refus_du_code": null,
+    "lu_via": "direct",
+    "citation_du_modele": null,
+    "score_avant_reparation": null,
+    "citation_trouvee": true,
+    "score_similarite": 1.0,
+    "citation_mots": 12,
+    "citation_longueur_ok": true,
+    "adresse_ok": true,
+    "statut_http": 200,
+    "domaine": "www.lvmh.com",
+    "type_source_code": "P4",
+    "type_corrige": false,
+    "entite": "groupe",
+    "date_page": null,
+    "date_retenue": "2026-10-15",
+    "page_vivante": false,
+    "sans_date": false,
+    "age_mois": 0,
+    "dans_fenetre": true,
+    "page_numero": null,
+    "erreurs": []
+   },
+   "niveau": "probable"
+  }
+ ],
+ "synthese": {
+  "identite": {
+   "niveau": "confirmé",
+   "contradiction": false,
+   "valeurs": [
+    {
+     "valeur": "LVMH Moët Hennessy - Louis Vuitton SE",
+     "precision": "Société européenne immatriculée au RCS de Paris sous le numéro 775 670 417, siège au 22 avenue Montaigne, 75008 Paris (même phrase de la page). ISIN et LEI non confirmés par une page lue.",
+     "statut": "present",
+     "niveau": "confirmé",
+     "ids": [
+      "lvmh-identite-1"
+     ]
+    }
+   ]
+  },
+  "direction_financiere": {
+   "niveau": "confirmé",
+   "contradiction": false,
+   "valeurs": [
+    {
+     "valeur": "Cécile Cabanis, directrice financière (CFO) du groupe LVMH",
+     "precision": "Chief Financial Officer du groupe LVMH. La date de nomination, le 1er février 2025, est écrite dans la phrase citée.",
+     "statut": "present",
+     "niveau": "confirmé",
+     "ids": [
+      "lvmh-direction_financiere-2"
+     ]
+    }
+   ]
+  },
+  "erp": {
+   "niveau": "probable",
+   "contradiction": false,
+   "valeurs": [
+    {
+     "valeur": "SAP S/4HANA",
+     "precision": "Offre d'emploi, donc un signal et non une preuve de déploiement : consultant fonctionnel SAP S/4HANA Finance (réf. SSCPC02560) pour la Public Cloud Edition (PCE). La page nomme LVMH Perfumes & Cosmetics et mentionne aussi LVMH Beauty.",
+     "statut": "present",
+     "niveau": "probable",
+     "ids": [
+      "lvmh-erp-3",
+      "lvmh-erp-4"
+     ]
+    },
+    {
+     "valeur": "SAP ECC",
+     "precision": "Page SAP LeanIX de septembre 2023 : deux instances SAP ECC existantes chez Moët Hennessy, avec migration annoncée vers une instance unique de SAP S/4HANA et bascule visée début 2024. La page ne dit pas si cette bascule a eu lieu.",
+     "statut": "present",
+     "niveau": "probable",
+     "ids": [
+      "lvmh-erp-5"
+     ]
+    }
+   ]
+  },
+  "achats": {
+   "niveau": "probable",
+   "contradiction": false,
+   "valeurs": [
+    {
+     "valeur": "autre",
+     "precision": "Aprovall : plateforme KYS (Know Your Supplier) de collecte, de partage et d'exploitation des données fournisseurs, utilisée par les équipes achats, juridique et contrôle interne de Moët Hennessy, présentée par la page comme la division Vins et Spiritueux du groupe LVMH. Aucune plateforme de la liste (SAP Ariba, Coupa, Jaggaer, Ivalua, Basware, GEP, Zycus) n'a été trouvée pour LVMH.",
+     "statut": "present",
+     "niveau": "probable",
+     "ids": [
+      "lvmh-achats-6"
+     ]
+    }
+   ]
+  },
+  "tms": {
+   "niveau": "non trouvé",
+   "contradiction": false,
+   "valeurs": []
+  },
+  "financement": {
+   "niveau": "confirmé",
+   "contradiction": false,
+   "valeurs": [
+    {
+     "valeur": "Billets de trésorerie",
+     "precision": "Programme Negotiable European Commercial Paper (NeuCP) de 15 Md EUR, émetteur LVMH SE. La même page liste deux programmes USCP de 15 Md USD (émetteurs LVMH SE, et LVMH Inc. avec la garantie de LVMH SE). Ce sont des tailles de programme, pas des encours. La mention Last update : July 29, 2026 figure dans la section EMTN de la page, pas dans celle des commercial papers.",
+     "statut": "present",
+     "niveau": "confirmé",
+     "ids": [
+      "lvmh-financement-7"
+     ]
+    }
+   ]
+  },
+  "signal": {
+   "niveau": "confirmé",
+   "contradiction": false,
+   "valeurs": [
+    {
+     "valeur": "Recrutement d'un chef de projet Trésorerie et communication bancaire, offre citant la Direction Projets Transformation Finance",
+     "precision": "Offre d'emploi LVMH (réf. LVMH03235) publiée le 08.11.2026, signal et non preuve de déploiement. Autres passages de la même offre : le programme FX FOR HOUSES qui met à disposition des services bancaires, un binôme avec le responsable des applications finance, les changements de système, les migrations et les montées de version.",
+     "statut": "present",
+     "niveau": "confirmé",
+     "ids": [
+      "lvmh-signal-8"
+     ]
+    },
+    {
+     "valeur": "Offre d'emploi pour un projet SAP S/4HANA Public Cloud Edition, avec tests d'interfaces avant recette",
+     "precision": "Offre publiée le 10.15.2026 (réf. SSCPC02560), signal et non preuve de déploiement. D'autres phrases de la même offre évoquent une formation à SAP S/4 PCE menée par des partenaires externes. La page nomme LVMH Perfumes & Cosmetics et cite LVMH Beauty.",
+     "statut": "present",
+     "niveau": "probable",
+     "ids": [
+      "lvmh-signal-9"
+     ]
+    }
+   ]
+  }
+ },
+ "nombre_sources": 8,
+ "questions": [
+  "Quel outil de trésorerie centralise les positions de trésorerie et les paiements ?",
+  "Où se décident les arbitrages entre financement bancaire et financement des fournisseurs ?",
+  "Un projet de système d'information financier est-il prévu, et sur quel calendrier ?"
+ ],
+ "angle": [
+  "Hypothèse : Financer les factures fournisseurs depuis l'outil déjà en place.",
+  "Elle s'appuie sur ces faits de la fiche. ERP : SAP S/4HANA, SAP ECC (probable). Plateforme d'achats : Aprovall (probable).",
+  "Les questions ci-dessous servent à confirmer ou à écarter cette piste en début de rendez-vous."
+ ],
+ "remarques_modele": [
+  "La demande ne définit pas les types de source P1 à P5. Je les ai appliqués dans l'ordre de la demande : P1 documents de la société, P2 communiqués, études de cas et blogs d'éditeurs et d'intégrateurs, P3 presse spécialisée, P4 offres d'emploi, P5 autres sources.",
+  "Moyens consommés : 22 recherches abouties et 20 requêtes de pages, dont 10 seulement ont rendu du texte. Les autres ont échoué : offres d'emploi fermées (404), document d'enregistrement universel 2025 trop volumineux pour l'outil, PDF illisible, serveur refusant la connexion, page Euronext vide. Une dernière recherche a été refusée par la limite de la session.",
+  "Financement court terme : une seule trouvaille, les programmes de billets de trésorerie de la page de dette de lvmh.com. Les notes sur la dette des comptes consolidés et du document d'enregistrement universel, où figureraient lignes de crédit confirmées, affacturage, titrisation ou accords de financement de fournisseurs, n'ont pas pu être lues. Ce résultat n'établit ni la présence ni l'absence de ces produits.",
+  "TMS : aucune trouvaille vérifiée. Des extraits de recherche attribuent à des offres de Sephora (réf. 289896 à San Francisco, réf. 281471 à Jakarta) des mentions de Kyriba, et à une offre de stage de LVMH Perfumes & Cosmetics (réf. SSCPC02414) des mentions de SAP et de XRT. Les pages 289896 et SSCPC02414 renvoient une erreur 404 et la page 281471 n'a pas été essayée : aucune citation n'a donc été vérifiée dans la page.",
+  "ERP : aucune page lue ne dit quel ERP est en place au niveau du groupe. Les trouvailles portent sur des entités : LVMH Perfumes & Cosmetics et LVMH Beauty (offre d'emploi d'octobre 2026, article de juillet 2024) et Moët Hennessy (page de 2023 sur une migration annoncée).",
+  "Achats : la seule trouvaille est une plateforme de données fournisseurs (Aprovall chez Moët Hennessy). Aucune plateforme d'achats de la liste n'est citée pour LVMH dans les pages lues.",
+  "Direction financière : la directrice financière est nommée. Aucun trésorier de groupe n'est nommé dans les pages lues.",
+  "Identité : nom légal et numéro RCS lus sur la page des mentions légales de lvmh.com. ISIN et LEI non confirmés par une page lue. FR0000121014 figure dans l'adresse d'une page tierce vue dans les résultats de recherche (researchpool.com), non lue.",
+  "Entités nommées dans les trouvailles : LVMH SE (émetteur des programmes de billets de trésorerie), LVMH Perfumes & Cosmetics, LVMH Beauty et Moët Hennessy, que la page d'Aprovall présente comme la division Vins et Spiritueux du groupe LVMH.",
+  "Dates : converties au format AAAA-MM-JJ depuis l'affichage de chaque page (08.11.2026 en français, 10.15.2026 en américain, 1 de julho de 2024 en portugais). Les pages des mentions légales, du profil de la directrice financière et d'Aprovall ne portent pas de date. L'article de Baguete est en portugais, code pt, hors des codes cités par le schéma."
+ ],
+ "champs_sans_resultat_modele": [
+  "tms"
+ ],
+ "jetons": {
+  "entree": 50,
+  "cache_ecrit": 261013,
+  "cache_lu": 4822475,
+  "sortie": 118862,
+  "recherches_web": 0,
+  "appels": 24,
+  "cout_estime_usd": 2.3235,
+  "duree_s": 1075.589,
+  "traites": 5202400
+ },
+ "duree_s": 0.0,
+ "relecture": {
+  "a_relire": 0,
+  "faites": 0,
+  "en_attente": 0,
+  "demande": null
+ },
+ "contact": {
+  "generiques": [],
+  "suggestion": null,
+  "mention": null,
+  "adresses_nominatives_publiees": 0
+ }
+}

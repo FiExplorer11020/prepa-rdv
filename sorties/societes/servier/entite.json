@@ -1,0 +1,18 @@
+{
+ "nom_saisi": "Servier",
+ "nom_retenu": "Les Laboratoires Servier",
+ "qid": null,
+ "pays": "France",
+ "statut": "privé (fondation)",
+ "isin": [],
+ "lei": null,
+ "lei_controle": null,
+ "nom_gleif": null,
+ "site": "https://servier.com",
+ "domaines": [
+  "servier.com"
+ ],
+ "alias": [],
+ "a_confirmer": "Wikidata non interrogé : PREPA_RDV_CONTACT absent ; ISIN, LEI et nom légal à confirmer",
+ "source": "table locale"
+}

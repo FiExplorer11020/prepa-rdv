@@ -1,0 +1,18 @@
+{
+ "nom_saisi": "Barilla",
+ "nom_retenu": "Barilla G. e R. Fratelli S.p.A.",
+ "qid": null,
+ "pays": "Italy",
+ "statut": "privé",
+ "isin": [],
+ "lei": null,
+ "lei_controle": null,
+ "nom_gleif": null,
+ "site": "https://www.barillagroup.com",
+ "domaines": [
+  "barillagroup.com"
+ ],
+ "alias": [],
+ "a_confirmer": "Wikidata non interrogé : PREPA_RDV_CONTACT absent ; ISIN, LEI et nom légal à confirmer",
+ "source": "table locale"
+}

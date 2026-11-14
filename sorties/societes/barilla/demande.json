@@ -1,0 +1,41 @@
+{
+ "societe": "Barilla",
+ "empreinte_prompt": "6ee5257d0713",
+ "plan": {
+  "direction_financiere": [
+   "Barilla Chief Financial Officer",
+   "Barilla Group Treasurer",
+   "Barilla investor relations management team",
+   "Barilla direttore finanziario CFO",
+   "Barilla factoring cessione crediti bilancio"
+  ],
+  "erp": [
+   "Barilla SAP S/4HANA",
+   "Barilla ERP implementation",
+   "Barilla Oracle OR Dynamics OR Workday ERP",
+   "Barilla annual report SAP"
+  ],
+  "achats": [
+   "Barilla SAP Ariba supplier",
+   "Barilla Coupa OR Jaggaer OR Ivalua",
+   "Barilla supplier portal procurement platform"
+  ],
+  "tms": [
+   "Barilla treasury management system",
+   "Barilla Kyriba",
+   "Barilla SAP Treasury"
+  ],
+  "financement": [
+   "Barilla supply chain finance",
+   "Barilla reverse factoring",
+   "Barilla receivables securitisation programme",
+   "Barilla factoring programme",
+   "Barilla annual report supplier finance arrangements"
+  ],
+  "signal": [
+   "Barilla finance transformation treasury 2026",
+   "Barilla ERP migration"
+  ]
+ },
+ "sortie": "<racine>/sorties/societes/barilla/agent-sortie.json"
+}

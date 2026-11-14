@@ -1,0 +1,68 @@
+{
+ "lectures": [
+  {
+   "id": "barilla-erp-4",
+   "lue": true,
+   "passage": "adopted applications including SAP S/4 HANA in 2025",
+   "contexte": null,
+   "titre": "Barilla Group Technographics, Software Purchases, AI and Digital Transformation Initiatives",
+   "date_page": null
+  },
+  {
+   "id": "barilla-erp-5",
+   "lue": true,
+   "passage": "Barilla Group has purchased the following applications: SAP Business Suite",
+   "contexte": null,
+   "titre": "Barilla Group Technographics, Software Purchases, AI and Digital Transformation Initiatives",
+   "date_page": null
+  },
+  {
+   "id": "barilla-erp-6",
+   "lue": false,
+   "passage": null,
+   "contexte": null,
+   "titre": null,
+   "date_page": null
+  },
+  {
+   "id": "barilla-erp-7",
+   "lue": false,
+   "passage": null,
+   "contexte": null,
+   "titre": null,
+   "date_page": null
+  },
+  {
+   "id": "barilla-tms-10",
+   "lue": true,
+   "passage": "Barilla Group is adopting Kyriba’s innovative digital platform",
+   "contexte": null,
+   "titre": "Barilla Group Shares the Recipe for Treasury Success",
+   "date_page": null
+  },
+  {
+   "id": "barilla-tms-13",
+   "lue": true,
+   "passage": "Kyriba Treasury in 2022",
+   "contexte": null,
+   "titre": "Barilla Group Technographics, Software Purchases, AI and Digital Transformation Initiatives",
+   "date_page": null
+  },
+  {
+   "id": "barilla-financement-17",
+   "lue": true,
+   "passage": "into a single Dynamic Discounting solution",
+   "contexte": null,
+   "titre": "Barilla Group Shares the Recipe for Treasury Success",
+   "date_page": null
+  },
+  {
+   "id": "barilla-signal-19",
+   "lue": true,
+   "passage": "adopted applications including SAP S/4 HANA in 2025",
+   "contexte": null,
+   "titre": "Barilla Group Technographics, Software Purchases, AI and Digital Transformation Initiatives",
+   "date_page": null
+  }
+ ]
+}

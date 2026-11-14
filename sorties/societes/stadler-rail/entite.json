@@ -1,0 +1,18 @@
+{
+ "nom_saisi": "Stadler Rail",
+ "nom_retenu": "Stadler Rail AG",
+ "qid": null,
+ "pays": "Switzerland",
+ "statut": "coté",
+ "isin": [],
+ "lei": null,
+ "lei_controle": null,
+ "nom_gleif": null,
+ "site": "https://www.stadlerrail.com",
+ "domaines": [
+  "stadlerrail.com"
+ ],
+ "alias": [],
+ "a_confirmer": "Wikidata non interrogé : PREPA_RDV_CONTACT absent ; ISIN, LEI et nom légal à confirmer",
+ "source": "table locale"
+}

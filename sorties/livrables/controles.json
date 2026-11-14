@@ -1,0 +1,15 @@
+{
+ "societes": 12,
+ "pdf": {
+  "pages": 12,
+  "taille_police": 10.0,
+  "octets": 311147,
+  "ok": true
+ },
+ "problemes_brief": {},
+ "tableurs": {
+  "cartographie.xlsx": 26388,
+  "trouvailles.xlsx": 81314
+ },
+ "sous_10_mo": true
+}

@@ -1,0 +1,136 @@
+{
+  "trouvailles": [
+    {
+      "champ": "identite",
+      "valeur": "LVMH Moët Hennessy - Louis Vuitton SE",
+      "precision": "Société européenne immatriculée au RCS de Paris sous le numéro 775 670 417, siège au 22 avenue Montaigne, 75008 Paris (même phrase de la page). ISIN et LEI non confirmés par une page lue.",
+      "statut_valeur": "present",
+      "citation": "LVMH Moët Hennessy – Louis Vuitton, a Société Européenne",
+      "citation_langue": "en",
+      "traduction_fr": "LVMH Moët Hennessy - Louis Vuitton, société européenne",
+      "url": "https://www.lvmh.com/en/legal-terms",
+      "entite_nommee": "LVMH Moët Hennessy – Louis Vuitton",
+      "type_source": "P1",
+      "date_source": null
+    },
+    {
+      "champ": "direction_financiere",
+      "valeur": "Cécile Cabanis, directrice financière (CFO) du groupe LVMH",
+      "precision": "Chief Financial Officer du groupe LVMH. La date de nomination, le 1er février 2025, est écrite dans la phrase citée.",
+      "statut_valeur": "present",
+      "citation": "On February 1, 2025, she is appointed Chief Financial Officer of the LVMH Group.",
+      "citation_langue": "en",
+      "traduction_fr": "Le 1er février 2025, elle est nommée directrice financière du groupe LVMH.",
+      "url": "https://www.lvmh.com/en/our-group/governance/cecile-cabanis",
+      "entite_nommee": "LVMH Group",
+      "type_source": "P1",
+      "date_source": null
+    },
+    {
+      "champ": "erp",
+      "valeur": "SAP S/4HANA",
+      "precision": "Offre d'emploi, donc un signal et non une preuve de déploiement : consultant fonctionnel SAP S/4HANA Finance (réf. SSCPC02560) pour la Public Cloud Edition (PCE). La page nomme LVMH Perfumes & Cosmetics et mentionne aussi LVMH Beauty.",
+      "statut_valeur": "present",
+      "citation": "support key phases of our SAP S/4HANA Public Cloud Edition (PCE)",
+      "citation_langue": "en",
+      "traduction_fr": "soutenir les phases clés de notre SAP S/4HANA Public Cloud Edition (PCE)",
+      "url": "https://www.lvmh.com/join-us/our-job-offers/SSCPC02560",
+      "entite_nommee": "LVMH Perfumes & Cosmetics",
+      "type_source": "P4",
+      "date_source": "2026-10-15"
+    },
+    {
+      "champ": "erp",
+      "valeur": "SAP S/4HANA",
+      "precision": "Presse spécialisée brésilienne, article en portugais : SAP S/4HANA Cloud Public Edition mis en œuvre pour LVMH Beauty avec l'intégrateur Delaware, projet réalisé via Grow with SAP (mentions de la même page).",
+      "statut_valeur": "present",
+      "citation": "implementou o software de gestão S/4 Hana, da SAP, rodando na nuvem pública",
+      "citation_langue": "pt",
+      "traduction_fr": "a mis en œuvre le logiciel de gestion S/4 Hana, de SAP, fonctionnant sur le cloud public",
+      "url": "https://www.baguete.com.br/noticias/lvmh-beauty-adota-s4-hana-com-delaware",
+      "entite_nommee": "LVMH Beauty",
+      "type_source": "P3",
+      "date_source": "2024-07-01"
+    },
+    {
+      "champ": "erp",
+      "valeur": "SAP ECC",
+      "precision": "Page SAP LeanIX de septembre 2023 : deux instances SAP ECC existantes chez Moët Hennessy, avec migration annoncée vers une instance unique de SAP S/4HANA et bascule visée début 2024. La page ne dit pas si cette bascule a eu lieu.",
+      "statut_valeur": "present",
+      "citation": "From their two legacy instances of SAP ECC Chorus/Cocktail",
+      "citation_langue": "en",
+      "traduction_fr": "À partir de leurs deux anciennes instances de SAP ECC Chorus/Cocktail",
+      "url": "https://leanix.net/en/blog/erp-mo%C3%ABt-hennessy",
+      "entite_nommee": "Moët Hennessy",
+      "type_source": "P2",
+      "date_source": "2023-09-21"
+    },
+    {
+      "champ": "achats",
+      "valeur": "autre",
+      "precision": "Aprovall : plateforme KYS (Know Your Supplier) de collecte, de partage et d'exploitation des données fournisseurs, utilisée par les équipes achats, juridique et contrôle interne de Moët Hennessy, présentée par la page comme la division Vins et Spiritueux du groupe LVMH. Aucune plateforme de la liste (SAP Ariba, Coupa, Jaggaer, Ivalua, Basware, GEP, Zycus) n'a été trouvée pour LVMH.",
+      "statut_valeur": "present",
+      "citation": "partnership with Aprovall led to the creation of the KYS – Know Your Supplier platform",
+      "citation_langue": "en",
+      "traduction_fr": "le partenariat avec Aprovall a conduit à la création de la plateforme KYS - Know Your Supplier",
+      "url": "https://www.aprovall.com/?p=5410",
+      "entite_nommee": "Moët Hennessy",
+      "type_source": "P2",
+      "date_source": null
+    },
+    {
+      "champ": "financement",
+      "valeur": "Billets de trésorerie",
+      "precision": "Programme Negotiable European Commercial Paper (NeuCP) de 15 Md EUR, émetteur LVMH SE. La même page liste deux programmes USCP de 15 Md USD (émetteurs LVMH SE, et LVMH Inc. avec la garantie de LVMH SE). Ce sont des tailles de programme, pas des encours. La mention Last update : July 29, 2026 figure dans la section EMTN de la page, pas dans celle des commercial papers.",
+      "statut_valeur": "present",
+      "citation": "Negotiable European Commercial Paper (NeuCP)",
+      "citation_langue": "en",
+      "traduction_fr": "Billets de trésorerie négociables européens (NeuCP)",
+      "url": "https://www.lvmh.com/investors/investors-and-analysts/debt-financing/",
+      "entite_nommee": "LVMH SE",
+      "type_source": "P1",
+      "date_source": "2026-07-29"
+    },
+    {
+      "champ": "signal",
+      "valeur": "Recrutement d'un chef de projet Trésorerie et communication bancaire, offre citant la Direction Projets Transformation Finance",
+      "precision": "Offre d'emploi LVMH (réf. LVMH03235) publiée le 08.11.2026, signal et non preuve de déploiement. Autres passages de la même offre : le programme FX FOR HOUSES qui met à disposition des services bancaires, un binôme avec le responsable des applications finance, les changements de système, les migrations et les montées de version.",
+      "statut_valeur": "present",
+      "citation": "la Direction Projets Transformation Finance pour optimiser leurs processus et leurs organisations",
+      "citation_langue": "fr",
+      "traduction_fr": null,
+      "url": "https://www.lvmh.com/fr/nous-rejoindre/nos-offres/LVMH03235",
+      "entite_nommee": "LVMH",
+      "type_source": "P4",
+      "date_source": "2026-11-08"
+    },
+    {
+      "champ": "signal",
+      "valeur": "Offre d'emploi pour un projet SAP S/4HANA Public Cloud Edition, avec tests d'interfaces avant recette",
+      "precision": "Offre publiée le 10.15.2026 (réf. SSCPC02560), signal et non preuve de déploiement. D'autres phrases de la même offre évoquent une formation à SAP S/4 PCE menée par des partenaires externes. La page nomme LVMH Perfumes & Cosmetics et cite LVMH Beauty.",
+      "statut_valeur": "present",
+      "citation": "support end-to-end interface testing across applications and S/4 PCE prior to UAT.",
+      "citation_langue": "en",
+      "traduction_fr": "soutenir les tests d'interfaces de bout en bout entre les applications et S/4 PCE avant la recette utilisateur (UAT).",
+      "url": "https://www.lvmh.com/join-us/our-job-offers/SSCPC02560",
+      "entite_nommee": "LVMH Perfumes & Cosmetics",
+      "type_source": "P4",
+      "date_source": "2026-10-15"
+    }
+  ],
+  "champs_sans_resultat": [
+    "tms"
+  ],
+  "remarques": [
+    "La demande ne définit pas les types de source P1 à P5. Je les ai appliqués dans l'ordre de la demande : P1 documents de la société, P2 communiqués, études de cas et blogs d'éditeurs et d'intégrateurs, P3 presse spécialisée, P4 offres d'emploi, P5 autres sources.",
+    "Moyens consommés : 22 recherches abouties et 20 requêtes de pages, dont 10 seulement ont rendu du texte. Les autres ont échoué : offres d'emploi fermées (404), document d'enregistrement universel 2025 trop volumineux pour l'outil, PDF illisible, serveur refusant la connexion, page Euronext vide. Une dernière recherche a été refusée par la limite de la session.",
+    "Financement court terme : une seule trouvaille, les programmes de billets de trésorerie de la page de dette de lvmh.com. Les notes sur la dette des comptes consolidés et du document d'enregistrement universel, où figureraient lignes de crédit confirmées, affacturage, titrisation ou accords de financement de fournisseurs, n'ont pas pu être lues. Ce résultat n'établit ni la présence ni l'absence de ces produits.",
+    "TMS : aucune trouvaille vérifiée. Des extraits de recherche attribuent à des offres de Sephora (réf. 289896 à San Francisco, réf. 281471 à Jakarta) des mentions de Kyriba, et à une offre de stage de LVMH Perfumes & Cosmetics (réf. SSCPC02414) des mentions de SAP et de XRT. Les pages 289896 et SSCPC02414 renvoient une erreur 404 et la page 281471 n'a pas été essayée : aucune citation n'a donc été vérifiée dans la page.",
+    "ERP : aucune page lue ne dit quel ERP est en place au niveau du groupe. Les trouvailles portent sur des entités : LVMH Perfumes & Cosmetics et LVMH Beauty (offre d'emploi d'octobre 2026, article de juillet 2024) et Moët Hennessy (page de 2023 sur une migration annoncée).",
+    "Achats : la seule trouvaille est une plateforme de données fournisseurs (Aprovall chez Moët Hennessy). Aucune plateforme d'achats de la liste n'est citée pour LVMH dans les pages lues.",
+    "Direction financière : la directrice financière est nommée. Aucun trésorier de groupe n'est nommé dans les pages lues.",
+    "Identité : nom légal et numéro RCS lus sur la page des mentions légales de lvmh.com. ISIN et LEI non confirmés par une page lue. FR0000121014 figure dans l'adresse d'une page tierce vue dans les résultats de recherche (researchpool.com), non lue.",
+    "Entités nommées dans les trouvailles : LVMH SE (émetteur des programmes de billets de trésorerie), LVMH Perfumes & Cosmetics, LVMH Beauty et Moët Hennessy, que la page d'Aprovall présente comme la division Vins et Spiritueux du groupe LVMH.",
+    "Dates : converties au format AAAA-MM-JJ depuis l'affichage de chaque page (08.11.2026 en français, 10.15.2026 en américain, 1 de julho de 2024 en portugais). Les pages des mentions légales, du profil de la directrice financière et d'Aprovall ne portent pas de date. L'article de Baguete est en portugais, code pt, hors des codes cités par le schéma."
+  ]
+}

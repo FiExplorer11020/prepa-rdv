@@ -1,0 +1,18 @@
+{
+ "nom_saisi": "LVMH",
+ "nom_retenu": "LVMH Moët Hennessy Louis Vuitton SE",
+ "qid": null,
+ "pays": "France",
+ "statut": "coté",
+ "isin": [],
+ "lei": null,
+ "lei_controle": null,
+ "nom_gleif": null,
+ "site": "https://www.lvmh.com",
+ "domaines": [
+  "lvmh.com"
+ ],
+ "alias": [],
+ "a_confirmer": "Wikidata non interrogé : PREPA_RDV_CONTACT absent ; ISIN, LEI et nom légal à confirmer",
+ "source": "table locale"
+}

@@ -1,0 +1,82 @@
+{
+ "societes": [
+  {
+   "societe": "Barilla",
+   "trouvailles": 19,
+   "niveaux": {
+    "probable": 10,
+    "non trouvé": 9
+   },
+   "rejets": {
+    "refus HTTP": 8,
+    "citation introuvable": 1
+   },
+   "gardees": 10,
+   "hors_fenetre": 9,
+   "sans_date": 0,
+   "type_corrige": 12,
+   "pages_vivantes": 0,
+   "pages_lues": 6,
+   "pages_refusees": 3,
+   "jetons": {
+    "entree": 68,
+    "cache_ecrit": 320535,
+    "cache_lu": 6252619,
+    "sortie": 122623,
+    "recherches_web": 0,
+    "appels": 33,
+    "cout_estime_usd": 2.653,
+    "duree_s": 1076.83,
+    "traites": 6695845
+   },
+   "duree_s": 0.0
+  },
+  {
+   "societe": "Saint-Gobain",
+   "trouvailles": 14,
+   "niveaux": {
+    "probable": 11,
+    "non trouvé": 2,
+    "confirmé": 1
+   },
+   "rejets": {
+    "refus HTTP": 1,
+    "citation introuvable": 1
+   },
+   "gardees": 12,
+   "hors_fenetre": 2,
+   "sans_date": 0,
+   "type_corrige": 9,
+   "pages_vivantes": 1,
+   "pages_lues": 8,
+   "pages_refusees": 1,
+   "jetons": {
+    "entree": 48,
+    "cache_ecrit": 335294,
+    "cache_lu": 4687462,
+    "sortie": 133102,
+    "recherches_web": 0,
+    "appels": 23,
+    "cout_estime_usd": 2.6381,
+    "duree_s": 1045.696,
+    "traites": 5155906
+   },
+   "duree_s": 0.0
+  }
+ ],
+ "total": {
+  "trouvailles": 33,
+  "gardees": 22,
+  "hors_fenetre": 11,
+  "sans_date": 0,
+  "part_hors_fenetre_ou_sans_date": 0.5,
+  "rejets": {
+   "refus HTTP": 9,
+   "citation introuvable": 2
+  },
+  "pages_lues": 14,
+  "pages_refusees": 4,
+  "traites": 11851751,
+  "cout_estime_usd": 5.29
+ }
+}

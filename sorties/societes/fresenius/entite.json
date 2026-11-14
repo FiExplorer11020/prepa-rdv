@@ -1,0 +1,18 @@
+{
+ "nom_saisi": "Fresenius",
+ "nom_retenu": "Fresenius SE & Co. KGaA",
+ "qid": null,
+ "pays": "Germany",
+ "statut": "coté",
+ "isin": [],
+ "lei": null,
+ "lei_controle": null,
+ "nom_gleif": null,
+ "site": "https://www.fresenius.com",
+ "domaines": [
+  "fresenius.com"
+ ],
+ "alias": [],
+ "a_confirmer": "Wikidata non interrogé : PREPA_RDV_CONTACT absent ; ISIN, LEI et nom légal à confirmer",
+ "source": "table locale"
+}

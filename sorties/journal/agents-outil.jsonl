@@ -1,0 +1,19 @@
+{"ts": "2026-11-13T22:43:50+00:00", "agent_id": "a25c5012267b97c08", "societe": "Saint-Gobain", "phase": "sonde", "role": "agent"}
+{"ts": "2026-11-13T22:45:16+00:00", "agent_id": "add6477265b45db74", "societe": "Barilla", "phase": "sonde", "role": "agent"}
+{"ts": "2026-11-13T22:53:02+00:00", "agent_id": "a9a874686dfd84dfc", "societe": "Saint-Gobain", "phase": "sonde", "role": "relecture"}
+{"ts": "2026-11-13T23:02:39+00:00", "agent_id": "af603d02add07284c", "societe": "Fresenius", "phase": "run", "role": "agent"}
+{"ts": "2026-11-13T23:03:17+00:00", "agent_id": "af4b11132012c5e03", "societe": "Deutsche Telekom", "phase": "run", "role": "agent"}
+{"ts": "2026-11-13T23:03:46+00:00", "agent_id": "acabce1a3e5924dc4", "societe": "Vattenfall", "phase": "run", "role": "agent"}
+{"ts": "2026-11-13T23:04:01+00:00", "agent_id": "aa8776403b1aacc69", "societe": "Nokia", "phase": "run", "role": "agent"}
+{"ts": "2026-11-13T23:05:00+00:00", "agent_id": "a6a3f990bb1468085", "societe": "SSAB", "phase": "run", "role": "agent"}
+{"ts": "2026-11-13T23:05:14+00:00", "agent_id": "a41caaa4d30a377d9", "societe": "LVMH", "phase": "run", "role": "agent"}
+{"ts": "2026-11-13T23:05:25+00:00", "agent_id": "a68e62c492e451b30", "societe": "Stadler Rail", "phase": "run", "role": "agent"}
+{"ts": "2026-11-13T23:05:43+00:00", "agent_id": "a0f7992c502745e35", "societe": "Verallia", "phase": "run", "role": "agent"}
+{"ts": "2026-11-13T23:06:25+00:00", "agent_id": "a88ec3fe6810c13bd", "societe": "Servier", "phase": "run", "role": "agent"}
+{"ts": "2026-11-13T23:06:38+00:00", "agent_id": "a2090716f082a84e5", "societe": "voestalpine", "phase": "run", "role": "agent"}
+{"ts": "2026-11-13T23:12:45+00:00", "agent_id": "a1fe775cfdd94fbef", "societe": "Deutsche Telekom", "phase": "run", "role": "relecture"}
+{"ts": "2026-11-13T23:15:21+00:00", "agent_id": "aaaf51f136dacf7ee", "societe": "Servier", "phase": "run", "role": "relecture"}
+{"ts": "2026-11-13T23:15:31+00:00", "agent_id": "aabaaa5e0984e9990", "societe": "Nokia", "phase": "run", "role": "relecture"}
+{"ts": "2026-11-13T23:17:33+00:00", "agent_id": "ab27d5f2195bc0203", "societe": "SSAB", "phase": "run", "role": "relecture"}
+{"ts": "2026-11-13T23:18:15+00:00", "agent_id": "a6ef120d5c56a687f", "societe": "Fresenius", "phase": "run", "role": "relecture"}
+{"ts": "2026-11-14T00:48:59+00:00", "agent_id": "adf828636e96267cc", "societe": "Barilla", "phase": "run", "role": "relecture"}

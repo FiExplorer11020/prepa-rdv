@@ -1,0 +1,18 @@
+{
+ "nom_saisi": "SSAB",
+ "nom_retenu": "SSAB AB",
+ "qid": null,
+ "pays": "Sweden",
+ "statut": "coté",
+ "isin": [],
+ "lei": null,
+ "lei_controle": null,
+ "nom_gleif": null,
+ "site": "https://www.ssab.com",
+ "domaines": [
+  "ssab.com"
+ ],
+ "alias": [],
+ "a_confirmer": "Wikidata non interrogé : PREPA_RDV_CONTACT absent ; ISIN, LEI et nom légal à confirmer",
+ "source": "table locale"
+}

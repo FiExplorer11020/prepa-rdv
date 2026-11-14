@@ -1,0 +1,42 @@
+{
+ "societe": "Saint-Gobain",
+ "empreinte_prompt": "6ee5257d0713",
+ "plan": {
+  "direction_financiere": [
+   "Saint-Gobain Chief Financial Officer",
+   "Saint-Gobain Group Treasurer",
+   "Saint-Gobain investor relations management team",
+   "Saint-Gobain directeur financier",
+   "Saint-Gobain trésorerie groupe"
+  ],
+  "erp": [
+   "Saint-Gobain SAP S/4HANA",
+   "Saint-Gobain ERP implementation",
+   "Saint-Gobain Oracle OR Dynamics OR Workday ERP",
+   "Saint-Gobain annual report SAP"
+  ],
+  "achats": [
+   "Saint-Gobain SAP Ariba supplier",
+   "Saint-Gobain Coupa OR Jaggaer OR Ivalua",
+   "Saint-Gobain supplier portal procurement platform"
+  ],
+  "tms": [
+   "Saint-Gobain treasury management system",
+   "Saint-Gobain Kyriba",
+   "Saint-Gobain SAP Treasury"
+  ],
+  "financement": [
+   "Saint-Gobain supply chain finance",
+   "Saint-Gobain reverse factoring",
+   "Saint-Gobain receivables securitisation programme",
+   "Saint-Gobain factoring programme",
+   "Saint-Gobain annual report supplier finance arrangements",
+   "Saint-Gobain affacturage titrisation créances document d'enregistrement universel"
+  ],
+  "signal": [
+   "Saint-Gobain finance transformation treasury 2026",
+   "Saint-Gobain ERP migration"
+  ]
+ },
+ "sortie": "<racine>/sorties/societes/saint-gobain/agent-sortie.json"
+}

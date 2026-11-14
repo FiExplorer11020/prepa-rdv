@@ -1,0 +1,42 @@
+{
+ "societe": "Verallia",
+ "empreinte_prompt": "6ee5257d0713",
+ "plan": {
+  "direction_financiere": [
+   "Verallia Chief Financial Officer",
+   "Verallia Group Treasurer",
+   "Verallia investor relations management team",
+   "Verallia directeur financier",
+   "Verallia trésorerie groupe"
+  ],
+  "erp": [
+   "Verallia SAP S/4HANA",
+   "Verallia ERP implementation",
+   "Verallia Oracle OR Dynamics OR Workday ERP",
+   "Verallia annual report SAP"
+  ],
+  "achats": [
+   "Verallia SAP Ariba supplier",
+   "Verallia Coupa OR Jaggaer OR Ivalua",
+   "Verallia supplier portal procurement platform"
+  ],
+  "tms": [
+   "Verallia treasury management system",
+   "Verallia Kyriba",
+   "Verallia SAP Treasury"
+  ],
+  "financement": [
+   "Verallia supply chain finance",
+   "Verallia reverse factoring",
+   "Verallia receivables securitisation programme",
+   "Verallia factoring programme",
+   "Verallia annual report supplier finance arrangements",
+   "Verallia affacturage titrisation créances document d'enregistrement universel"
+  ],
+  "signal": [
+   "Verallia finance transformation treasury 2026",
+   "Verallia ERP migration"
+  ]
+ },
+ "sortie": "<racine>/sorties/societes/verallia/agent-sortie.json"
+}

@@ -1,0 +1,50 @@
+{
+ "societes": [
+  {
+   "societe": "Saint-Gobain",
+   "trouvailles": 14,
+   "niveaux": {
+    "probable": 12,
+    "non trouvé": 2
+   },
+   "rejets": {
+    "refus HTTP": 1,
+    "citation introuvable": 1
+   },
+   "gardees": 12,
+   "hors_fenetre": 1,
+   "sans_date": 0,
+   "type_corrige": 11,
+   "pages_vivantes": 0,
+   "pages_lues": 8,
+   "pages_refusees": 1,
+   "jetons": {
+    "entree": 48,
+    "cache_ecrit": 335294,
+    "cache_lu": 4687462,
+    "sortie": 133102,
+    "recherches_web": 0,
+    "appels": 23,
+    "cout_estime_usd": 2.6381,
+    "duree_s": 1045.696,
+    "traites": 5155906
+   },
+   "duree_s": 11.4
+  }
+ ],
+ "total": {
+  "trouvailles": 14,
+  "gardees": 12,
+  "hors_fenetre": 1,
+  "sans_date": 0,
+  "part_hors_fenetre_ou_sans_date": 0.08,
+  "rejets": {
+   "refus HTTP": 1,
+   "citation introuvable": 1
+  },
+  "pages_lues": 8,
+  "pages_refusees": 1,
+  "traites": 5155906,
+  "cout_estime_usd": 2.64
+ }
+}

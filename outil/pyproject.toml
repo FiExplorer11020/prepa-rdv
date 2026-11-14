@@ -1,0 +1,28 @@
+[project]
+name = "prepa-rdv"
+version = "0.1.0"
+description = "Prépare un rendez-vous avec une direction financière à partir d'informations publiques. Chaque information porte sa preuve, sa date et un niveau de confiance calculé par le code."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+dependencies = [
+    "httpx>=0.28,<0.29",
+    "pydantic>=2.14,<3",
+    "trafilatura>=2.3,<3",
+    "pypdf>=7.1,<8",
+    "rapidfuzz>=3.14,<4",
+    "openpyxl>=3.1,<4",
+]
+
+[project.optional-dependencies]
+api = ["anthropic>=2.8,<3"]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "pip-audit>=2.7"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

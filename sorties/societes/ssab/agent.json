@@ -1,0 +1,298 @@
+{
+ "empreinte_prompt": "6ee5257d0713",
+ "modele": "claude-sonnet-5-5 (sous-agent)",
+ "plan": {
+  "direction_financiere": [
+   "SSAB Chief Financial Officer",
+   "SSAB Group Treasurer",
+   "SSAB investor relations management team",
+   "SSAB CFO ekonomichef",
+   "SSAB factoring kundfordringar årsredovisning"
+  ],
+  "erp": [
+   "SSAB SAP S/4HANA",
+   "SSAB ERP implementation",
+   "SSAB Oracle OR Dynamics OR Workday ERP",
+   "SSAB annual report SAP"
+  ],
+  "achats": [
+   "SSAB SAP Ariba supplier",
+   "SSAB Coupa OR Jaggaer OR Ivalua",
+   "SSAB supplier portal procurement platform"
+  ],
+  "tms": [
+   "SSAB treasury management system",
+   "SSAB Kyriba",
+   "SSAB SAP Treasury"
+  ],
+  "financement": [
+   "SSAB supply chain finance",
+   "SSAB reverse factoring",
+   "SSAB receivables securitisation programme",
+   "SSAB factoring programme",
+   "SSAB annual report supplier finance arrangements"
+  ],
+  "signal": [
+   "SSAB finance transformation treasury 2026",
+   "SSAB ERP migration"
+  ]
+ },
+ "prompt": "Société : SSAB (nom légal retenu : SSAB AB)\nPays du siège : Sweden. Statut : coté.\nSite officiel : https://www.ssab.com. Domaines de la société : ssab.com.\nAttention, identité à confirmer : Wikidata non interrogé : PREPA_RDV_CONTACT absent ; ISIN, LEI et nom légal à confirmer.\n\nPlan de requêtes (suis-le, complète-le si besoin) :\n- direction_financiere : SSAB Chief Financial Officer | SSAB Group Treasurer | SSAB investor relations management team | SSAB CFO ekonomichef | SSAB factoring kundfordringar årsredovisning\n- erp : SSAB SAP S/4HANA | SSAB ERP implementation | SSAB Oracle OR Dynamics OR Workday ERP | SSAB annual report SAP\n- achats : SSAB SAP Ariba supplier | SSAB Coupa OR Jaggaer OR Ivalua | SSAB supplier portal procurement platform\n- tms : SSAB treasury management system | SSAB Kyriba | SSAB SAP Treasury\n- financement : SSAB supply chain finance | SSAB reverse factoring | SSAB receivables securitisation programme | SSAB factoring programme | SSAB annual report supplier finance arrangements\n- signal : SSAB finance transformation treasury 2026 | SSAB ERP migration\n\nRéponds uniquement par l'objet JSON du schéma.",
+ "sortie": {
+  "trouvailles": [
+   {
+    "champ": "identite",
+    "valeur": "SSAB AB (publ)",
+    "precision": "Nom légal confirmé par cette page ; numéro d'organisation, ISIN et LEI non trouvés dans les pages lues",
+    "statut_valeur": "present",
+    "citation": "This information is inside information that SSAB AB (publ) is obliged to make public",
+    "citation_langue": "en",
+    "traduction_fr": "Cette information est une information privilégiée que SSAB AB (publ) est tenue de rendre publique",
+    "url": "https://www.ssab.com/en/news/2026/10/report-for-q3-2026",
+    "entite_nommee": "SSAB AB (publ)",
+    "type_source": "P1",
+    "date_source": "2026-10-28"
+   },
+   {
+    "champ": "direction_financiere",
+    "valeur": "Leena Craelius, directrice financière (CFO)",
+    "precision": "Titre complet sur la page du comité exécutif : Executive Vice President and Chief Financial Officer",
+    "statut_valeur": "present",
+    "citation": "The report will be presented by SSAB’s President and CEO Johnny Sjöström, and CFO Leena Craelius.",
+    "citation_langue": "en",
+    "traduction_fr": "Le rapport sera présenté par le président-directeur général de SSAB, Johnny Sjöström, et par la directrice financière (CFO), Leena Craelius.",
+    "url": "https://www.ssab.com/en/news/2026/10/report-for-q3-2026",
+    "entite_nommee": "SSAB",
+    "type_source": "P1",
+    "date_source": "2026-10-28"
+   },
+   {
+    "champ": "direction_financiere",
+    "valeur": "Leena Craelius, directrice financière (CFO)",
+    "precision": "Citée dans le communiqué sur le financement vert de 2,3 Md EUR",
+    "statut_valeur": "present",
+    "citation": "Leena Craelius, CFO of SSAB",
+    "citation_langue": "en",
+    "traduction_fr": "Leena Craelius, directrice financière (CFO) de SSAB",
+    "url": "https://www.ssab.com/en/news/2025/04/ssab-secures-green-financing-of-eur-23-billion",
+    "entite_nommee": "SSAB",
+    "type_source": "P1",
+    "date_source": "2025-04-29"
+   },
+   {
+    "champ": "direction_financiere",
+    "valeur": "Kati Vellinki, Head of Treasury (responsable de la trésorerie)",
+    "precision": "Contact trésorerie du communiqué du 29 avril 2025 ; fonction non reconfirmée depuis",
+    "statut_valeur": "present",
+    "citation": "Kati Vellinki, Head of Treasury",
+    "citation_langue": "en",
+    "traduction_fr": "Kati Vellinki, responsable de la trésorerie",
+    "url": "https://www.ssab.com/en/news/2025/04/ssab-secures-green-financing-of-eur-23-billion",
+    "entite_nommee": "SSAB",
+    "type_source": "P1",
+    "date_source": "2025-04-29"
+   },
+   {
+    "champ": "erp",
+    "valeur": "SAP S/4HANA",
+    "precision": "Offre d'emploi, signal et non preuve de déploiement : SSAB EMEA AB, Oxelösund, Division Special Steels ; l'offre cite SAP R3/Hana, SAP R/3 ou SAP S/4HANA et une future feuille de route S/4HANA",
+    "statut_valeur": "present",
+    "citation": "SSAB, Division Special Steels, are transforming the IT landscape and SAP R3/Hana are becoming the ERP system for major business processes.",
+    "citation_langue": "en",
+    "traduction_fr": "SSAB, Division Special Steels, transforme son paysage informatique et SAP R3/Hana devient le système ERP des principaux processus métier.",
+    "url": "https://jobbsafari.se/jobb/ssab-sap-solution-expert-sasrb-20184500",
+    "entite_nommee": "SSAB",
+    "type_source": "P4",
+    "date_source": "2026-04-14"
+   },
+   {
+    "champ": "erp",
+    "valeur": "SAP S/4HANA",
+    "precision": "Offre d'emploi, signal et non preuve de déploiement : SSAB EMEA AB, poste Finance Developer ; l'offre cite aussi GSAP et Global SAP",
+    "statut_valeur": "present",
+    "citation": "Test ERP solutions (SAP S/4HANA, GSAP) to ensure functionality and compliance.",
+    "citation_langue": "en",
+    "traduction_fr": "Tester les solutions ERP (SAP S/4HANA, GSAP) pour garantir la fonctionnalité et la conformité.",
+    "url": "https://jobbsafari.se/jobb/ssab-finance-developer-sasrb-19822099",
+    "entite_nommee": "SSAB EMEA AB",
+    "type_source": "P4",
+    "date_source": "2025-12-11"
+   },
+   {
+    "champ": "erp",
+    "valeur": "SAP S/4HANA",
+    "precision": "Périmètre Tibnor, filiale de SSAB (« ett dotterbolag till SSAB » selon la page), pas nécessairement le groupe ; la page décrit un S/4HANA private cloud lancé à l'été 2022",
+    "statut_valeur": "present",
+    "citation": "Tibnor använder S/4HANA som den primära källan för sina affärsdata.",
+    "citation_langue": "sv",
+    "traduction_fr": "Tibnor utilise S/4HANA comme source principale de ses données métier.",
+    "url": "https://news.sap.com/sweden/2025/04/varldspremiar-hos-tibnor-forst-ut-med-saps-nya-molnplattform/",
+    "entite_nommee": "Tibnor",
+    "type_source": "P2",
+    "date_source": "2025-04-14"
+   },
+   {
+    "champ": "achats",
+    "valeur": "SAP Ariba",
+    "precision": "Étude de cas sans date, sur un agrégateur : sourcing, gestion des contrats, visibilité des dépenses et procure-to-pay, intégrés à tous les ERP de SSAB",
+    "statut_valeur": "present",
+    "citation": "Case Study: SSAB achieves rapid global spend visibility and shifts to higher-value procurement with SAP Ariba",
+    "citation_langue": "en",
+    "traduction_fr": "Étude de cas : SSAB obtient rapidement une visibilité mondiale sur ses dépenses et passe à des achats à plus forte valeur ajoutée avec SAP Ariba",
+    "url": "https://www.casestudies.com/company/sap-ariba/case-study/increased-focus-on-higher-value-add-activities-as-a-result-of-global-e-procurement-journey",
+    "entite_nommee": "SSAB",
+    "type_source": "P2",
+    "date_source": null
+   },
+   {
+    "champ": "achats",
+    "valeur": "SAP Ariba",
+    "precision": "Présentation d'avril 2014 de SSAB EMEA : projet Procure to Invoice, commandes et factures échangées via Ariba Network ; usage actuel non confirmé par ce document",
+    "statut_valeur": "present",
+    "citation": "Ariba implementation at SSAB EMEA",
+    "citation_langue": "en",
+    "traduction_fr": "Mise en œuvre d'Ariba chez SSAB EMEA",
+    "url": "https://www.slideshare.net/slideshow/ariba-live-breakoutsession2014v03/33139400",
+    "entite_nommee": "SSAB EMEA",
+    "type_source": "P2",
+    "date_source": "2014-04"
+   },
+   {
+    "champ": "tms",
+    "valeur": "autre",
+    "precision": "Twin",
+    "statut_valeur": "present",
+    "citation": "Administration of the IT systems used in Treasury, Twin and UFW Unic Finance 2010",
+    "citation_langue": "en",
+    "traduction_fr": "Administration des systèmes informatiques utilisés en trésorerie, Twin et UFW Unic Finance 2010",
+    "url": "https://vakanser.se/jobb/ssab+-+middle+office+manager",
+    "entite_nommee": "SSAB EMEA AB",
+    "type_source": "P4",
+    "date_source": "2018-05-15"
+   },
+   {
+    "champ": "tms",
+    "valeur": "autre",
+    "precision": "UFW Unic Finance 2010",
+    "statut_valeur": "present",
+    "citation": "Administration of the IT systems used in Treasury, Twin and UFW Unic Finance 2010",
+    "citation_langue": "en",
+    "traduction_fr": "Administration des systèmes informatiques utilisés en trésorerie, Twin et UFW Unic Finance 2010",
+    "url": "https://vakanser.se/jobb/ssab+-+middle+office+manager",
+    "entite_nommee": "SSAB EMEA AB",
+    "type_source": "P4",
+    "date_source": "2018-05-15"
+   },
+   {
+    "champ": "financement",
+    "valeur": "Billets de trésorerie",
+    "precision": "Programme suédois, limite de 5 000 MSEK",
+    "statut_valeur": "present",
+    "citation": "The Swedish commercial paper program has a limit of SEK 5,000 million",
+    "citation_langue": "en",
+    "traduction_fr": "Le programme suédois de billets de trésorerie a une limite de 5 000 millions de SEK",
+    "url": "https://www.ssab.com/company/investors/debt-financing",
+    "entite_nommee": "SSAB",
+    "type_source": "P1",
+    "date_source": null
+   },
+   {
+    "champ": "financement",
+    "valeur": "Billets de trésorerie",
+    "precision": "Programme finlandais, limite de 500 MEUR",
+    "statut_valeur": "present",
+    "citation": "the Finnish commercial paper program has a limit of EUR 500 million.",
+    "citation_langue": "en",
+    "traduction_fr": "le programme finlandais de billets de trésorerie a une limite de 500 millions d'EUR.",
+    "url": "https://www.ssab.com/company/investors/debt-financing",
+    "entite_nommee": "SSAB",
+    "type_source": "P1",
+    "date_source": null
+   },
+   {
+    "champ": "financement",
+    "valeur": "autre",
+    "precision": "Committed back-stop facilities, lignes de crédit confirmées de soutien au financement court terme ; le mot renouvelable (revolving) n'apparaît pas dans cette citation",
+    "statut_valeur": "present",
+    "citation": "committed back-stop facilities to secure the short-term funding and liquidity needs.",
+    "citation_langue": "en",
+    "traduction_fr": "lignes de soutien confirmées pour sécuriser les besoins de financement court terme et de liquidité.",
+    "url": "https://www.ssab.com/company/investors/debt-financing",
+    "entite_nommee": "SSAB",
+    "type_source": "P1",
+    "date_source": null
+   },
+   {
+    "champ": "financement",
+    "valeur": "Ligne de crédit renouvelable",
+    "precision": "RCF syndiquée multidevises de 800 M EUR, annoncée le 12 novembre 2026 ; communiqué complet non ouvert : https://www.ssab.com/en/news/2026/11/ssab-has-signed-a-eur-800-million-revolving-credit-facility",
+    "statut_valeur": "present",
+    "citation": "SSAB has signed a new EUR 800 million syndicated multi-currency revolving credit facility agreement (RCF).",
+    "citation_langue": "en",
+    "traduction_fr": "SSAB a signé une nouvelle convention de ligne de crédit renouvelable (RCF) syndiquée multidevises de 800 millions d'EUR.",
+    "url": "https://www.ssab.com/en/news/2025/04/ssab-secures-green-financing-of-eur-23-billion",
+    "entite_nommee": "SSAB",
+    "type_source": "P1",
+    "date_source": "2026-11-12"
+   },
+   {
+    "champ": "signal",
+    "valeur": "Signature d'une ligne de crédit renouvelable syndiquée multidevises de 800 M EUR, annoncée le 12 novembre 2026",
+    "precision": null,
+    "statut_valeur": "present",
+    "citation": "SSAB has signed a new EUR 800 million syndicated multi-currency revolving credit facility agreement (RCF).",
+    "citation_langue": "en",
+    "traduction_fr": "SSAB a signé une nouvelle convention de ligne de crédit renouvelable (RCF) syndiquée multidevises de 800 millions d'EUR.",
+    "url": "https://www.ssab.com/en/news/2025/04/ssab-secures-green-financing-of-eur-23-billion",
+    "entite_nommee": "SSAB",
+    "type_source": "P1",
+    "date_source": "2026-11-12"
+   },
+   {
+    "champ": "signal",
+    "valeur": "Première notation de crédit de SSAB par Moody's, attribuée au troisième trimestre 2026",
+    "precision": "Notation émetteur long terme Baa2, perspective stable, selon la même page",
+    "statut_valeur": "present",
+    "citation": "During the third quarter, Moody’s assigned a credit rating to SSAB for the first time.",
+    "citation_langue": "en",
+    "traduction_fr": "Au cours du troisième trimestre, Moody’s a attribué pour la première fois une notation de crédit à SSAB.",
+    "url": "https://www.ssab.com/en/news/2026/10/report-for-q3-2026",
+    "entite_nommee": "SSAB",
+    "type_source": "P1",
+    "date_source": "2026-10-28"
+   },
+   {
+    "champ": "signal",
+    "valeur": "Division Special Steels : transformation du paysage informatique, SAP R3/Hana devenant l'ERP des principaux processus (offre d'emploi d'avril 2026)",
+    "precision": "Offre d'emploi : signal, pas une preuve de déploiement",
+    "statut_valeur": "present",
+    "citation": "SSAB, Division Special Steels, are transforming the IT landscape and SAP R3/Hana are becoming the ERP system for major business processes.",
+    "citation_langue": "en",
+    "traduction_fr": "SSAB, Division Special Steels, transforme son paysage informatique et SAP R3/Hana devient le système ERP des principaux processus métier.",
+    "url": "https://jobbsafari.se/jobb/ssab-sap-solution-expert-sasrb-20184500",
+    "entite_nommee": "SSAB",
+    "type_source": "P4",
+    "date_source": "2026-04-14"
+   }
+  ],
+  "champs_sans_resultat": [],
+  "remarques": [
+   "Typage des sources P1 à P5 non défini dans la demande : appliqué d'après l'ordre de la demande, P1 = documents de la société (ssab.com), P2 = communiqués, études de cas et présentations d'éditeurs (SAP, Ariba), P3 = presse spécialisée, P4 = offres d'emploi, P5 = autre.",
+   "Moyens épuisés : budget de recherches web du tour atteint (la dernière requête a été refusée) et 20 pages lues. Le rapport annuel 2025 n'a pas pu être lu (sustainabilityreports.com en 403, copie financialfilings.com bloquée, le PDF Cision trouvé était un communiqué d'une page) : les notes sur les créances et les dettes n'ont donc pas été consultées.",
+   "Les pages ont été lues par un outil de lecture qui résume et plafonne ses extraits à environ 125 caractères ; les citations reprennent ces extraits, sans relecture du HTML brut. La citation de l'offre SAP Solution Expert est assemblée à partir de deux segments contigus.",
+   "TMS : aucun éditeur de TMS actuel trouvé. Seule une offre de 2018 (SSAB EMEA AB, Middle Office Manager) nomme Twin et UFW Unic Finance 2010, et demande aussi de participer à l'évaluation et à la mise en place d'un nouveau TMS, non nommé. Piste non vérifiée (résumé de recherche, page non lue) : une offre Back Office / Cash Management Professional sur vakanser.se citerait Nomentia et CoProcess, employeur non confirmé.",
+   "Financement court terme : aucun affacturage, titrisation de créances, affacturage inversé, escompte dynamique ni crédit documentaire trouvé dans les pages lues (page Debt financing, communiqué du 29 avril 2025, rapport du T3 2026). Ce n'est pas une absence déclarée, la note des états financiers n'ayant pas été lue.",
+   "Ligne de crédit renouvelable de 800 M EUR : la citation a été lue dans l'encart d'actualités liées de la page du 29 avril 2025, avec la date « 12 Nov. » ; l'année 2026 vient de l'adresse du lien (/news/2026/11/). Le communiqué complet n'a pas été ouvert. L'encart change avec les nouvelles : la citation peut disparaître de cette page.",
+   "La page Debt financing ne porte pas de date de mise à jour (date_source null) ; elle contient des chiffres au 30 septembre 2026 et mentionne une notation Moody's. Elle parle de committed back-stop facilities, pas de ligne renouvelable.",
+   "ERP : aucune source de la société ne dit quelle version tourne en production. Deux offres de SSAB EMEA AB (décembre 2025 et avril 2026) parlent de SAP R/3, de S/4HANA et de GSAP ; l'ERP décrit par SAP pour Tibnor est celui d'une filiale que la page présente comme dotterbolag till SSAB, pas forcément celui du groupe ; l'étude de cas Ariba indique que SSAB avait plusieurs ERP.",
+   "Achats : l'étude de cas Ariba est sans date et hébergée par un agrégateur (casestudies.com) ; la présentation de SSAB EMEA date d'avril 2014. Piste non vérifiée (résumés de recherche, pages non lues) : des offres d'achats de SSAB EMEA AB de 2017 à 2021 citeraient Ariba et IFS. Aucune source récente ne confirme l'usage actuel d'Ariba.",
+   "Direction financière : le rapport du T3 2026 écrit CFO Leena Craelius ; la page du comité exécutif (https://www.ssab.com/en/company/investors/corporate-governance/group-executive-committee) porte acting Chief Financial Officer dans un texte alternatif d'image et Chief Financial Officer dans la biographie. Aucun trésorier n'y est nommé ; Kati Vellinki figure comme Head of Treasury dans le communiqué du 29 avril 2025, poste non reconfirmé depuis.",
+   "Identité : nom légal SSAB AB (publ) confirmé par le rapport du T3 2026 ; numéro d'organisation, LEI et ISIN non confirmés par une page lue (ISIN SE0000171100 pour les actions A d'après un résumé de recherche, non vérifié).",
+   "Un article GlobalCapital sans date (SSAB reinforces liquidity with enlarged revolver) n'est pas retenu : seul son titre était lisible."
+  ]
+ },
+ "sessions": [
+  "a6a3f990bb1468085"
+ ],
+ "acces": "sous-agent"
+}

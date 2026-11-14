@@ -1,0 +1,42 @@
+{
+ "societe": "Deutsche Telekom",
+ "empreinte_prompt": "6ee5257d0713",
+ "plan": {
+  "direction_financiere": [
+   "Deutsche Telekom Chief Financial Officer",
+   "Deutsche Telekom Group Treasurer",
+   "Deutsche Telekom investor relations management team",
+   "Deutsche Telekom Finanzvorstand",
+   "Deutsche Telekom Treasury Leiter"
+  ],
+  "erp": [
+   "Deutsche Telekom SAP S/4HANA",
+   "Deutsche Telekom ERP implementation",
+   "Deutsche Telekom Oracle OR Dynamics OR Workday ERP",
+   "Deutsche Telekom annual report SAP"
+  ],
+  "achats": [
+   "Deutsche Telekom SAP Ariba supplier",
+   "Deutsche Telekom Coupa OR Jaggaer OR Ivalua",
+   "Deutsche Telekom supplier portal procurement platform"
+  ],
+  "tms": [
+   "Deutsche Telekom treasury management system",
+   "Deutsche Telekom Kyriba",
+   "Deutsche Telekom SAP Treasury"
+  ],
+  "financement": [
+   "Deutsche Telekom supply chain finance",
+   "Deutsche Telekom reverse factoring",
+   "Deutsche Telekom receivables securitisation programme",
+   "Deutsche Telekom factoring programme",
+   "Deutsche Telekom annual report supplier finance arrangements",
+   "Deutsche Telekom Factoring Forderungen Geschäftsbericht"
+  ],
+  "signal": [
+   "Deutsche Telekom finance transformation treasury 2026",
+   "Deutsche Telekom ERP migration"
+  ]
+ },
+ "sortie": "<racine>/sorties/societes/deutsche-telekom/agent-sortie.json"
+}

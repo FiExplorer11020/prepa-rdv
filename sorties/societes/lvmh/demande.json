@@ -1,0 +1,42 @@
+{
+ "societe": "LVMH",
+ "empreinte_prompt": "6ee5257d0713",
+ "plan": {
+  "direction_financiere": [
+   "LVMH Chief Financial Officer",
+   "LVMH Group Treasurer",
+   "LVMH investor relations management team",
+   "LVMH directeur financier",
+   "LVMH trésorerie groupe"
+  ],
+  "erp": [
+   "LVMH SAP S/4HANA",
+   "LVMH ERP implementation",
+   "LVMH Oracle OR Dynamics OR Workday ERP",
+   "LVMH annual report SAP"
+  ],
+  "achats": [
+   "LVMH SAP Ariba supplier",
+   "LVMH Coupa OR Jaggaer OR Ivalua",
+   "LVMH supplier portal procurement platform"
+  ],
+  "tms": [
+   "LVMH treasury management system",
+   "LVMH Kyriba",
+   "LVMH SAP Treasury"
+  ],
+  "financement": [
+   "LVMH supply chain finance",
+   "LVMH reverse factoring",
+   "LVMH receivables securitisation programme",
+   "LVMH factoring programme",
+   "LVMH annual report supplier finance arrangements",
+   "LVMH affacturage titrisation créances document d'enregistrement universel"
+  ],
+  "signal": [
+   "LVMH finance transformation treasury 2026",
+   "LVMH ERP migration"
+  ]
+ },
+ "sortie": "<racine>/sorties/societes/lvmh/agent-sortie.json"
+}

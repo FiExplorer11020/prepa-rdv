@@ -1,0 +1,18 @@
+{
+ "nom_saisi": "Saint-Gobain",
+ "nom_retenu": "Compagnie de Saint-Gobain",
+ "qid": null,
+ "pays": "France",
+ "statut": "coté",
+ "isin": [],
+ "lei": null,
+ "lei_controle": null,
+ "nom_gleif": null,
+ "site": "https://www.saint-gobain.com",
+ "domaines": [
+  "saint-gobain.com"
+ ],
+ "alias": [],
+ "a_confirmer": "Wikidata non interrogé : PREPA_RDV_CONTACT absent ; ISIN, LEI et nom légal à confirmer",
+ "source": "table locale"
+}

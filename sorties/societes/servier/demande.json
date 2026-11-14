@@ -1,0 +1,42 @@
+{
+ "societe": "Servier",
+ "empreinte_prompt": "6ee5257d0713",
+ "plan": {
+  "direction_financiere": [
+   "Servier Chief Financial Officer",
+   "Servier Group Treasurer",
+   "Servier investor relations management team",
+   "Servier directeur financier",
+   "Servier trésorerie groupe"
+  ],
+  "erp": [
+   "Servier SAP S/4HANA",
+   "Servier ERP implementation",
+   "Servier Oracle OR Dynamics OR Workday ERP",
+   "Servier annual report SAP"
+  ],
+  "achats": [
+   "Servier SAP Ariba supplier",
+   "Servier Coupa OR Jaggaer OR Ivalua",
+   "Servier supplier portal procurement platform"
+  ],
+  "tms": [
+   "Servier treasury management system",
+   "Servier Kyriba",
+   "Servier SAP Treasury"
+  ],
+  "financement": [
+   "Servier supply chain finance",
+   "Servier reverse factoring",
+   "Servier receivables securitisation programme",
+   "Servier factoring programme",
+   "Servier annual report supplier finance arrangements",
+   "Servier affacturage titrisation créances document d'enregistrement universel"
+  ],
+  "signal": [
+   "Servier finance transformation treasury 2026",
+   "Servier ERP migration"
+  ]
+ },
+ "sortie": "<racine>/sorties/societes/servier/agent-sortie.json"
+}

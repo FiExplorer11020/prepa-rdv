@@ -1,0 +1,41 @@
+{
+ "societe": "Vattenfall",
+ "empreinte_prompt": "6ee5257d0713",
+ "plan": {
+  "direction_financiere": [
+   "Vattenfall Chief Financial Officer",
+   "Vattenfall Group Treasurer",
+   "Vattenfall investor relations management team",
+   "Vattenfall CFO ekonomichef",
+   "Vattenfall factoring kundfordringar årsredovisning"
+  ],
+  "erp": [
+   "Vattenfall SAP S/4HANA",
+   "Vattenfall ERP implementation",
+   "Vattenfall Oracle OR Dynamics OR Workday ERP",
+   "Vattenfall annual report SAP"
+  ],
+  "achats": [
+   "Vattenfall SAP Ariba supplier",
+   "Vattenfall Coupa OR Jaggaer OR Ivalua",
+   "Vattenfall supplier portal procurement platform"
+  ],
+  "tms": [
+   "Vattenfall treasury management system",
+   "Vattenfall Kyriba",
+   "Vattenfall SAP Treasury"
+  ],
+  "financement": [
+   "Vattenfall supply chain finance",
+   "Vattenfall reverse factoring",
+   "Vattenfall receivables securitisation programme",
+   "Vattenfall factoring programme",
+   "Vattenfall annual report supplier finance arrangements"
+  ],
+  "signal": [
+   "Vattenfall finance transformation treasury 2026",
+   "Vattenfall ERP migration"
+  ]
+ },
+ "sortie": "<racine>/sorties/societes/vattenfall/agent-sortie.json"
+}

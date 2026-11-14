@@ -1,0 +1,18 @@
+{
+ "nom_saisi": "Verallia",
+ "nom_retenu": "Verallia SA",
+ "qid": null,
+ "pays": "France",
+ "statut": "à vérifier",
+ "isin": [],
+ "lei": null,
+ "lei_controle": null,
+ "nom_gleif": null,
+ "site": "https://www.verallia.com",
+ "domaines": [
+  "verallia.com"
+ ],
+ "alias": [],
+ "a_confirmer": "Wikidata non interrogé : PREPA_RDV_CONTACT absent ; ISIN, LEI et nom légal à confirmer",
+ "source": "table locale"
+}

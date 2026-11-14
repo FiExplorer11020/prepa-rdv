@@ -1,0 +1,41 @@
+{
+ "societe": "Nokia",
+ "empreinte_prompt": "6ee5257d0713",
+ "plan": {
+  "direction_financiere": [
+   "Nokia Chief Financial Officer",
+   "Nokia Group Treasurer",
+   "Nokia investor relations management team",
+   "Nokia talousjohtaja CFO",
+   "Nokia factoring myyntisaamiset vuosikertomus"
+  ],
+  "erp": [
+   "Nokia SAP S/4HANA",
+   "Nokia ERP implementation",
+   "Nokia Oracle OR Dynamics OR Workday ERP",
+   "Nokia annual report SAP"
+  ],
+  "achats": [
+   "Nokia SAP Ariba supplier",
+   "Nokia Coupa OR Jaggaer OR Ivalua",
+   "Nokia supplier portal procurement platform"
+  ],
+  "tms": [
+   "Nokia treasury management system",
+   "Nokia Kyriba",
+   "Nokia SAP Treasury"
+  ],
+  "financement": [
+   "Nokia supply chain finance",
+   "Nokia reverse factoring",
+   "Nokia receivables securitisation programme",
+   "Nokia factoring programme",
+   "Nokia annual report supplier finance arrangements"
+  ],
+  "signal": [
+   "Nokia finance transformation treasury 2026",
+   "Nokia ERP migration"
+  ]
+ },
+ "sortie": "<racine>/sorties/societes/nokia/agent-sortie.json"
+}

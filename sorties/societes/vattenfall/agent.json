@@ -1,0 +1,244 @@
+{
+ "empreinte_prompt": "6ee5257d0713",
+ "modele": "claude-sonnet-5-5 (sous-agent)",
+ "plan": {
+  "direction_financiere": [
+   "Vattenfall Chief Financial Officer",
+   "Vattenfall Group Treasurer",
+   "Vattenfall investor relations management team",
+   "Vattenfall CFO ekonomichef",
+   "Vattenfall factoring kundfordringar årsredovisning"
+  ],
+  "erp": [
+   "Vattenfall SAP S/4HANA",
+   "Vattenfall ERP implementation",
+   "Vattenfall Oracle OR Dynamics OR Workday ERP",
+   "Vattenfall annual report SAP"
+  ],
+  "achats": [
+   "Vattenfall SAP Ariba supplier",
+   "Vattenfall Coupa OR Jaggaer OR Ivalua",
+   "Vattenfall supplier portal procurement platform"
+  ],
+  "tms": [
+   "Vattenfall treasury management system",
+   "Vattenfall Kyriba",
+   "Vattenfall SAP Treasury"
+  ],
+  "financement": [
+   "Vattenfall supply chain finance",
+   "Vattenfall reverse factoring",
+   "Vattenfall receivables securitisation programme",
+   "Vattenfall factoring programme",
+   "Vattenfall annual report supplier finance arrangements"
+  ],
+  "signal": [
+   "Vattenfall finance transformation treasury 2026",
+   "Vattenfall ERP migration"
+  ]
+ },
+ "prompt": "Société : Vattenfall (nom légal retenu : Vattenfall AB)\nPays du siège : Sweden. Statut : public (État suédois).\nSite officiel : https://group.vattenfall.com. Domaines de la société : vattenfall.com.\nAttention, identité à confirmer : Wikidata non interrogé : PREPA_RDV_CONTACT absent ; ISIN, LEI et nom légal à confirmer.\n\nPlan de requêtes (suis-le, complète-le si besoin) :\n- direction_financiere : Vattenfall Chief Financial Officer | Vattenfall Group Treasurer | Vattenfall investor relations management team | Vattenfall CFO ekonomichef | Vattenfall factoring kundfordringar årsredovisning\n- erp : Vattenfall SAP S/4HANA | Vattenfall ERP implementation | Vattenfall Oracle OR Dynamics OR Workday ERP | Vattenfall annual report SAP\n- achats : Vattenfall SAP Ariba supplier | Vattenfall Coupa OR Jaggaer OR Ivalua | Vattenfall supplier portal procurement platform\n- tms : Vattenfall treasury management system | Vattenfall Kyriba | Vattenfall SAP Treasury\n- financement : Vattenfall supply chain finance | Vattenfall reverse factoring | Vattenfall receivables securitisation programme | Vattenfall factoring programme | Vattenfall annual report supplier finance arrangements\n- signal : Vattenfall finance transformation treasury 2026 | Vattenfall ERP migration\n\nRéponds uniquement par l'objet JSON du schéma.",
+ "sortie": {
+  "trouvailles": [
+   {
+    "champ": "identite",
+    "valeur": "Vattenfall AB",
+    "precision": "Nom légal porté par la page investisseurs (émetteur des programmes de financement) et par les offres d'emploi lues. LEI et ISIN non confirmés par une page lue.",
+    "statut_valeur": "present",
+    "citation": "Vattenfall AB",
+    "citation_langue": "en",
+    "traduction_fr": "Vattenfall AB (nom de société, sans traduction)",
+    "url": "https://group.vattenfall.com/investors/funding-and-ratings/programmes-and-credit-facilities/",
+    "entite_nommee": "Vattenfall AB",
+    "type_source": "P1",
+    "date_source": "2026-10"
+   },
+   {
+    "champ": "direction_financiere",
+    "valeur": "Kerstin Ahlfont, Chief Financial Officer",
+    "precision": "Membre de l'Executive Group Management, listée sur la page Group management revue en octobre 2026.",
+    "statut_valeur": "present",
+    "citation": "Kerstin Ahlfont Chief Financial Officer",
+    "citation_langue": "en",
+    "traduction_fr": "Kerstin Ahlfont, directrice financière (Chief Financial Officer)",
+    "url": "https://group.vattenfall.com/who-we-are/corporate-governance/group-management",
+    "entite_nommee": "Vattenfall",
+    "type_source": "P1",
+    "date_source": "2026-10"
+   },
+   {
+    "champ": "direction_financiere",
+    "valeur": "Maria Paulinz, Head of Treasury",
+    "precision": "Nomination annoncée le 14 décembre 2022, prise de poste le 15 mars 2023 selon le communiqué. Maintien en poste en novembre 2026 non vérifié.",
+    "statut_valeur": "present",
+    "citation": "Maria Paulinz has been appointed new Head of Treasury at Vattenfall.",
+    "citation_langue": "en",
+    "traduction_fr": "Maria Paulinz a été nommée nouvelle responsable de la trésorerie (Head of Treasury) chez Vattenfall.",
+    "url": "https://group.vattenfall.com/press-and-media/pressreleases/2022/maria-paulinz-new-head-of-treasury-at-vattenfall/",
+    "entite_nommee": "Vattenfall",
+    "type_source": "P1",
+    "date_source": "2022-12-14"
+   },
+   {
+    "champ": "erp",
+    "valeur": "SAP S/4HANA",
+    "precision": "Étude de cas de l'intégrateur Natuvion : consolidation des ERP SAP (Allemagne, Pays-Bas) pour préparer la migration vers S/4HANA. La page ne dit pas que S/4HANA est en production. Elle n'affiche pas de date de publication (chiffre d'affaires 2019 et copyright 2026 seulement).",
+    "statut_valeur": "present",
+    "citation": "Vattenfall gets ready for SAP S/4HANA",
+    "citation_langue": "en",
+    "traduction_fr": "Vattenfall se prépare à SAP S/4HANA",
+    "url": "https://www.natuvion.com/success-stories/vattenfall-erp-consolidation/",
+    "entite_nommee": "Vattenfall",
+    "type_source": "P2",
+    "date_source": null
+   },
+   {
+    "champ": "erp",
+    "valeur": "SAP S/4HANA",
+    "precision": "Offre d'emploi Vattenfall AB (SAP S4 Hana Project Lead, domaine finance, Solna) : signal, pas preuve de déploiement. Offre expirée ; la date retenue est la date limite de candidature affichée (26 novembre 2025).",
+    "statut_valeur": "present",
+    "citation": "we are transforming our SAP Finance landscape to SAP S/4HANA",
+    "citation_langue": "en",
+    "traduction_fr": "nous faisons évoluer notre paysage SAP Finance vers SAP S/4HANA",
+    "url": "https://careers.vattenfall.com/global/job/sap-s4-hana-project-lead-finance-domain-in-solna-jid-50240",
+    "entite_nommee": "Vattenfall AB",
+    "type_source": "P4",
+    "date_source": "2025-11-26"
+   },
+   {
+    "champ": "erp",
+    "valeur": "autre",
+    "precision": "SAP ERP, version non précisée par la page (ni ECC ni S/4HANA nommés). Migration des données du système SAP allemand dans le cadre d'une stratégie de consolidation SAP, avril 2020.",
+    "statut_valeur": "present",
+    "citation": "As part of their SAP consolidation strategy, Vattenfall AB has migrated the data from its German SAP system",
+    "citation_langue": "en",
+    "traduction_fr": "Dans le cadre de leur stratégie de consolidation SAP, Vattenfall AB a migré les données de son système SAP allemand",
+    "url": "https://www.crxmarkets.com/en/successful-migration-of-vattenfalls-supply-chain-finance-data-during-sap-migration-2",
+    "entite_nommee": "Vattenfall AB",
+    "type_source": "P2",
+    "date_source": "2020-04-16"
+   },
+   {
+    "champ": "achats",
+    "valeur": "SAP Ariba",
+    "precision": "Guide de Vattenfall aux fournisseurs : outil de sourcing et d'appels d'offres (RFI, RFP, RFX). Le déploiement y est décrit comme commencé ; document non daté. Texte lu par un service de lecture tiers, le PDF n'étant pas extractible directement.",
+    "statut_valeur": "present",
+    "citation": "Vattenfall has begun to implement SAP Ariba as our main sourcing and tendering tool for the organization.",
+    "citation_langue": "en",
+    "traduction_fr": "Vattenfall a commencé à déployer SAP Ariba comme principal outil de sourcing et d'appels d'offres de l'organisation.",
+    "url": "https://group.vattenfall.com/uk/contentassets/8cd7332db68c478b9816eac515d0c605/sap_aribas_help_center.pdf",
+    "entite_nommee": "Vattenfall",
+    "type_source": "P1",
+    "date_source": null
+   },
+   {
+    "champ": "tms",
+    "valeur": "SAP Treasury",
+    "precision": "Offre d'emploi (System Manager SAP Treasury, employeur Vattenfall AB), publiée le 2018-02-02 selon la page : signal ancien, pas preuve du système actuel. Modules cités : L052 SAP Treasury, GE03 Payment Management, GE11 Bank Account Management.",
+    "statut_valeur": "present",
+    "citation": "for the central Vattenfall SAP Treasury solution",
+    "citation_langue": "en",
+    "traduction_fr": "pour la solution centrale SAP Treasury de Vattenfall",
+    "url": "https://vakanser.se/jobb/system+manager+sap+treasury+m+f",
+    "entite_nommee": "Vattenfall AB",
+    "type_source": "P4",
+    "date_source": "2018-02-02"
+   },
+   {
+    "champ": "financement",
+    "valeur": "Billets de trésorerie",
+    "precision": "Programme Euro CP de 10 milliards d'euros ; le tableau de la page cite Citibank sur la ligne Euro CP.",
+    "statut_valeur": "present",
+    "citation": "For short-term funding, Vattenfall has a European Commercial Paper programme (EUR 10 billion)",
+    "citation_langue": "en",
+    "traduction_fr": "Pour son financement à court terme, Vattenfall dispose d'un programme européen de billets de trésorerie (10 milliards d'euros)",
+    "url": "https://group.vattenfall.com/investors/funding-and-ratings/programmes-and-credit-facilities/",
+    "entite_nommee": "Vattenfall",
+    "type_source": "P1",
+    "date_source": "2026-10"
+   },
+   {
+    "champ": "financement",
+    "valeur": "Ligne de crédit renouvelable",
+    "precision": "Ligne de 2 milliards d'euros, échéance 2027 d'après le tableau de la page, qui cite Skandinaviska Enskilda Banken ; 15 banques y participent, dont le groupe bancaire de référence de Vattenfall.",
+    "statut_valeur": "present",
+    "citation": "Revolving Credit Facility (EUR 2 billion) which serves as a general liquidity back-up",
+    "citation_langue": "en",
+    "traduction_fr": "ligne de crédit renouvelable (2 milliards d'euros) qui sert de réserve générale de liquidité",
+    "url": "https://group.vattenfall.com/investors/funding-and-ratings/programmes-and-credit-facilities/",
+    "entite_nommee": "Vattenfall AB",
+    "type_source": "P1",
+    "date_source": "2026-10"
+   },
+   {
+    "champ": "financement",
+    "valeur": "autre",
+    "precision": "Back-up Credit Facility de 1 milliard d'euros, échéance 2027 d'après le tableau de la page, qui cite Danske Bank. La page ne dit pas si elle est renouvelable.",
+    "statut_valeur": "present",
+    "citation": "Vattenfall also has a Back-up Credit Facility (EUR 1 billion).",
+    "citation_langue": "en",
+    "traduction_fr": "Vattenfall dispose aussi d'une ligne de crédit de secours, la Back-up Credit Facility (1 milliard d'euros).",
+    "url": "https://group.vattenfall.com/investors/funding-and-ratings/programmes-and-credit-facilities/",
+    "entite_nommee": "Vattenfall",
+    "type_source": "P1",
+    "date_source": "2026-10"
+   },
+   {
+    "champ": "financement",
+    "valeur": "Affacturage inversé (supply chain finance)",
+    "precision": "Programme de supply chain finance avec la place de marché CRX Markets pour les opérations allemandes de Vattenfall, annoncé en mars 2016 ; la banque Helaba accompagne le lancement selon l'article.",
+    "statut_valeur": "present",
+    "citation": "The agreed partnership comprises the implementation of an supply chain finance program in Vattenfall’s operations in Germany",
+    "citation_langue": "en",
+    "traduction_fr": "Le partenariat convenu comprend la mise en place d'un programme de supply chain finance dans les activités de Vattenfall en Allemagne",
+    "url": "https://thepaypers.com/fintech/news/crx-markets-signs-up-vattenfall-in-a-supply-chain-finance-program",
+    "entite_nommee": "Vattenfall",
+    "type_source": "P3",
+    "date_source": "2016-03-08"
+   },
+   {
+    "champ": "financement",
+    "valeur": "Affacturage inversé (supply chain finance)",
+    "precision": "Étude de cas CRX Markets d'avril 2020 : programme de supply chain finance de Vattenfall maintenu pendant la migration SAP, avec 17 entités Vattenfall, 56 fournisseurs et plus de 40.000 factures migrés selon la page.",
+    "statut_valeur": "present",
+    "citation": "Except for a short lock-up period during the migration itself, the SCF program was not affected",
+    "citation_langue": "en",
+    "traduction_fr": "À l'exception d'une courte période de blocage pendant la migration elle-même, le programme de SCF n'a pas été affecté",
+    "url": "https://www.crxmarkets.com/en/successful-migration-of-vattenfalls-supply-chain-finance-data-during-sap-migration-2",
+    "entite_nommee": "Vattenfall AB",
+    "type_source": "P2",
+    "date_source": "2020-04-16"
+   },
+   {
+    "champ": "signal",
+    "valeur": "Transformation « Next Generation ERP » sur SAP S/4HANA en cours, avec un chantier de standardisation du processus Purchase-to-Pay au sein de Finance Business Support",
+    "precision": "Offre d'emploi Vattenfall AB (Senior Finance Project Manager, Solna) : signal, pas preuve de déploiement. Offre expirée ; date limite affichée « 15 Feb. » sans année, d'où date_source null.",
+    "statut_valeur": "present",
+    "citation": "You will spearhead strategic initiatives to standardise and optimise the P2P process across Vattenfall, leveraging our ongoing Next Generation ERP S/4HANA transformation",
+    "citation_langue": "en",
+    "traduction_fr": "Vous piloterez des initiatives stratégiques pour standardiser et optimiser le processus P2P dans tout Vattenfall, en vous appuyant sur notre transformation en cours Next Generation ERP S/4HANA",
+    "url": "https://careers.vattenfall.com/job/senior-finance-project-manager-at-vattenfall-in-solna-jid-50409",
+    "entite_nommee": "Vattenfall AB",
+    "type_source": "P4",
+    "date_source": null
+   }
+  ],
+  "champs_sans_resultat": [],
+  "remarques": [
+   "type_source : la demande ne définit pas P1 à P5. Correspondance retenue : P1 document ou page de la société (page investisseurs, communiqué, guide fournisseurs), P2 communiqué ou étude de cas d'un éditeur ou intégrateur, P3 presse spécialisée, P4 offre d'emploi, P5 autre.",
+   "Limites de lecture : les PDF de la société (rapports intermédiaires, rapport annuel) n'ont pas pu être lus par l'outil de lecture, donc aucune note de bilan n'a été consultée. Aucun document lu ne déclare l'absence d'un produit de financement, et rien n'a été trouvé sur la titrisation de créances, l'affacturage hors supply chain finance, l'escompte dynamique ou le crédit documentaire.",
+   "Le plan de requêtes n'a pas été exécuté en entier (limites de recherches et de pages atteintes) : les requêtes Oracle, Dynamics et Workday n'ont pas été lancées, et la requête Kyriba n'a donné aucune trace chez Vattenfall. Aucune trace de Coupa, Jaggaer, Ivalua, Zycus ou GEP chez Vattenfall dans la recherche faite.",
+   "Guide Ariba : le PDF n'est pas extractible par l'outil de lecture ; son texte a été lu par l'intermédiaire d'un service de lecture tiers (r.jina.ai). La date « 10 Sep 2025 » renvoyée par ce service n'est pas une date affichée par le document. Deux guides Ariba voisins affichent « 5/27/2019 » dans leur titre (résultats de recherche), donc l'information peut remonter à 2019. La page fournisseurs actuelle, vue en résultats de recherche et non lue, parle d'un « Vattenfall Supplier Bank (VSB) » pour l'enregistrement des fournisseurs.",
+   "Piste non vérifiée pour les achats : un document « Vattenfall invoice channels and addresses » de novembre 2025, vu en résultats de recherche et non lu, citerait la facturation électronique par un portail Basware (régions à vérifier). Basware figure dans la liste des plateformes.",
+   "TMS : seule preuve explicite, une offre d'emploi de 2018 (System Manager SAP Treasury). Une offre Treasury Controller de Vattenfall AB publiée le 2024-08-30, lue, demande seulement « Experience in SAP and/or Cognos. » sans nommer le système de trésorerie. Une offre Treasury Back Office de 2024, vue en résultats de recherche et non lue, citerait Wall Street Suite, Finance Kit ou Quantum comme expérience souhaitée. Le TMS actuel n'est donc pas confirmé.",
+   "ERP : les pages lues décrivent un ERP SAP existant, de version non précisée, et une transformation vers S/4HANA (étude Natuvion, deux offres d'emploi). Aucune page lue ne dit que S/4HANA est en production. Les offres sont des signaux, pas des preuves de déploiement ; un site d'annonces tiers affiche « Erstellt am 21. Juli 2026 » pour une offre Senior Finance Project Manager de Vattenfall (résultats de recherche, non lu).",
+   "Direction financière : Kerstin Ahlfont est nommée directrice financière sur la page Group management (revue en octobre 2026). Pour Maria Paulinz, la nomination date de décembre 2022 et son maintien en poste n'est pas revérifié. Une offre de janvier 2026 vue en résultats de recherche, non lue, ferait de Johan Gyllenhoff le Vice President of Group Finance and Treasury.",
+   "Identité : LEI 549300T5RZ1HA5HZ3109 et numéro d'organisation suédois 556036-2138 relevés dans des résultats de recherche (registre de l'autorité financière suédoise, bases LEI), pages non lues, à confirmer. Aucun ISIN trouvé. D'autres sociétés du groupe portent le nom Vattenfall (par exemple Vattenfall Vindkraft Aktiebolag, Vattenfall A/S) et sont à ne pas confondre avec Vattenfall AB.",
+   "Supply chain finance : programme CRX Markets annoncé en mars 2016 pour les opérations allemandes de Vattenfall, puis cité en avril 2020 avec 17 entités. Aucun document récent lu ne confirme qu'il est toujours actif."
+  ]
+ },
+ "sessions": [
+  "acabce1a3e5924dc4"
+ ],
+ "acces": "sous-agent"
+}

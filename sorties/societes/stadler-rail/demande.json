@@ -1,0 +1,42 @@
+{
+ "societe": "Stadler Rail",
+ "empreinte_prompt": "6ee5257d0713",
+ "plan": {
+  "direction_financiere": [
+   "Stadler Rail Chief Financial Officer",
+   "Stadler Rail Group Treasurer",
+   "Stadler Rail investor relations management team",
+   "Stadler Rail Finanzvorstand",
+   "Stadler Rail Treasury Leiter"
+  ],
+  "erp": [
+   "Stadler Rail SAP S/4HANA",
+   "Stadler Rail ERP implementation",
+   "Stadler Rail Oracle OR Dynamics OR Workday ERP",
+   "Stadler Rail annual report SAP"
+  ],
+  "achats": [
+   "Stadler Rail SAP Ariba supplier",
+   "Stadler Rail Coupa OR Jaggaer OR Ivalua",
+   "Stadler Rail supplier portal procurement platform"
+  ],
+  "tms": [
+   "Stadler Rail treasury management system",
+   "Stadler Rail Kyriba",
+   "Stadler Rail SAP Treasury"
+  ],
+  "financement": [
+   "Stadler Rail supply chain finance",
+   "Stadler Rail reverse factoring",
+   "Stadler Rail receivables securitisation programme",
+   "Stadler Rail factoring programme",
+   "Stadler Rail annual report supplier finance arrangements",
+   "Stadler Rail Factoring Forderungen Geschäftsbericht"
+  ],
+  "signal": [
+   "Stadler Rail finance transformation treasury 2026",
+   "Stadler Rail ERP migration"
+  ]
+ },
+ "sortie": "<racine>/sorties/societes/stadler-rail/agent-sortie.json"
+}

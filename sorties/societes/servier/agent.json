@@ -1,0 +1,224 @@
+{
+ "empreinte_prompt": "6ee5257d0713",
+ "modele": "claude-sonnet-5-5 (sous-agent)",
+ "plan": {
+  "direction_financiere": [
+   "Servier Chief Financial Officer",
+   "Servier Group Treasurer",
+   "Servier investor relations management team",
+   "Servier directeur financier",
+   "Servier trésorerie groupe"
+  ],
+  "erp": [
+   "Servier SAP S/4HANA",
+   "Servier ERP implementation",
+   "Servier Oracle OR Dynamics OR Workday ERP",
+   "Servier annual report SAP"
+  ],
+  "achats": [
+   "Servier SAP Ariba supplier",
+   "Servier Coupa OR Jaggaer OR Ivalua",
+   "Servier supplier portal procurement platform"
+  ],
+  "tms": [
+   "Servier treasury management system",
+   "Servier Kyriba",
+   "Servier SAP Treasury"
+  ],
+  "financement": [
+   "Servier supply chain finance",
+   "Servier reverse factoring",
+   "Servier receivables securitisation programme",
+   "Servier factoring programme",
+   "Servier annual report supplier finance arrangements",
+   "Servier affacturage titrisation créances document d'enregistrement universel"
+  ],
+  "signal": [
+   "Servier finance transformation treasury 2026",
+   "Servier ERP migration"
+  ]
+ },
+ "prompt": "Société : Servier (nom légal retenu : Les Laboratoires Servier)\nPays du siège : France. Statut : privé (fondation).\nSite officiel : https://servier.com. Domaines de la société : servier.com.\nAttention, identité à confirmer : Wikidata non interrogé : PREPA_RDV_CONTACT absent ; ISIN, LEI et nom légal à confirmer.\n\nPlan de requêtes (suis-le, complète-le si besoin) :\n- direction_financiere : Servier Chief Financial Officer | Servier Group Treasurer | Servier investor relations management team | Servier directeur financier | Servier trésorerie groupe\n- erp : Servier SAP S/4HANA | Servier ERP implementation | Servier Oracle OR Dynamics OR Workday ERP | Servier annual report SAP\n- achats : Servier SAP Ariba supplier | Servier Coupa OR Jaggaer OR Ivalua | Servier supplier portal procurement platform\n- tms : Servier treasury management system | Servier Kyriba | Servier SAP Treasury\n- financement : Servier supply chain finance | Servier reverse factoring | Servier receivables securitisation programme | Servier factoring programme | Servier annual report supplier finance arrangements | Servier affacturage titrisation créances document d'enregistrement universel\n- signal : Servier finance transformation treasury 2026 | Servier ERP migration\n\nRéponds uniquement par l'objet JSON du schéma.",
+ "sortie": {
+  "trouvailles": [
+   {
+    "champ": "identite",
+    "valeur": "Les Laboratoires Servier",
+    "precision": "Nom écrit dans le pied de page du site officiel. Forme juridique, SIREN, ISIN et LEI non lus dans une page.",
+    "statut_valeur": "present",
+    "citation": "©2026 Les Laboratoires Servier",
+    "citation_langue": "fr",
+    "traduction_fr": null,
+    "url": "https://servier.com/en/servier-group/executive-committee/",
+    "entite_nommee": "Les Laboratoires Servier",
+    "type_source": "P2",
+    "date_source": null
+   },
+   {
+    "champ": "direction_financiere",
+    "valeur": "Pascal Lemaire",
+    "precision": "Executive Vice President, Finance, membre du comité exécutif. Le titre « CFO » n'apparaît pas sur la page.",
+    "statut_valeur": "present",
+    "citation": "Pascal Lemaire Executive Vice President Finance",
+    "citation_langue": "en",
+    "traduction_fr": "Pascal Lemaire, vice-président exécutif, Finance",
+    "url": "https://servier.com/en/servier-group/executive-committee/",
+    "entite_nommee": "Servier Group",
+    "type_source": "P2",
+    "date_source": null
+   },
+   {
+    "champ": "direction_financiere",
+    "valeur": "Cédric DONDAIN",
+    "precision": "Trésorier international en charge de la gestion de crédit. La même page l'intitule « Responsable trésorerie internationale et credit management, Groupe Servier ». Étude de cas Coface de mars 2024, fonction non revérifiée depuis.",
+    "statut_valeur": "present",
+    "citation": "Cédric DONDAIN, trésorier international en charge de la gestion de crédit du groupe Servier",
+    "citation_langue": "fr",
+    "traduction_fr": null,
+    "url": "https://www.coface.com/fr/actualites-economie-conseils-d-experts/servier-x-coface-programme-mondial-et-confiance-durable-pour-conquerir-de-nouveaux-marches",
+    "entite_nommee": "groupe Servier",
+    "type_source": "P3",
+    "date_source": "2024-03-11"
+   },
+   {
+    "champ": "erp",
+    "valeur": "SAP S/4HANA",
+    "precision": "Offre d'emploi, donc un signal et non une preuve de déploiement : poste de Solution Owner Integration & Data dans une « SAP Factory » de la Direction SI, qui accompagne les directions Finance et Industrie. La page cite un programme Morphe'US en cinq projets dont un projet ERP, sans dire sous quel produit il tourne. En-tête de la page : SERVIER MONDE.",
+    "statut_valeur": "present",
+    "citation": "Minimum de 5 années d’expérience SAP S/4HANA, avec expertise en gestion de la donnée",
+    "citation_langue": "fr",
+    "traduction_fr": null,
+    "url": "https://jobs.servier.com/job/SURESNES-Solution-Owner-Integration-&-Data-(H-F)-FRAN-92284/1341193655/",
+    "entite_nommee": "LABORATOIRES SERVIER",
+    "type_source": "P5",
+    "date_source": "2026-10-28"
+   },
+   {
+    "champ": "erp",
+    "valeur": "autre",
+    "precision": "SAP ERP, version non précisée : la page n'écrit ni ECC ni S/4HANA. Communiqué de l'éditeur Determine sur l'intégration native de sa plateforme à l'ERP SAP auquel Servier la relie, daté de 2018.",
+    "statut_valeur": "present",
+    "citation": "Determine Cloud Platform to full Procure-to-Pay backed by SAP ERP",
+    "citation_langue": "en",
+    "traduction_fr": "Plateforme cloud Determine vers un procure-to-pay complet adossé à SAP ERP",
+    "url": "https://www.corcentric.com/company/press-releases/servier-group",
+    "entite_nommee": "Servier Group",
+    "type_source": "P3",
+    "date_source": "2018-01-23"
+   },
+   {
+    "champ": "erp",
+    "valeur": "SAP S/4HANA",
+    "precision": "Filiale nigériane Swiss Pharma Nigeria Ltd (Swipha), pas le groupe. La page écrit que Servier a racheté Swipha en 2017 et situe le go-live des 36 premiers utilisateurs fin octobre 2020. Une cession ultérieure de Swipha n'est pas exclue (voir remarques).",
+    "statut_valeur": "present",
+    "citation": "Swipha chose SAP's flagship S/4HANA platform",
+    "citation_langue": "en",
+    "traduction_fr": "Swipha a choisi la plateforme phare S/4HANA de SAP",
+    "url": "https://news.sap.com/africa/2021/12/swiss-pharma-nigeria-ltd-leaps-into-4ir-capabilities-with-sap-s-4hana-deployment/",
+    "entite_nommee": "Swiss Pharma Nigeria Ltd (Swipha)",
+    "type_source": "P3",
+    "date_source": "2021-12-14"
+   },
+   {
+    "champ": "achats",
+    "valeur": "Coupa",
+    "precision": "Coupa Supplier Portal pour les fournisseurs de Servier en France (appels d'offres, statut des bons de commande et des factures) et Coupa Risk Assess pour l'analyse de risques fournisseurs. La page ne mentionne ni Determine ni SAP.",
+    "statut_valeur": "present",
+    "citation": "Le nouveau portail Coupa Supplier Portal sécurise et simplifie les relations entre Servier et ses fournisseurs.",
+    "citation_langue": "fr",
+    "traduction_fr": null,
+    "url": "https://servier.fr/nos-engagements/relations-fournisseurs/travailler-avec-nous/",
+    "entite_nommee": "Servier",
+    "type_source": "P2",
+    "date_source": "2026-07-10"
+   },
+   {
+    "champ": "achats",
+    "valeur": "autre",
+    "precision": "Determine (Corcentric), solution Source-to-Pay : usage depuis 2007 pour les dépenses indirectes du groupe, migration vers la Determine Cloud Platform annoncée en 2020.",
+    "statut_valeur": "present",
+    "citation": "Servier has been using the Determine Procurement Solution since 2007 to manage the group's indirect spend.",
+    "citation_langue": "en",
+    "traduction_fr": "Servier utilise la solution d'achats Determine depuis 2007 pour gérer les dépenses indirectes du groupe.",
+    "url": "https://www.corcentric.com/company/press-releases/servier-procurement-cloud/",
+    "entite_nommee": "Servier",
+    "type_source": "P3",
+    "date_source": "2020-09-15"
+   },
+   {
+    "champ": "achats",
+    "valeur": "autre",
+    "precision": "Determine (Corcentric). La page de 2018 parle d'un engagement de 10 ans, d'une intégration native à l'ERP SAP et de 85 % des dépenses d'achats du groupe gérés dans Determine (achats indirects).",
+    "statut_valeur": "present",
+    "citation": "Servier Turns to Procurement Industry Innovator Determine to Execute Strategic Mission-Critical Upgrade, Expansion and Deep SAP Integration",
+    "citation_langue": "en",
+    "traduction_fr": "Servier se tourne vers Determine, innovateur du secteur des achats, pour mener une mise à niveau stratégique et critique, une extension et une intégration approfondie avec SAP",
+    "url": "https://www.corcentric.com/company/press-releases/servier-group",
+    "entite_nommee": "Servier Group",
+    "type_source": "P3",
+    "date_source": "2018-01-23"
+   },
+   {
+    "champ": "financement",
+    "valeur": "Ligne de crédit renouvelable",
+    "precision": "Refinancement de la ligne de crédit renouvelable de Servier, annoncé par le cabinet White & Case avec le financement de l'acquisition d'Edgewise. Page illisible (HTTP 403) : citation reprise du titre affiché dans les résultats de recherche ; montant, banques et date non vérifiés.",
+    "statut_valeur": "present",
+    "citation": "White & Case advises Servier on financing for Edgewise Therapeutics acquisition and revolving credit facility refinancing",
+    "citation_langue": "en",
+    "traduction_fr": "White & Case conseille Servier sur le financement de l'acquisition d'Edgewise Therapeutics et sur le refinancement de sa ligne de crédit renouvelable",
+    "url": "https://www.whitecase.com/news/press-release/white-case-advises-servier-financing-edgewise-therapeutics-acquisition-and",
+    "entite_nommee": "Servier",
+    "type_source": "P3",
+    "date_source": null
+   },
+   {
+    "champ": "signal",
+    "valeur": "Programmes Morphe'US, Jazz et Fusion de la Direction SI, au service des directions Finance et Industrie, avec une SAP Factory",
+    "precision": "Offre d'emploi du 28 octobre 2026, donc un signal. La page écrit aussi que Morphe'US repose sur cinq projets distincts : ERP, APS, MES, MDM et Performance management.",
+    "statut_valeur": "present",
+    "citation": "Réussir les programmes Morphe’Us, Jazz et Fusion, et accompagner les directions Finance et Industrie",
+    "citation_langue": "fr",
+    "traduction_fr": null,
+    "url": "https://jobs.servier.com/job/SURESNES-Solution-Owner-Integration-&-Data-(H-F)-FRAN-92284/1341193655/",
+    "entite_nommee": "LABORATOIRES SERVIER",
+    "type_source": "P5",
+    "date_source": "2026-10-28"
+   },
+   {
+    "champ": "signal",
+    "valeur": "Acquisition d'Edgewise (1,55 Md$ à la signature) finalisée le 13 juillet",
+    "precision": "Article du 4 novembre 2026. Il écrit « paying $1.55 billion upfront (approximately €1.3 billion) » et rapporte un échec de l'essai pivot dans la dystrophie musculaire de Becker ; il ne mentionne ni financement, ni dépréciation, ni directeur financier. Les résultats de recherche (pages non lues) décrivent l'achat de l'activité dystrophie musculaire d'Edgewise pour jusqu'à 2,65 milliards de dollars, jalons compris.",
+    "statut_valeur": "present",
+    "citation": "The transaction, completed July 13, was intended to accelerate Servier's expansion into rare neurological diseases.",
+    "citation_langue": "en",
+    "traduction_fr": "La transaction, finalisée le 13 juillet, devait accélérer l'expansion de Servier dans les maladies neurologiques rares.",
+    "url": "https://european-biotechnology.com/latest-news/serviers-1-55b-edgewise-acquisition-backfires-after-phase-3-setback/",
+    "entite_nommee": "Servier",
+    "type_source": "P4",
+    "date_source": "2026-11-04"
+   }
+  ],
+  "champs_sans_resultat": [
+   "tms"
+  ],
+  "remarques": [
+   "Échelle des types de source non définie dans la demande. Lecture retenue : P1 rapport annuel ou document réglementé de la société, P2 site ou communiqué officiel de la société, P3 communiqué ou étude de cas d'un éditeur, d'un partenaire ou d'un cabinet, P4 presse spécialisée, P5 offre d'emploi. Aucune trouvaille en P1 : le rapport annuel 2024/2025 (PDF de servier.com) était illisible pour l'outil de lecture.",
+   "Moyens consommés : 17 recherches sur 25 (une 18e a été refusée, le plafond de recherches du tour étant atteint) et 20 pages sur 20, dont neuf échecs (HTTP 403 ou 404, PDF illisible). Les champs financement et tms en souffrent.",
+   "Financement : la seule trouvaille est le refinancement d'une ligne de crédit renouvelable. La page White & Case est restée illisible (HTTP 403 à deux essais) ; la citation reprend le titre affiché dans les résultats de recherche. Extraits de recherche non vérifiés sur la page : facilités d'acquisition de 1,55 milliard d'euros (term loan et bridge) et ligne renouvelable de 700 millions d'euros, avec une incohérence de devise dans la source.",
+   "Aucune trace trouvée d'affacturage, de titrisation de créances, de supply chain finance, d'escompte dynamique, de billets de trésorerie ni de crédit documentaire.",
+   "Assurance-crédit non enregistrée comme financement : la page Coface du 11 mars 2024 décrit un programme mondial d'assurance-crédit de Servier (28 polices dans 26 pays, environ 1,5 milliard d'euros de chiffre d'affaires assurable), ce qui n'est pas un produit de financement.",
+   "TMS : aucun logiciel de trésorerie nommé pour Servier. Des offres de trésorerie à Suresnes citant Kyriba, Trax et FXall sont apparues chez des agrégateurs (JobLeads, Michael Page, France Travail), sans employeur nommé dans les extraits et sans page lisible : non retenues.",
+   "Achats : Determine (usage depuis 2007, cloud en 2020, documents de l'éditeur Corcentric) et Coupa (portail fournisseurs, page Servier France de 2026) figurent tous deux dans les sources. Aucune page ne dit que l'un remplace l'autre.",
+   "ERP : le communiqué de 2018 écrit « SAP ERP » sans version. L'offre d'emploi du 28 octobre 2026 est un signal, pas une preuve de déploiement. Swipha (Nigeria) était filiale de Servier selon la page de 2021 ; un titre CFNEWS non lu (« Servier se déleste au Nigeria, Sadev se renforce ») laisse penser à une cession, à vérifier. Un profil tiers (ghost.bitscale.ai) liste SAP S/4HANA et SAP Fieldglass pour Servier : non retenu, sans citation de page.",
+   "Direction financière : le communiqué de résultats du 27 janvier 2026 (servier.com/en/newsroom/solid-performance-forecasts/) cite aussi Pascal Lemaire comme Executive Vice President Finance ; la phrase exacte n'a pas pu être recopiée. Le titre CFO ne se lit que dans des profils tiers.",
+   "Identité : la page des mentions légales (servier.fr/cgu) a renvoyé une erreur 404. Un extrait de recherche lui attribue la forme société par actions simplifiée, l'immatriculation 085 480 796 au RCS de Nanterre et le siège 50 rue Carnot, 92284 Suresnes, avec deux montants de capital différents selon les sites ; à confirmer. La page d'offre d'emploi porte SERVIER MONDE en en-tête et LABORATOIRES SERVIER en pied de page.",
+   "Signal non lu : un communiqué de Day One Biopharmaceuticals (ir.dayonebio.com), titré « Servier and Day One Biopharmaceuticals announce acquisition to expand Servier’s rare oncology portfolio », apparaît dans les résultats ; page illisible (HTTP 403), date et montant inconnus.",
+   "Article de European Biotechnology du 4 novembre 2026 : son titre parle d'un revers de phase 2 et son texte d'un essai pivot. La source n'est pas cohérente sur ce point.",
+   "Date de la page fournisseurs de Servier France lue au format jour/mois/année : « Dernière mise à jour le 10/07/2026 »."
+  ]
+ },
+ "sessions": [
+  "a88ec3fe6810c13bd"
+ ],
+ "acces": "sous-agent"
+}

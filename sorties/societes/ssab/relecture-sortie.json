@@ -1,0 +1,36 @@
+{
+  "lectures": [
+    {
+      "id": "ssab-erp-5",
+      "lue": true,
+      "passage": "transform their IT landscape with SAP R/3/S/4HANA",
+      "contexte": null,
+      "titre": "SSAB - SAP Solution Expert",
+      "date_page": "2026-04-14"
+    },
+    {
+      "id": "ssab-erp-6",
+      "lue": true,
+      "passage": "operation of critical ERP systems like SAP S/4HANA",
+      "contexte": null,
+      "titre": "SSAB - Finance Developer",
+      "date_page": "2025-12-11"
+    },
+    {
+      "id": "ssab-erp-7",
+      "lue": true,
+      "passage": "Tibnor använder S/4HANA som den primära källan för sina affärsdata",
+      "contexte": null,
+      "titre": "Världspremiär hos Tibnor – först ut med SAP:s nya molnplattform",
+      "date_page": "april 14, 2025"
+    },
+    {
+      "id": "ssab-signal-18",
+      "lue": true,
+      "passage": "Special Steels, are transforming the IT landscape and SAP R3/Hana are becoming the ERP",
+      "contexte": null,
+      "titre": "SSAB - SAP Solution Expert",
+      "date_page": "2026-04-14"
+    }
+  ]
+}
