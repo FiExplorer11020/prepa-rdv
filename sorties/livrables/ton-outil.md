@@ -4,7 +4,7 @@
 
 L'outil prépare un rendez-vous avec la direction financière d'une société : il cherche son ERP, sa plateforme d'achats, son TMS et ses financements court terme en place, sur sources publiques. Chaque information porte une citation recopiée mot pour mot, l'adresse de la page, sa date et un niveau de confiance. Le modèle cherche et remplit un schéma fermé. Le code relit les pages, vérifie et note : le modèle ne note jamais sa propre confiance.
 
-Sur 12 sociétés, l'outil a produit 185 trouvailles. 163 ont passé les contrôles, 22 ont été rejetées. Une société prend 16,4 minutes d'agent en moyenne, pour 5,7 millions de jetons traités, soit 2,39 $ au tarif de liste de l'API : c'est une estimation, car l'accès passe par un abonnement. Construction : 174 minutes de travail actif, planification comptée à part.
+Sur 12 sociétés, l'outil a produit 185 trouvailles. 163 ont passé les contrôles, 22 ont été rejetées. Une société prend 16,4 minutes d'agent en moyenne, pour 5,7 millions de jetons traités, soit 2,39 $ au tarif de liste de l'API : c'est une estimation, car l'accès passe par un abonnement. Construction : 179 minutes de travail actif, planification comptée à part.
 
 ## La chaîne, en six étapes
 
@@ -109,12 +109,12 @@ Le journal complet est dans `sorties/journal/erreurs.jsonl`. Une erreur sans cha
 
 | | Appels | Entrée fraîche | Cache écrit | Cache lu | Sortie | Total traité | Coût estimé ($) |
 |---|---|---|---|---|---|---|---|
-| dev / construction | 596 | 1 194 | 3 008 418 | 237 534 104 | 1 200 921 | 241 744 637 | 69,33 |
+| dev / construction | 631 | 1 264 | 3 224 619 | 246 746 138 | 1 264 229 | 251 236 250 | 74,17 |
 | dev / planification | 226 | 452 | 3 083 404 | 83 036 656 | 1 236 962 | 87 357 474 | 31,78 |
 | outil / audit | 35 | 78 | 817 973 | 4 840 297 | 188 478 | 5 846 826 | 8,83 |
 | outil / run | 317 | 648 | 3 473 302 | 58 514 831 | 1 354 289 | 63 343 070 | 28,59 |
 | outil / sonde | 64 | 132 | 786 046 | 12 070 573 | 282 380 | 13 139 131 | 6,00 |
-| **Total du cas** | 1 238 | 2 504 | 11 169 143 | 395 996 461 | 4 263 030 | 411 431 138 | 144,53 |
+| **Total du cas** | 1 273 | 2 574 | 11 385 344 | 405 208 495 | 4 326 338 | 420 922 751 | 149,37 |
 
 Coût estimé au tarif de liste du modèle de chaque appel, par million de jetons : Sonnet 5.5 à 2 $ en entrée, 10 $ en sortie et 0,10 $ en lecture du cache ; Opus 5.5 à 4 $ en entrée, 20 $ en sortie et 0,20 $ en lecture du cache. Ce n'est pas une facture : l'accès passe par un abonnement ou par un compte non facturé. Les jetons lus dans le cache dominent le total, car Claude Code relit tout son contexte à chaque appel.
 
@@ -137,6 +137,6 @@ Hors du cas (une session antérieure du même dossier, sans lien avec l'outil) :
 | Verallia | 49 | 100 | 273 977 | 9 306 443 | 124 582 | 9 705 102 | 2,86 |
 | voestalpine | 29 | 60 | 253 793 | 5 622 651 | 105 975 | 5 982 479 | 2,26 |
 
-Temps de construction actif : 174 minutes (plafond du cas : 180).
+Temps de construction actif : 179 minutes (plafond du cas : 180).
 
 Le tableau par société compte aussi les secondes lectures, d'où des totaux plus hauts que dans le tableau des temps et coûts, qui ne compte que l'agent de recherche. Chaque appel est compté au tarif du modèle qui l'a fait : Sonnet 5.5 pour les agents de recherche et les secondes lectures, Opus 5.5 pour la seconde lecture relancée de Barilla.
