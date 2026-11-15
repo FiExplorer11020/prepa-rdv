@@ -22,9 +22,9 @@ from urllib.parse import urlparse
 
 from pypdf import PdfReader
 
-from . import audit, bilan as bilan_mod, brief, gabarit, horloge, textes
+from . import affichage, audit, bilan as bilan_mod, brief, gabarit, horloge, textes
 from .run import charger_fiches, slug
-from .schema import LIBELLES_CHAMP, Niveau
+from .schema import LIBELLES_CHAMP, Champ, Niveau
 from .tableur import CHAMPS_CARTO, LEGENDE, valeur_cellule
 
 POLICES = Path(__file__).parent / "polices"
@@ -42,6 +42,9 @@ FEMININ = {Niveau.CONFIRME: ("confirmée", "confirmées"), Niveau.PROBABLE: ("pr
            Niveau.NON_TROUVE: ("non trouvée", "non trouvées"), Niveau.ABSENCE_DECLAREE: ("absence déclarée", "absences déclarées"),
            Niveau.CONTRADICTION: ("contradiction", "contradictions")}
 ORDRE_BARRE = (Niveau.CONFIRME, Niveau.PROBABLE, Niveau.ABSENCE_DECLAREE, Niveau.CONTRADICTION, Niveau.NON_TROUVE)
+# « La cellule est confirmée pour 8 sociétés et probable pour 4. »
+ETAT_CELLULE = {Niveau.CONFIRME: "confirmée", Niveau.PROBABLE: "probable", Niveau.ABSENCE_DECLAREE: "en absence déclarée",
+                Niveau.CONTRADICTION: "en contradiction"}
 RANG = {Niveau.CONFIRME.value: 0, Niveau.ABSENCE_DECLAREE.value: 1, Niveau.CONTRADICTION.value: 2, Niveau.PROBABLE.value: 3}
 
 _e = html.escape
@@ -68,7 +71,8 @@ def _refs(texte: str) -> str:
 
 def _page(titre: str, description: str, corps: str, racine: str = "", actif: str = "", lien_outil: str = "",
           textes_presents: tuple[tuple[str, str], ...] = TEXTES) -> str:
-    nav = [("index.html#societes", "Les sociétés", "accueil")] + [(f"{nom}.html", libelle, nom) for nom, libelle in textes_presents]
+    nav = ([("index.html#interlocuteurs", "Les interlocuteurs", "interlocuteurs"), ("index.html#societes", "Les sociétés", "accueil")]
+           + [(f"{nom}.html", libelle, nom) for nom, libelle in textes_presents])
     liens = "".join(f'<a href="{racine}{h}"' + (' aria-current="page"' if k == actif else "") + f">{_e(t)}</a>" for h, t, k in nav)
     if lien_outil:
         liens += f'<a href="{_e(lien_outil)}">Le code</a>'
@@ -107,8 +111,8 @@ def _accueil(fiches: list[dict], telechargements: Path, jugements: dict[str, dic
         actions.append(_bouton("telechargements/cartographie.xlsx", "La cartographie", "tableur"))
     tete = (f'<section class="ouverture"><p class="leg">Cas pratique, novembre 2026</p>'
             f'<h1>Préparer un <span class="insecable">rendez-vous</span> avec une direction financière</h1>'
-            f'<p class="chapo">Pour une grande entreprise, l\'outil cherche sur sources publiques son ERP, sa plateforme d\'achats, '
-            f"son TMS et ses financements court terme. Chaque information porte la citation retrouvée sur sa page, l'adresse de la "
+            f'<p class="chapo">Pour une grande entreprise, l\'outil cherche sur sources publiques les noms de sa direction financière, '
+            f"son ERP, sa plateforme d'achats, son TMS et ses financements court terme. Chaque information porte la citation retrouvée sur sa page, l'adresse de la "
             f"page, sa date et un niveau de confiance que le code fixe d'après une table.</p>"
             f"<p>Le cas demande de préparer {n} rendez-vous en trois heures de construction au plus, avec un outil qui fait le "
             f"travail. Ce site reprend ce que contiennent les briefs et les tableurs.</p>"
@@ -174,8 +178,83 @@ def _accueil(fiches: list[dict], telechargements: Path, jugements: dict[str, dic
     deux = (f'<section><h2>{"Les deux textes" if len(cartes) > 1 else "Le texte"}</h2><div class="cartes">{"".join(cartes)}</div></section>'
             if cartes else "")
     return _page(gabarit.MARQUE, f"{n} briefs de rendez-vous préparés sur informations publiques, citées et datées.",
-                 tete + mesures + niveaux + chaine + societes + deux, actif="accueil", lien_outil=lien_outil,
-                 textes_presents=textes_presents)
+                 tete + _interlocuteurs(fiches) + mesures + niveaux + chaine + societes + deux, actif="accueil",
+                 lien_outil=lien_outil, textes_presents=textes_presents)
+
+
+def _personnes(f: dict) -> list[dict]:
+    """La direction financière d'une société, telle que la cartographie la porte : chaque personne retenue, dans l'ordre de la
+    synthèse (le directeur financier d'abord, D17), avec son niveau, sa page et les marques du brief."""
+    par_id = {t["id"]: t for t in f["trouvailles"]}
+    entite = f.get("entite") or {}
+    personnes = []
+    for v in f["synthese"][Champ.DIRECTION_FINANCIERE.value]["valeurs"]:
+        if v["statut"] != "present" or v["niveau"] == Niveau.NON_TROUVE.value:
+            continue
+        t = par_id.get(v["ids"][0]) if v["ids"] else None
+        qui = brief._valeur_affichee(v, Champ.DIRECTION_FINANCIERE, t) + affichage.marques(t, entite)
+        if t and t["verifs"].get("mode_verification") == "seconde_lecture":
+            qui += " (seconde lecture)"
+        personnes.append({"qui": qui, "niveau": v["niveau"], "trouvaille": t})
+    return personnes
+
+
+def _pour(k: int, mot: str) -> str:
+    return f"{k} {mot}{'s' if k > 1 else ''}"
+
+
+def _interlocuteurs(fiches: list[dict]) -> str:
+    """Qui rencontrer : la direction financière de chaque société, avec sa source, et les adresses générales que la société publie.
+
+    Le bloc contacts du brief (cahier, section 10) en reprend la part publiée. Une adresse nominative déduite ne sort jamais ici,
+    même d'une fiche qui la porte : seules les adresses générales s'affichent."""
+    n = len(fiches)
+    par_niveau: Counter = Counter()
+    total, avec_adresse, lignes = 0, 0, []
+    for f in fiches:
+        par_niveau[Niveau(f["synthese"][Champ.DIRECTION_FINANCIERE.value]["niveau"])] += 1
+        personnes = _personnes(f)
+        total += len(personnes)
+        items = []
+        for p in personnes:
+            t, src = p["trouvaille"], ""
+            if t:
+                domaine = (t["verifs"].get("domaine") or urlparse(t["url"]).hostname or t["url"]).removeprefix("www.")
+                src = f'<p class="src"><a href="{_e(t["url"])}">{_e(domaine)}</a>, {_e(brief._annee(t))}</p>'
+            items.append(f'<li class="personne"><div class="haut"><span class="qui">{_e(p["qui"])}</span>'
+                         f'{_pastille(p["niveau"])}</div>{src}</li>')
+        if not items:
+            items.append(f'<li class="personne"><div class="haut"><span class="qui">Non trouvé</span>'
+                         f'{_pastille(Niveau.NON_TROUVE.value)}</div></li>')
+        contact = f.get("contact") or {}
+        generiques = contact.get("generiques") or []
+        avec_adresse += bool(generiques)
+        notes = ""
+        if generiques:
+            notes += (f'<p class="adresses">{"Adresses publiées" if len(generiques) > 1 else "Adresse publiée"} : '
+                      f'{_e(", ".join(generiques))}</p>')
+        if contact.get("mention"):
+            notes += f'<p class="adresses">{_e(contact["mention"])}</p>'
+        lignes.append(f'<li><a class="societe" href="societes/{slug(f["societe"])}.html">{_e(f["societe"])}</a>'
+                      f'<div><ul class="personnes">{"".join(items)}</ul>{notes}</div></li>')
+
+    def part(k: int) -> str:
+        return "la société" if n == 1 else f"les {n} sociétés" if k == n else f"{k} des {n} sociétés"
+
+    nommees = n - par_niveau[Niveau.NON_TROUVE]
+    cible = part(nommees)
+    niveaux = [f"{ETAT_CELLULE[niv]} pour {_pour(par_niveau[niv], 'société') if not i else par_niveau[niv]}"
+               for i, niv in enumerate(niv for niv in ORDRE_BARRE if par_niveau[niv] and niv != Niveau.NON_TROUVE)]
+    detail = ""
+    if niveaux:
+        detail = f" Dans la cartographie, la cellule est {', '.join(niveaux[:-1]) + ' et ' if len(niveaux) > 1 else ''}{niveaux[-1]}."
+    adresses = (f"Sur les pages de la société que l'outil a lues, une adresse générale apparaît pour {part(avec_adresse)}."
+                if avec_adresse else "Aucune adresse générale n'apparaît sur les pages de la société que l'outil a lues.")
+    entree = (f"Les pages lues nomment {_pour(total, 'personne')} de la direction financière pour {cible}, le directeur financier "
+              f"en tête.{detail}" if total else "Aucune page lue ne nomme la direction financière.")
+    return (f'<section id="interlocuteurs"><h2>Les interlocuteurs</h2><p>{_e(entree)}</p>'
+            f"<p>{_e(adresses)} L'outil ne relève pas de téléphone.</p>"
+            f'<ol class="interlocuteurs">{"".join(lignes)}</ol></section>')
 
 
 def _trouvaille(t: dict, entite: dict, jugement: dict | None) -> str:
@@ -470,6 +549,17 @@ h2 .etiquette { margin-left: .5rem; position: relative; top: -.15em; }
 .sommaire .meta { display: block; font-size: .88rem; margin-top: .1rem; }
 .sommaire .niv { font-size: .88rem; color: var(--texte-2); font-weight: 500; text-align: right; }
 
+.interlocuteurs { list-style: none; margin: 1.2rem 0 0; padding: 0; border-bottom: 1px solid var(--filet); }
+.interlocuteurs > li { display: grid; grid-template-columns: 12rem minmax(0, 1fr); column-gap: 1.4rem; border-top: 1px solid var(--filet);
+  padding: .95rem 0; }
+.interlocuteurs .societe { font-weight: 600; font-size: 1.08rem; text-decoration: none; align-self: start; }
+.interlocuteurs .societe:hover { text-decoration: underline; text-decoration-color: var(--texte); }
+.personnes { list-style: none; margin: 0; padding: 0; }
+.personne + .personne { margin-top: .75rem; }
+.personne .haut { display: flex; justify-content: space-between; align-items: flex-start; gap: .4rem 1.2rem; }
+.personne .src { margin: .2rem 0 0; font-size: .9rem; color: var(--texte-2); overflow-wrap: anywhere; }
+.interlocuteurs .adresses { margin: .7rem 0 0; font-size: .9rem; color: var(--texte-2); overflow-wrap: anywhere; }
+
 .cartes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .carte { display: block; background: var(--surface); border-radius: var(--r-carte); padding: 1.4rem 1.5rem; text-decoration: none; }
 .carte .titre { display: block; font-size: 1.4rem; line-height: 1.22; }
@@ -544,6 +634,8 @@ blockquote { margin: .5rem 0 0; padding: .75rem 1rem; background: var(--surface)
   .brief td.valeur { margin: .15rem 0 .45rem; }
   .brief td.niveau { text-align: left; width: auto; }
   .brief { border-bottom: 1px solid var(--filet); }
-  .trouvaille .haut { flex-direction: column; }
+  .trouvaille .haut, .personne .haut { flex-direction: column; }
+  .interlocuteurs > li { grid-template-columns: 1fr; }
+  .interlocuteurs .societe { margin-bottom: .45rem; }
 }
 """

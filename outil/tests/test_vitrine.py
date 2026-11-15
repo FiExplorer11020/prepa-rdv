@@ -72,6 +72,33 @@ def test_la_page_d_une_societe_montre_la_citation_la_source_et_le_verdict(sortie
     assert '<p class="n">0 <small>sur 1</small></p><p class="l">cellules jugées justes' in accueil
 
 
+def test_l_accueil_montre_les_interlocuteurs_sans_adresse_deduite(sorties, tmp_path):
+    url = "https://www.nokia.com/about-us/leadership/"
+
+    def contacts(f):
+        erp = next(t for t in f["trouvailles"] if t["champ"] == "erp")
+        df = {**erp, "id": "nokia-direction_financiere-1", "champ": "direction_financiere", "url": url,
+              "valeur": "Marco Wirén, Chief Financial Officer", "verifs": {**erp["verifs"], "domaine": "nokia.com"}}
+        f["trouvailles"].append(df)
+        f["synthese"]["direction_financiere"] = {"niveau": "confirmé", "contradiction": False, "valeurs": [
+            {"valeur": df["valeur"], "precision": None, "statut": "present", "niveau": "confirmé", "ids": [df["id"]]}]}
+        f["contact"] = {"generiques": ["investor.relations@nokia.com"], "adresses_nominatives_publiees": 2, "mention": None,
+                        "suggestion": {"nom": "Marco Wirén", "adresse": "marco.wiren@nokia.com", "motif": "prenom.nom",
+                                       "mention": "déduite, non vérifiée", "mx": True}}
+    _modifier_fiche(sorties, contacts)
+    r = vitrine.construire(tmp_path / "site", sorties, LIEN)
+    accueil = (tmp_path / "site" / "index.html").read_text(encoding="utf-8")
+    debut, fin = accueil.index('<section id="interlocuteurs">'), accueil.index('<section><h2>Ce que les journaux mesurent')
+    bloc = accueil[debut:fin]
+    assert r["problemes"] == [] and 'href="index.html#interlocuteurs"' in accueil
+    assert "<h2>Les interlocuteurs</h2>" in bloc and 'href="societes/nokia.html"' in bloc
+    assert "Marco Wirén, Chief Financial Officer" in bloc and f'<a href="{url}">nokia.com</a>, 2026' in bloc
+    assert ("Les pages lues nomment 1 personne de la direction financière pour la société, le directeur financier en tête. "
+            "Dans la cartographie, la cellule est confirmée pour 1 société.") in bloc
+    assert "Adresse publiée : investor.relations@nokia.com" in bloc and "L'outil ne relève pas de téléphone." in bloc
+    assert "marco.wiren@nokia.com" not in accueil         # l'adresse déduite reste dans le brief privé, jamais à l'accueil
+
+
 def test_le_texte_de_la_fiche_est_echappe(sorties, tmp_path):
     def piege(f):
         t = next(t for t in f["trouvailles"] if t["champ"] == "erp")
